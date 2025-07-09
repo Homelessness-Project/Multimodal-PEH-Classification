@@ -33,6 +33,26 @@ def main():
     model_config = get_model_config(args.model)
     model_id = model_config["model_id"]
 
+    # Few-shot prompt selection
+    few_shot_text = ''
+    if args.few_shot:
+        try:
+            if args.source == 'reddit':
+                from utils import FEW_SHOT_REDDIT_PROMPT_TEXT
+                few_shot_text = FEW_SHOT_REDDIT_PROMPT_TEXT
+            elif args.source == 'x':
+                from utils import FEW_SHOT_X_PROMPT_TEXT
+                few_shot_text = FEW_SHOT_X_PROMPT_TEXT
+            elif args.source == 'news_articles':
+                from utils import FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
+                few_shot_text = FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
+            elif args.source == 'meeting_minutes':
+                from utils import FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
+                few_shot_text = FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
+        except ImportError:
+            print(f"Few-shot prompt for {args.source} not found in utils.py. Proceeding without few-shot examples.")
+            few_shot_text = ''
+
     # Load model and tokenizer
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -119,7 +139,10 @@ def main():
                 )[0]['generated_text']
                 is_still_biased = "Yes" if "yes" in recheck_output.lower() else "No"
                 # Step 4: Classify the mitigated comment
-                classify_prompt = create_classification_prompt(new_comment)
+                if few_shot_text:
+                    classify_prompt = create_classification_prompt(new_comment, few_shot_text)
+                else:
+                    classify_prompt = create_classification_prompt(new_comment)
                 classification_output = pipe(
                     classify_prompt,
                     max_new_tokens=model_config["max_new_tokens"],

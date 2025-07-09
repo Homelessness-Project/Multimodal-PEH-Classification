@@ -3,9 +3,9 @@ from typing import Dict, List, Optional, Tuple
 import spacy
 from pydeidentify import Deidentifier
 
-def create_classification_prompt(comment: str) -> str:
-    """Creates the classification prompt for analyzing Reddit comments about homelessness."""
-    return f"""You are an expert in social behavior analysis. Your task is to analyze Reddit comments about homelessness and categorize them according to specific criteria.
+def create_classification_prompt(comment: str, few_shot_text: str = None) -> str:
+    """Creates the classification prompt for analyzing Reddit comments about homelessness, with optional few-shot examples."""
+    base_prompt = f"""You are an expert in social behavior analysis. Your task is to analyze Reddit comments about homelessness and categorize them according to specific criteria.
 
 DEFINITIONS:
 
@@ -50,11 +50,11 @@ Response Category: [solutions/interventions]
 Perception Type: [personal interaction, media portrayal, not in my backyard, harmful generalization, deserving/undeserving]
 racist: [Yes/No]
 Reasoning: [brief explanation]
-
-Comment to analyze:
-\"\"\" {comment} \"\"\"
-
-Analysis:"""
+"""
+    if few_shot_text:
+        base_prompt += f"\n\n{few_shot_text.strip()}\n"
+    base_prompt += f"\nComment to analyze:\n\"\"\" {comment} \"\"\"\n\nAnalysis:"
+    return base_prompt
 
 def create_mitigation_prompt(comment: str, classification: str = "") -> str:
     """Creates the mitigation prompt for rephrasing biased comments."""

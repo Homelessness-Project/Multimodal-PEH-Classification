@@ -97,9 +97,10 @@ def main():
             city = item["City"]
             try:
                 # Compose prompt with optional few-shot examples
-                prompt = create_classification_prompt(comment)
                 if few_shot_text:
-                    prompt = prompt + "\n\n" + few_shot_text
+                    prompt = create_classification_prompt(comment, few_shot_text)
+                else:
+                    prompt = create_classification_prompt(comment)
                 output = pipe(
                     prompt,
                     max_new_tokens=model_config["max_new_tokens"],
