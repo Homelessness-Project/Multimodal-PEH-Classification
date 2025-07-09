@@ -1,0 +1,17 @@
+Label,Positive Agreement (2),Partial Agreement (1),Negative Agreement (0),Total,Agreement Rate (%),Positive Prevalence (%)
+ask a genuine question,48,47,405,500,90.6,19.0
+ask a rhetorical question,37,69,394,500,86.2,21.2
+provide a fact or claim,196,181,123,500,63.8,75.4
+provide an observation,98,138,264,500,72.4,47.2
+express their opinion,350,103,47,500,79.4,90.6
+express others opinions,27,123,350,500,75.4,30.0
+money aid allocation,39,153,308,500,69.4,38.4
+government critique,28,79,393,500,84.2,21.4
+societal critique,37,157,306,500,68.6,38.8
+solutions/interventions,152,151,197,500,69.8,60.6
+personal interaction,37,66,397,500,86.8,20.6
+media portrayal,1,17,482,500,96.6,3.6
+not in my backyard,21,81,398,500,83.8,20.4
+harmful generalization,36,134,330,500,73.2,34.0
+deserving/undeserving,1,39,460,500,92.2,8.0
+racist,0,3,497,500,99.4,0.6
