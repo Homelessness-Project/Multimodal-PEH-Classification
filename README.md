@@ -54,27 +54,33 @@ To generate these yourself:
 python scripts/annotator_agreement.py
 ```
 
-### 5. Classification
-The classified comments are available in:
-- [`output/classified_comments_llama.csv`](output/classified_comments_llama.csv)
-- [`output/classified_comments_qwen.csv`](output/classified_comments_qwen.csv)
+### 5. Classification (Deduplicated)
+You can classify comments using either Llama or Qwen with a single script:
 
-To run the classification yourself:
+**Zero-shot (default):**
 ```bash
-python scripts/llama_3_2_classify.py
-python scripts/qwen_3_2_classify.py
+python scripts/classify_comments.py --model llama
+python scripts/classify_comments.py --model qwen
 ```
 
-### 6. Mitigation
-The mitigated comments are available in:
-- [`output/mitigated_comments_llama.csv`](output/mitigated_comments_llama.csv)
-- [`output/mitigated_comments_qwen.csv`](output/mitigated_comments_qwen.csv)
-
-To run the mitigation yourself:
+**Few-shot (with examples):**
 ```bash
-python scripts/llama_3_2_mitigate.py
-python scripts/qwen_3_2_mitigate.py
+python scripts/classify_comments.py --model llama --few_shot reddit
+python scripts/classify_comments.py --model qwen --few_shot reddit
 ```
+- The `--few_shot` argument appends a set of few-shot examples to the end of the prompt. Supported values: `reddit`, `x`, `news_articles`, `meeting_minutes` (when defined in `utils.py`).
+- If `--few_shot` is not specified, zero-shot classification is used.
+- The output will be saved to `output/classified_comments_llama.csv` or `output/classified_comments_qwen.csv` by default.
+- You can override the input or output file with `--input` and `--output` arguments.
+
+### 6. Mitigation (Deduplicated)
+To mitigate and reclassify comments using either model (mitigation always includes reclassification):
+```bash
+python scripts/mitigate_comments.py --model llama
+python scripts/mitigate_comments.py --model qwen
+```
+- The output will be saved to `output/mitigated_comments_llama.csv` or `output/mitigated_comments_qwen.csv` by default.
+- Mitigation always includes reclassification of the mitigated comments.
 
 ## Analysis
 

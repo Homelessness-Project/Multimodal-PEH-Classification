@@ -331,3 +331,43 @@ def deidentify_text(text, nlp=None):
     deidentified = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', deidentified)
     
     return deidentified
+
+FEW_SHOT_REDDIT_PROMPT_TEXT = '''Sentance: Are you implying that local police beat panhandlers with batons?  Because they don't .
+Comment Type: [ask a genuine question, provide a fact or claim]
+Critique Category: [societal critique]
+Response Category: []
+Perception Type: []
+racist: [No]
+
+Sentance: Most comments are saying how great it is to homeless (and it usually is) but are ignoring or unaware of the ***type*** of homeless they plan to [STREET] here.  *Drug addicts and people with mental issues.*  If it were more homes for homeless and/or low income families, I wouldn't think twice about it but I'm very concerned about a facility housing drug addicts and people with mental issues just a couple hundred feet from a school in the middle of a residential neighborhood.
+Comment Type: [express their opinion, express others opinions]
+Critique Category: []
+Response Category: []
+Perception Type: [not in my backyard, harmful generalization, deserving/undeserving]
+racist: [No]
+
+Sentance: What is up with the pots and pans?  What homeless or trafficked person needs those?  Oh wait!  She needs some.  Send her 50 sets.  She can keep one and sell the rest!  What a piece of 💩
+Comment Type: [ask a rhetorical question, express their opinion]
+Critique Category: [societal critique]
+Response Category: []
+Perception Type: [not in my backyard, harmful generalization]
+racist: [No]
+
+Sentance: "I live here too [ORGANIZATION][ORGANIZATION][ORGANIZATION]
+Fuck the homeless"
+Comment Type: [express their opinion]
+Critique Category: []
+Response Category: []
+Perception Type: [not in my backyard, harmful generalization, deserving/undeserving]
+racist: [No]
+
+Sentance: "I won't support organizations that are homophobic personally. I clearly stated that others can make their own choices. I then brought up a very real issue in [ORGANIZATION]. I'm a Social Worker. I've worked directly with [ORGANIZATION] in the past. They are very religious. It is what it is. You overreacted to my post IMO. I'm not that important. Its just my opinion. But yeah, I'm not okay with discrimination, so personally I would not work for nor support [PERSON]. I know far too many GLBTQIA+ and Trans individuals that have struggled in [ORGANIZATION] because of discrimination from places like this. Trans houseless individuals in particular are often sexually assaulted around here when they start engaging in services. Its a problem. >""Get over it"" **No.**"
+Comment Type: [provide a fact or claim, provide an observation, express their opinion]
+Critique Category: [societal critique]
+Response Category: []
+Perception Type: []
+racist: [No]
+'''
+
+
+
