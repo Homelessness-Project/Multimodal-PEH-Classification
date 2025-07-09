@@ -2,9 +2,9 @@ import pandas as pd
 import os
 
 # File paths
-INPUT_FILE = 'annotation/raw_scores.csv'
+RAW_SCORES_FILE = 'annotation/reddit_raw_scores.csv'
 OUTPUT_DIR = 'output/annotation'
-SOFT_LABELS_FILE = os.path.join(OUTPUT_DIR, 'soft_labels.csv')
+SOFT_LABELS_FILE = os.path.join(OUTPUT_DIR, 'reddit_soft_labels.csv')
 OVERALL_STATS_FILE = os.path.join(OUTPUT_DIR, 'agreement_stats.csv')
 COLUMN_STATS_FILE = os.path.join(OUTPUT_DIR, 'column_agreement_stats.csv')
 
@@ -87,7 +87,7 @@ def save_statistics(stats_dict, file_path):
     stats_df.to_csv(file_path, index=False)
 
 def main():
-    df = load_annotations(INPUT_FILE)
+    df = load_annotations(RAW_SCORES_FILE)
 
     label_columns = [
         'ask a genuine question',

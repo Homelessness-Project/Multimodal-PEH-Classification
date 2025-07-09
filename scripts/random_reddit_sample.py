@@ -3,7 +3,7 @@ import os
 
 cities = [
     "atlanticcity", "baltimore", "elpaso",
-    "kzoo", "portland", "sanfrancisco", "southbend"
+    "kzoo", "portland", "sanfrancisco", "southbend", "buffalo", "fayetteville", "rockford"
 ]
 
 base_path = "data"

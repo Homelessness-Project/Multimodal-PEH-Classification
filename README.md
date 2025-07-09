@@ -24,9 +24,11 @@ python scripts/random_reddit_sample.py
 ```
 This generates a random set of 50 Reddit comments per city.
 
-### 2. Deidentified Data
-The deidentified dataset (500 comments total, 50 from each of 10 cities) is available at:
-[`output/sampled_reddit_comments_by_city_deidentified.csv`](output/sampled_reddit_comments_by_city_deidentified.csv)
+### 2. Gold Subset Deidentified Data (for LLM Evaluation)
+The gold subset deidentified dataset (500 comments total, 50 from each of 10 cities) is available at:
+[`output/gold_subset_reddit_comments_by_city_deidentified.csv`](output/gold_subset_reddit_comments_by_city_deidentified.csv)
+
+**Note:** This file is used for LLM evaluation and is NOT the human-annotated gold standard. The true human gold standard is stored separately (see annotation section below).
 
 To generate this yourself:
 ```bash
@@ -43,43 +45,53 @@ Download the following models from HuggingFace:
 ## Annotation and Classification
 
 ### 4. Gold Standard / Soft Labeling
-The annotation data is available in:
-- Raw scores: [`annotation/raw_scores.csv`](annotation/raw_scores.csv)
+The human-annotated gold standard and soft label annotation data for Reddit are available in:
+- Raw scores: [`annotation/reddit_raw_scores.csv`](annotation/reddit_raw_scores.csv)
 - Processed outputs:
   - [`output/annotation/column_agreement_stats.csv`](output/annotation/column_agreement_stats.csv)
-  - [`output/annotation/soft_labels.csv`](output/annotation/soft_labels.csv)
+  - [`output/annotation/reddit_soft_labels.csv`](output/annotation/reddit_soft_labels.csv)
+
+Other sources (e.g., X, news_articles, meeting_minutes) may have their own raw scores and soft label files in the future.
 
 To generate these yourself:
 ```bash
 python scripts/annotator_agreement.py
 ```
 
-### 5. Classification (Deduplicated)
-You can classify comments using either Llama or Qwen with a single script:
+## Classification and Mitigation
+
+**Note:** The only valid options for `--source` are: `reddit`, `x`, `news_articles`, and `meeting_minutes`.
+
+### 5. Classification
+You can classify comments using either Llama or Qwen with a single script. You must specify the data source and dataset:
 
 **Zero-shot (default):**
 ```bash
-python scripts/classify_comments.py --model llama
-python scripts/classify_comments.py --model qwen
+python scripts/classify_comments.py --model llama --source reddit --dataset gold_subset
+python scripts/classify_comments.py --model qwen --source reddit --dataset gold_subset
 ```
 
 **Few-shot (with examples):**
 ```bash
-python scripts/classify_comments.py --model llama --few_shot reddit
-python scripts/classify_comments.py --model qwen --few_shot reddit
+python scripts/classify_comments.py --model llama --source reddit --dataset gold_subset --few_shot reddit
+python scripts/classify_comments.py --model qwen --source reddit --dataset gold_subset --few_shot reddit
 ```
-- The `--few_shot` argument appends a set of few-shot examples to the end of the prompt. Supported values: `reddit`, `x`, `news_articles`, `meeting_minutes` (when defined in `utils.py`).
+- The `--source` argument specifies the data source (`reddit`, `x`, `news_articles`, `meeting_minutes`).
+- The `--dataset` argument specifies which dataset to use (`all`, `gold_subset`).
+- For Reddit, `--dataset gold_subset` uses the gold subset file (`output/gold_subset_reddit_comments_by_city_deidentified.csv`) for LLM evaluation. This is NOT the human gold standard.
+- The `--few_shot` argument appends five few-shot examples to the end of the prompt. Supported values: `reddit`, `x`, `news_articles`, `meeting_minutes` (when defined in `utils.py`).
 - If `--few_shot` is not specified, zero-shot classification is used.
-- The output will be saved to `output/classified_comments_llama.csv` or `output/classified_comments_qwen.csv` by default.
+- The output will be saved to `output/classified_comments_{source}_{dataset}_{model}.csv` by default, or `output/classified_comments_{source}_{dataset}_{model}_fewshot.csv` if few-shot is used (e.g., `output/classified_comments_reddit_gold_subset_llama.csv`).
 - You can override the input or output file with `--input` and `--output` arguments.
 
-### 6. Mitigation (Deduplicated)
+### 6. Mitigation
 To mitigate and reclassify comments using either model (mitigation always includes reclassification):
 ```bash
-python scripts/mitigate_comments.py --model llama
-python scripts/mitigate_comments.py --model qwen
+python scripts/mitigate_comments.py --model llama --source reddit --dataset gold_subset
+python scripts/mitigate_comments.py --model qwen --source reddit --dataset gold_subset
 ```
-- The output will be saved to `output/mitigated_comments_llama.csv` or `output/mitigated_comments_qwen.csv` by default.
+- For Reddit, `--dataset gold_subset` uses the gold subset file (`output/gold_subset_reddit_comments_by_city_deidentified.csv`) for LLM evaluation. This is NOT the human gold standard.
+- The output will be saved to `output/mitigated_comments_{source}_{dataset}_{model}.csv` by default, or `output/mitigated_comments_{source}_{dataset}_{model}_fewshot.csv` if few-shot is used (e.g., `output/mitigated_comments_reddit_gold_subset_llama.csv`).
 - Mitigation always includes reclassification of the mitigated comments.
 
 ## Analysis

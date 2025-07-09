@@ -23,7 +23,7 @@ def main():
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional)')
     parser.add_argument('--few_shot', type=str, default=None, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Append few-shot examples for the specified platform (if available)')
     parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Specify the data source (required)')
-    parser.add_argument('--dataset', type=str, required=True, choices=['sample', 'all', 'gold'], help='Specify which dataset to use (required)')
+    parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     args = parser.parse_args()
 
     model_config = get_model_config(args.model)
@@ -43,14 +43,12 @@ def main():
 
     # Set default input file based on source and dataset if not provided
     if not args.input:
-        if args.source == 'reddit' and args.dataset == 'sample':
-            args.input = 'output/sampled_reddit_comments_by_city_deidentified.csv'
+        if args.source == 'reddit' and args.dataset == 'gold_subset':
+            args.input = 'output/gold_subset_reddit_comments_by_city_deidentified.csv'  # gold subset for LLM runs
         elif args.source == 'reddit' and args.dataset == 'all':
             args.input = 'data/reddit/all_comments.csv'
-        elif args.source == 'reddit' and args.dataset == 'gold':
-            args.input = 'output/annotation/soft_labels.csv'
         # Add similar logic for other sources as needed
-        # e.g., elif args.source == 'x' and args.dataset == 'sample': ...
+        # e.g., elif args.source == 'x' and args.dataset == 'gold_subset': ...
 
     # Load data
     try:

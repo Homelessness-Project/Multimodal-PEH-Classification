@@ -32,15 +32,25 @@ field_map = {
     'racist': 'racist'
 }
 
+# Update file paths for Reddit annotation and soft label data
+RAW_SCORES_FILE = 'annotation/reddit_raw_scores.csv'
+SOFT_LABELS_FILE = 'output/annotation/reddit_soft_labels.csv'
+
+# Update file paths for Llama and Qwen classified/mitigated outputs
+LLAMA_CLASSIFIED_FILE = 'output/classified_comments_reddit_gold_subset_llama.csv'
+QWEN_CLASSIFIED_FILE = 'output/classified_comments_reddit_gold_subset_qwen.csv'
+LLAMA_MITIGATED_FILE = 'output/mitigated_comments_reddit_gold_subset_llama.csv'
+QWEN_MITIGATED_FILE = 'output/mitigated_comments_reddit_gold_subset_qwen.csv'
+
 def load_classifications():
     """Load both Llama and Qwen classification results for original and mitigated data."""
     try:
         print("Loading classification files...")
-        llama_df = pd.read_csv("output/classified_comments_llama.csv")
-        qwen_df = pd.read_csv("output/classified_comments_qwen.csv")
-        llama_mit_df = pd.read_csv("output/mitigated_comments_llama.csv")
-        qwen_mit_df = pd.read_csv("output/mitigated_comments_qwen.csv")
-        soft_labels_df = pd.read_csv("output/annotation/soft_labels.csv")
+        llama_df = pd.read_csv(LLAMA_CLASSIFIED_FILE)
+        qwen_df = pd.read_csv(QWEN_CLASSIFIED_FILE)
+        llama_mit_df = pd.read_csv(LLAMA_MITIGATED_FILE)
+        qwen_mit_df = pd.read_csv(QWEN_MITIGATED_FILE)
+        soft_labels_df = pd.read_csv(SOFT_LABELS_FILE)
         print(f"Loaded {len(llama_df)} comments from each model")
         print(f"Mitigated data lengths - Llama: {len(llama_mit_df)}, Qwen: {len(qwen_mit_df)}")
         print(f"Soft labels length: {len(soft_labels_df)}")
@@ -326,7 +336,7 @@ def plot_soft_label_comparison(soft_results, pdf_path):
 
 def gold_standard_by_city_size():
     # Load annotation data
-    df = pd.read_csv('annotation/raw_scores.csv', header=1)
+    df = pd.read_csv(RAW_SCORES_FILE, header=1)
     
     # Define city groups
     small_cities = [
@@ -697,7 +707,7 @@ def main():
 
     # Correlation analysis between gold standard variables (all rows, ignore city)
     print('Computing correlation matrix between gold standard annotation variables (all data)...')
-    gold_df = pd.read_csv('annotation/raw_scores.csv', header=1)
+    gold_df = pd.read_csv(RAW_SCORES_FILE, header=1)
     label_columns = [
         'ask a genuine question', 'ask a rhetorical question', 'provide a fact or claim',
         'provide an observation', 'express their opinion', 'express others opinions',
