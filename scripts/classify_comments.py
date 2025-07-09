@@ -18,7 +18,7 @@ from utils import (
 
 def main():
     parser = argparse.ArgumentParser(description="Classify Reddit comments using Llama or Qwen.")
-    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen'], help='Model to use (llama or qwen)')
+    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
     parser.add_argument('--input', type=str, default=None, help='Input CSV file')
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional)')
     parser.add_argument('--few_shot', type=str, default=None, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Append few-shot examples for the specified platform (if available)')

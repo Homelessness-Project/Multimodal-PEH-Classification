@@ -22,7 +22,7 @@ from utils import (
 
 def main():
     parser = argparse.ArgumentParser(description="Mitigate and reclassify Reddit comments using Llama or Qwen.")
-    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen'], help='Model to use (llama or qwen)')
+    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
     parser.add_argument('--input', type=str, default=None, help='Input CSV file')
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional)')
     parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Specify the data source (required)')

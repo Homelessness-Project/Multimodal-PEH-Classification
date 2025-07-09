@@ -153,6 +153,20 @@ def get_model_config(model_name: str) -> Dict:
             "temperature": 0.1,
             "top_p": 0.95,
             "repetition_penalty": 1.1
+        },
+        "gemma3": {
+            "model_id": "google/gemma-3-4b-it",
+            "max_new_tokens": 500,
+            "temperature": 0.1,
+            "top_p": 0.95,
+            "repetition_penalty": 1.1
+        },
+        "phi4": {
+            "model_id": "microsoft/Phi-4-mini-instruct",
+            "max_new_tokens": 500,
+            "temperature": 0.1,
+            "top_p": 0.95,
+            "repetition_penalty": 1.1
         }
     }
     return configs.get(model_name.lower(), configs["qwen"])
