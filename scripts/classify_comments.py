@@ -17,20 +17,87 @@ from utils import (
 )
 import ast
 
+def parse_bracketed_list(field):
+    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
+        return []
+    field = field.strip()
+    if field.startswith('[') and field.endswith(']'):
+        field = field[1:-1]
+    items = [v.strip() for v in field.split(',') if v.strip()]
+    return items
+
+def parse_bracketed_single_value(field):
+    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
+        return ""
+    field = field.strip()
+    if field.startswith('[') and field.endswith(']'):
+        field = field[1:-1]
+    items = [v.strip() for v in field.split(',') if v.strip()]
+    return items[0] if items else ""
+
+def process_raw_to_flags(raw_csv_path, flags_csv_path):
+    df = pd.read_csv(raw_csv_path)
+    output_data = []
+    for _, row in tqdm(df.iterrows(), total=len(df)):
+        comment = row['Comment']
+        city = row['City']
+        output = row['Raw Response']
+        comment_text = ", ".join(parse_bracketed_list(extract_field(output, "Comment Type")))
+        critique_text = ", ".join(parse_bracketed_list(extract_field(output, "Critique Category")))
+        response_text = ", ".join(parse_bracketed_list(extract_field(output, "Response Category")))
+        perception_text = ", ".join(parse_bracketed_list(extract_field(output, "Perception Type")))
+        racist_text = extract_field(output, "racist")
+        racist_value = parse_bracketed_single_value(racist_text).lower()
+        racist_flag = 1 if racist_value in ["yes", "true", "1"] else 0
+        reasoning = extract_field(output, "Reasoning")
+        if not reasoning:
+            reasoning = "No reasoning provided."
+        output_row = create_output_row(
+            comment=comment,
+            city=city,
+            comment_text=comment_text,
+            critique_text=critique_text,
+            response_text=response_text,
+            perception_text=perception_text,
+            racist_flag=racist_flag,
+            reasoning=reasoning,
+            raw_response=output
+        )
+        output_data.append(output_row)
+    output_df = pd.DataFrame(output_data)
+    output_df.to_csv(flags_csv_path, index=False)
+    print(f"Saved {len(output_data)} processed comments to {flags_csv_path}")
+
 def main():
     parser = argparse.ArgumentParser(description="Classify Reddit comments using Llama or Qwen.")
     parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
-    parser.add_argument('--input', type=str, default=None, help='Input CSV file')
-    parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional)')
+    parser.add_argument('--input', type=str, default=None, help='Input CSV file (for --process_raw_only, this should be the raw CSV)')
+    parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional, for processed/flags CSV)')
     parser.add_argument('--few_shot', type=str, default=None, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Append few-shot examples for the specified platform (if available)')
     parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Specify the data source (required)')
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
+    parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
     args = parser.parse_args()
 
+    # Compose output paths
+    if args.output:
+        flags_csv_path = args.output
+    else:
+        base_name = f"classified_comments_{args.source}_{args.dataset}_{args.model}"
+        flags_csv_path = os.path.join('output', args.source, args.model, base_name + '_flags.csv')
+    raw_csv_path = os.path.join('output', args.source, args.model, f"classified_comments_{args.source}_{args.dataset}_{args.model}_raw.csv")
+    os.makedirs(os.path.dirname(raw_csv_path), exist_ok=True)
+
+    if args.process_raw_only:
+        if not args.input:
+            print("Error: --input (raw CSV) is required when using --process_raw_only.")
+            exit(1)
+        process_raw_to_flags(args.input, flags_csv_path)
+        return
+
+    # LLM inference step
     model_config = get_model_config(args.model)
     model_id = model_config["model_id"]
-
-    # Load model and tokenizer
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         tokenizer.padding_side = 'left'
@@ -45,11 +112,10 @@ def main():
     # Set default input file based on source and dataset if not provided
     if not args.input:
         if args.source == 'reddit' and args.dataset == 'gold_subset':
-            args.input = 'output/gold_subset_reddit_comments_by_city_deidentified.csv'  # gold subset for LLM runs
+            args.input = 'output/gold_subset_reddit_comments_by_city_deidentified.csv'
         elif args.source == 'reddit' and args.dataset == 'all':
             args.input = 'data/reddit/all_comments.csv'
         # Add similar logic for other sources as needed
-        # e.g., elif args.source == 'x' and args.dataset == 'gold_subset': ...
 
     # Load data
     try:
@@ -114,81 +180,23 @@ def main():
                 analysis_start = output.find("Analysis:")
                 if analysis_start != -1:
                     output = output[analysis_start + len("Analysis:"):].strip()
-                comment_text = extract_field(output, "Comment Type")
-                critique_text = extract_field(output, "Critique Category")
-                response_text = extract_field(output, "Response Category")
-                perception_text = extract_field(output, "Perception Type")
-                # Literal parsing for category fields: just what's inside the brackets, no filtering
-                def parse_bracketed_list(field):
-                    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
-                        return []
-                    field = field.strip()
-                    if field.startswith('[') and field.endswith(']'):
-                        field = field[1:-1]
-                    items = [v.strip() for v in field.split(',') if v.strip()]
-                    return items
-
-                comment_text = parse_bracketed_list(comment_text)
-                critique_text = parse_bracketed_list(critique_text)
-                response_text = parse_bracketed_list(response_text)
-                perception_text = parse_bracketed_list(perception_text)
-                # Remove 'racist' from perception type, then filter
-                perception_raw = extract_field(output, "Perception Type")
-                perception_text = parse_bracketed_list(perception_raw)
-                # Helper to parse single value in brackets (for 'racist' field)
-                def parse_bracketed_single_value(field):
-                    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
-                        return ""
-                    field = field.strip()
-                    if field.startswith('[') and field.endswith(']'):
-                        field = field[1:-1]
-                    items = [v.strip() for v in field.split(',') if v.strip()]
-                    return items[0] if items else ""
-
-                racist_text = extract_field(output, "racist")
-                racist_value = parse_bracketed_single_value(racist_text).lower()
-                racist_flag = 1 if racist_value in ["yes", "true", "1"] else 0
-                reasoning = extract_field(output, "Reasoning")
-                if not reasoning:
-                    reasoning = "No reasoning provided."
-                # Convert lists to comma-separated strings for output
-                comment_text_str = ", ".join(comment_text)
-                critique_text_str = ", ".join(critique_text)
-                response_text_str = ", ".join(response_text)
-                perception_text_str = ", ".join(perception_text)
-                output_row = create_output_row(
-                    comment=comment,
-                    city=city,
-                    comment_text=comment_text_str,
-                    critique_text=critique_text_str,
-                    response_text=response_text_str,
-                    perception_text=perception_text_str,
-                    racist_flag=racist_flag,
-                    reasoning=reasoning,
-                    raw_response=output
-                )
-                output_data.append(output_row)
+                # Save only raw output
+                output_data.append({
+                    "Comment": comment,
+                    "City": city,
+                    "Raw Response": output
+                })
             except Exception as e:
                 print(f"Error processing comment: {comment[:100]}...")
                 print(f"Error: {e}")
                 continue
-        if output_data:
-            # Compose output filename
-            out_path = args.output
-            if not out_path:
-                out_path = f"output/classified_comments_{args.source}_{args.dataset}_{args.model}"
-                if args.few_shot:
-                    out_path += "_fewshot"
-                out_path += ".csv"
-            # Place outputs in output/{source}/ subfolder
-            if not os.path.isabs(out_path):
-                source_dir = os.path.join('output', args.source)
-                os.makedirs(source_dir, exist_ok=True)
-                out_path = os.path.join(source_dir, os.path.basename(out_path))
-            output_df = pd.DataFrame(output_data)
-            output_df.to_csv(out_path, index=False)
-            print(f"Saved {len(output_data)} processed comments")
-    print(f"\nDone! Final output saved to {out_path}")
+    # Save raw CSV
+    raw_df = pd.DataFrame(output_data)
+    raw_df.to_csv(raw_csv_path, index=False)
+    print(f"Saved {len(output_data)} raw LLM outputs to {raw_csv_path}")
+    # Process raw to flags CSV
+    process_raw_to_flags(raw_csv_path, flags_csv_path)
+    print(f"Done! Final output saved to {flags_csv_path}")
 
 if __name__ == "__main__":
     main() 
