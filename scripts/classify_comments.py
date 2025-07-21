@@ -180,6 +180,11 @@ def main():
                 if args.few_shot:
                     out_path += "_fewshot"
                 out_path += ".csv"
+            # Place outputs in output/{source}/ subfolder
+            if not os.path.isabs(out_path):
+                source_dir = os.path.join('output', args.source)
+                os.makedirs(source_dir, exist_ok=True)
+                out_path = os.path.join(source_dir, os.path.basename(out_path))
             output_df = pd.DataFrame(output_data)
             output_df.to_csv(out_path, index=False)
             print(f"Saved {len(output_data)} processed comments")
