@@ -135,12 +135,19 @@ def main():
                 # Remove 'racist' from perception type, then filter
                 perception_raw = extract_field(output, "Perception Type")
                 perception_text = parse_bracketed_list(perception_raw)
+                # Helper to parse single value in brackets (for 'racist' field)
+                def parse_bracketed_single_value(field):
+                    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
+                        return ""
+                    field = field.strip()
+                    if field.startswith('[') and field.endswith(']'):
+                        field = field[1:-1]
+                    items = [v.strip() for v in field.split(',') if v.strip()]
+                    return items[0] if items else ""
+
                 racist_text = extract_field(output, "racist")
-                racist_flag = 0
-                if racist_text:
-                    racist_text = racist_text.lower().strip()
-                    if racist_text in ["yes", "true", "1"]:
-                        racist_flag = 1
+                racist_value = parse_bracketed_single_value(racist_text).lower()
+                racist_flag = 1 if racist_value in ["yes", "true", "1"] else 0
                 reasoning = extract_field(output, "Reasoning")
                 if not reasoning:
                     reasoning = "No reasoning provided."
