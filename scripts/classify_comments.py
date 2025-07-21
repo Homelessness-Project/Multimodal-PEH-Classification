@@ -15,6 +15,7 @@ from utils import (
     PERCEPTION_TYPES,
     create_output_row
 )
+import ast
 
 def main():
     parser = argparse.ArgumentParser(description="Classify Reddit comments using Llama or Qwen.")
@@ -117,6 +118,23 @@ def main():
                 critique_text = extract_field(output, "Critique Category")
                 response_text = extract_field(output, "Response Category")
                 perception_text = extract_field(output, "Perception Type")
+                # Literal parsing for category fields: just what's inside the brackets, no filtering
+                def parse_bracketed_list(field):
+                    if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
+                        return []
+                    field = field.strip()
+                    if field.startswith('[') and field.endswith(']'):
+                        field = field[1:-1]
+                    items = [v.strip() for v in field.split(',') if v.strip()]
+                    return items
+
+                comment_text = parse_bracketed_list(comment_text)
+                critique_text = parse_bracketed_list(critique_text)
+                response_text = parse_bracketed_list(response_text)
+                perception_text = parse_bracketed_list(perception_text)
+                # Remove 'racist' from perception type, then filter
+                perception_raw = extract_field(output, "Perception Type")
+                perception_text = parse_bracketed_list(perception_raw)
                 racist_text = extract_field(output, "racist")
                 racist_flag = 0
                 if racist_text:
@@ -126,13 +144,18 @@ def main():
                 reasoning = extract_field(output, "Reasoning")
                 if not reasoning:
                     reasoning = "No reasoning provided."
+                # Convert lists to comma-separated strings for output
+                comment_text_str = ", ".join(comment_text)
+                critique_text_str = ", ".join(critique_text)
+                response_text_str = ", ".join(response_text)
+                perception_text_str = ", ".join(perception_text)
                 output_row = create_output_row(
                     comment=comment,
                     city=city,
-                    comment_text=comment_text,
-                    critique_text=critique_text,
-                    response_text=response_text,
-                    perception_text=perception_text,
+                    comment_text=comment_text_str,
+                    critique_text=critique_text_str,
+                    response_text=response_text_str,
+                    perception_text=perception_text_str,
                     racist_flag=racist_flag,
                     reasoning=reasoning,
                     raw_response=output
