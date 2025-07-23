@@ -270,9 +270,74 @@ def get_model_config(model_name: str) -> Dict:
             "temperature": 0.1,
             "top_p": 0.95,
             "repetition_penalty": 1.1
+        },
+        "gpt4": {
+            "api": "openai",
+            "api_key_env": "OPENAI_API_KEY",
+            "model_id": "gpt-4-1106-preview",  # or latest GPT-4.1 model id
+            "max_new_tokens": 500
+        },
+        "gemini": {
+            "api": "google",
+            "api_key_env": "GOOGLE_API_KEY",
+            "model_id": "models/gemini-1.5-pro-latest",
+            "max_new_tokens": 500
+        },
+        "grok": {
+            "api": "grok",
+            "api_key_env": "GROK_API_KEY",
+            "model_id": "grok-1.5-4",  # or latest Grok 4 model id
+            "max_new_tokens": 500
         }
     }
     return configs.get(model_name.lower(), configs["qwen"])
+
+import requests
+import os
+
+def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
+    """Call an API-based LLM (GPT-4.1, Gemini 2.5 Pro, Grok 4) and return the response text."""
+    # Load .env if present and not already loaded
+    if not getattr(call_api_llm, '_env_loaded', False):
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+        except ImportError:
+            print("[Warning] python-dotenv not installed. Set API keys in your environment or install with 'pip install python-dotenv'.")
+        call_api_llm._env_loaded = True
+    config = get_model_config(model_name)
+    api = config.get("api")
+    api_key = os.environ.get(config.get("api_key_env", ""), None)
+    model_id = config.get("model_id")
+    if api == "openai":
+        # OpenAI GPT-4.1
+        import openai
+        openai.api_key = api_key
+        response = openai.ChatCompletion.create(
+            model=model_id,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=max_tokens,
+            temperature=0.1,
+        )
+        return response["choices"][0]["message"]["content"]
+    elif api == "google":
+        # Gemini 2.5 Pro (Google AI Studio API)
+        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={api_key}"
+        headers = {"Content-Type": "application/json"}
+        data = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"maxOutputTokens": max_tokens}}
+        resp = requests.post(endpoint, headers=headers, json=data)
+        resp.raise_for_status()
+        return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+    elif api == "grok":
+        # Grok 4 (xAI API, placeholder)
+        endpoint = "https://api.grok.x.ai/v1/chat/completions"
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+        data = {"model": model_id, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens}
+        resp = requests.post(endpoint, headers=headers, json=data)
+        resp.raise_for_status()
+        return resp.json()["choices"][0]["message"]["content"]
+    else:
+        raise ValueError(f"Unknown or unsupported API model: {model_name}")
 
 # Define categories
 COMMENT_TYPES = [

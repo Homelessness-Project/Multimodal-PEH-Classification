@@ -72,13 +72,14 @@ def process_raw_to_flags(raw_csv_path, flags_csv_path):
 
 def main():
     parser = argparse.ArgumentParser(description="Classify content about homelessness using various LLMs with support for different content types.")
-    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
+    parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4', 'gpt4', 'gemini', 'grok'], help='Model to use (llama, qwen, gemma3, phi4, gpt4, gemini, or grok)')
     parser.add_argument('--input', type=str, default=None, help='Input CSV file (for --process_raw_only, this should be the raw CSV)')
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional, for processed/flags CSV)')
     parser.add_argument('--few_shot', type=str, default='none', choices=['reddit', 'x', 'news', 'meeting_minutes', 'none'], help='Append few-shot examples for the specified platform (if available). Use "none" for zero-shot (default).')
     parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news', 'meeting_minutes'], help='Specify the data source (required)')
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
+    parser.add_argument('--test', action='store_true', help='If set and using an API model, only process 10 comments and output estimated cost.')
     args = parser.parse_args()
 
     # Setup logging if running with nohup
@@ -118,16 +119,21 @@ def main():
     # LLM inference step
     model_config = get_model_config(args.model)
     model_id = model_config["model_id"]
-    try:
-        tokenizer = AutoTokenizer.from_pretrained(model_id)
-        tokenizer.padding_side = 'left'
-        model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
-        tokenizer.pad_token = tokenizer.eos_token
-        model.config.pad_token_id = model.config.eos_token_id
-        pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
-    except Exception as e:
-        print(f"Error loading model: {e}")
-        exit(1)
+    api_models = ["gpt4", "gemini", "grok"]
+    if args.model in api_models:
+        from utils import call_api_llm
+        pipe = None  # Not used
+    else:
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(model_id)
+            tokenizer.padding_side = 'left'
+            model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
+            tokenizer.pad_token = tokenizer.eos_token
+            model.config.pad_token_id = model.config.eos_token_id
+            pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
+        except Exception as e:
+            print(f"Error loading model: {e}")
+            exit(1)
 
     # Set default input file based on source and dataset if not provided
     if not args.input:
@@ -159,6 +165,11 @@ def main():
     except Exception as e:
         print(f"Error loading data: {e}")
         exit(1)
+
+    # If --test and API model, only process 10 comments
+    if args.test and args.model in api_models:
+        df = df.iloc[:10]
+        print("Test mode: Only processing first 10 comments to save API cost.")
 
     output_data = []
     BATCH_SIZE = 10
@@ -194,6 +205,15 @@ def main():
     else:
         start_batch = 0
 
+    total_api_cost = 0.0
+    api_cost_per_million = {
+        "gpt4": {"input": 2.00, "output": 8.00},
+        "gemini": {"input": 2.50, "output": 15.00},
+        "grok": {"input": 3.00, "output": 15.00}
+    }
+    api_input_tokens = 0
+    api_output_tokens = 0
+
     for batch_idx in range(start_batch, total_batches):
         start_idx = batch_idx * BATCH_SIZE
         end_idx = min((batch_idx + 1) * BATCH_SIZE, len(df))
@@ -216,15 +236,23 @@ def main():
                     content_type=args.source, 
                     few_shot_text=args.few_shot
                 )
-                output = pipe(
-                    prompt,
-                    max_new_tokens=model_config["max_new_tokens"],
-                    do_sample=True,
-                    temperature=model_config["temperature"],
-                    top_p=model_config["top_p"],
-                    repetition_penalty=model_config["repetition_penalty"],
-                    pad_token_id=tokenizer.eos_token_id
-                )[0]['generated_text']
+                if args.model in api_models:
+                    output = call_api_llm(prompt, args.model, max_tokens=model_config["max_new_tokens"])
+                    # Estimate tokens (very rough: 1 token ~ 4 chars)
+                    input_tokens = len(prompt) // 4
+                    output_tokens = len(output) // 4
+                    api_input_tokens += input_tokens
+                    api_output_tokens += output_tokens
+                else:
+                    output = pipe(
+                        prompt,
+                        max_new_tokens=model_config["max_new_tokens"],
+                        do_sample=True,
+                        temperature=model_config["temperature"],
+                        top_p=model_config["top_p"],
+                        repetition_penalty=model_config["repetition_penalty"],
+                        pad_token_id=tokenizer.eos_token_id
+                    )[0]['generated_text']
                 analysis_start = output.find("Analysis:")
                 if analysis_start != -1:
                     output = output[analysis_start + len("Analysis:"):].strip()
@@ -253,6 +281,15 @@ def main():
     
     print(f"Completed! Final output saved to {flags_csv_path}")
     
+    # Output API cost if used
+    if args.model in api_models:
+        cost_info = api_cost_per_million.get(args.model, {"input": 2.00, "output": 8.00})
+        input_cost = (api_input_tokens / 1_000_000) * cost_info["input"]
+        output_cost = (api_output_tokens / 1_000_000) * cost_info["output"]
+        total_api_cost = input_cost + output_cost
+        print(f"\nAPI token usage estimate: {api_input_tokens} input tokens, {api_output_tokens} output tokens")
+        print(f"Estimated {args.model} API cost: input=${input_cost:.4f}, output=${output_cost:.4f}, total=${total_api_cost:.4f}")
+
     # Log completion if using nohup
     if not sys.stdout.isatty():
         print("-" * 80)
