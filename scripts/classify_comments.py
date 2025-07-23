@@ -5,6 +5,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
 from datasets import Dataset
 import os
+import sys
+import datetime
 from utils import (
     get_model_config, 
     create_classification_prompt, 
@@ -78,6 +80,24 @@ def main():
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
     args = parser.parse_args()
+
+    # Setup logging if running with nohup
+    if not sys.stdout.isatty():  # Check if running in background (nohup)
+        # Create logs directory if it doesn't exist
+        os.makedirs('logs', exist_ok=True)
+        
+        # Create log filename with timestamp
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_filename = f"logs/{args.source}_{args.dataset}_{args.model}_{args.few_shot}_{timestamp}.log"
+        
+        # Redirect stdout and stderr to log file
+        sys.stdout = open(log_filename, 'w')
+        sys.stderr = sys.stdout
+        
+        print(f"Logging to: {log_filename}")
+        print(f"Started at: {datetime.datetime.now()}")
+        print(f"Command: {' '.join(sys.argv)}")
+        print("-" * 80)
 
     # Compose output paths
     if args.output:
@@ -206,6 +226,13 @@ def main():
     # Process raw to flags CSV
     process_raw_to_flags(raw_csv_path, flags_csv_path)
     print(f"Done! Final output saved to {flags_csv_path}")
+    
+    # Log completion if using nohup
+    if not sys.stdout.isatty():
+        print("-" * 80)
+        print(f"Completed at: {datetime.datetime.now()}")
+        print(f"Results saved to: {flags_csv_path}")
+        sys.stdout.close()
 
 if __name__ == "__main__":
     """
