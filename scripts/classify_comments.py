@@ -103,9 +103,9 @@ def main():
     if args.output:
         flags_csv_path = args.output
     else:
-        base_name = f"classified_comments_{args.source}_{args.dataset}_{args.model}"
+        base_name = f"classified_comments_{args.source}_{args.dataset}_{args.model}_{args.few_shot}"
         flags_csv_path = os.path.join('output', args.source, args.model, base_name + '_flags.csv')
-    raw_csv_path = os.path.join('output', args.source, args.model, f"classified_comments_{args.source}_{args.dataset}_{args.model}_raw.csv")
+    raw_csv_path = os.path.join('output', args.source, args.model, f"classified_comments_{args.source}_{args.dataset}_{args.model}_{args.few_shot}_raw.csv")
     os.makedirs(os.path.dirname(raw_csv_path), exist_ok=True)
 
     if args.process_raw_only:
