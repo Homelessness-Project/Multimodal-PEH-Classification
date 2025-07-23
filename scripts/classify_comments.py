@@ -177,7 +177,24 @@ def main():
         print(f"Error: {e}")
         exit(1)
 
-    for batch_idx in range(total_batches):
+    # Check if we're resuming from a previous run
+    if os.path.exists(raw_csv_path):
+        existing_df = pd.read_csv(raw_csv_path)
+        processed_count = len(existing_df)
+        print(f"Found existing raw output with {processed_count} processed comments")
+        if processed_count >= len(df):
+            print("All comments already processed. Processing raw to flags...")
+            process_raw_to_flags(raw_csv_path, flags_csv_path)
+            print(f"Done! Final output saved to {flags_csv_path}")
+            return
+        else:
+            print(f"Resuming from comment {processed_count}")
+            output_data = existing_df.to_dict('records')
+            start_batch = processed_count // BATCH_SIZE
+    else:
+        start_batch = 0
+
+    for batch_idx in range(start_batch, total_batches):
         start_idx = batch_idx * BATCH_SIZE
         end_idx = min((batch_idx + 1) * BATCH_SIZE, len(df))
         batch_df = df.iloc[start_idx:end_idx]
@@ -187,6 +204,8 @@ def main():
             "City": batch_df["City"].tolist()
         }
         batch_dataset = Dataset.from_dict(batch_data)
+        batch_outputs = []
+        
         for item in tqdm(batch_dataset, total=len(batch_dataset)):
             comment = item["Comment"]
             city = item["City"]
@@ -209,8 +228,8 @@ def main():
                 analysis_start = output.find("Analysis:")
                 if analysis_start != -1:
                     output = output[analysis_start + len("Analysis:"):].strip()
-                # Save only raw output
-                output_data.append({
+                # Save to batch outputs
+                batch_outputs.append({
                     "Comment": comment,
                     "City": city,
                     "Raw Response": output
@@ -219,13 +238,20 @@ def main():
                 print(f"Error processing comment: {comment[:100]}...")
                 print(f"Error: {e}")
                 continue
-    # Save raw CSV
-    raw_df = pd.DataFrame(output_data)
-    raw_df.to_csv(raw_csv_path, index=False)
-    print(f"Saved {len(output_data)} raw LLM outputs to {raw_csv_path}")
-    # Process raw to flags CSV
-    process_raw_to_flags(raw_csv_path, flags_csv_path)
-    print(f"Done! Final output saved to {flags_csv_path}")
+        
+        # Add batch outputs to main data
+        output_data.extend(batch_outputs)
+        
+        # Save progress after each batch
+        temp_df = pd.DataFrame(output_data)
+        temp_df.to_csv(raw_csv_path, index=False)
+        print(f"Saved batch {batch_idx + 1} progress: {len(output_data)}/{len(df)} comments processed")
+        
+        # Also save flags after each batch
+        process_raw_to_flags(raw_csv_path, flags_csv_path)
+        print(f"Updated flags CSV with {len(output_data)} processed comments")
+    
+    print(f"Completed! Final output saved to {flags_csv_path}")
     
     # Log completion if using nohup
     if not sys.stdout.isatty():
