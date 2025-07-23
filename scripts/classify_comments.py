@@ -132,7 +132,7 @@ def main():
     # Set default input file based on source and dataset if not provided
     if not args.input:
         if args.source == 'reddit' and args.dataset == 'gold_subset':
-            args.input = 'data/reddit/gold_subset_comments.csv'
+            args.input = 'gold_standard/gold_subset_reddit_comments_by_city_deidentified.csv'
         elif args.source == 'reddit' and args.dataset == 'all':
             args.input = 'data/reddit/all_comments.csv'
         elif args.source == 'x' and args.dataset == 'gold_subset':
