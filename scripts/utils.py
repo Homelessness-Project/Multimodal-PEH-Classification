@@ -3,9 +3,45 @@ from typing import Dict, List, Optional, Tuple
 import spacy
 from pydeidentify import Deidentifier
 
-def create_classification_prompt(comment: str, few_shot_text: str = None) -> str:
-    """Creates the classification prompt for analyzing Reddit comments about homelessness, with optional few-shot examples."""
-    base_prompt = f"""You are an expert in social behavior analysis. Your task is to analyze Reddit comments about homelessness and categorize them according to specific criteria.
+def create_classification_prompt(comment: str, content_type: str = "reddit", few_shot_text: str = "none") -> str:
+    """Creates the classification prompt for analyzing content about homelessness, with optional few-shot examples.
+    
+    Args:
+        comment: The text content to analyze
+        content_type: Type of content source ("reddit", "x", "news", "meeting_minutes")
+        few_shot_text: Few-shot examples (default "none" for zero-shot, or content type name for automatic selection)
+    """
+    # Validate content_type
+    valid_content_types = ["reddit", "x", "news", "meeting_minutes"]
+    if content_type.lower() not in valid_content_types:
+        raise ValueError(f"content_type must be one of {valid_content_types}, got '{content_type}'")
+    
+    # Define content type descriptions
+    content_descriptions = {
+        "reddit": "Reddit comments",
+        "x": "X (Twitter) posts",
+        "news": "news articles",
+        "meeting_minutes": "meeting minutes"
+    }
+    
+    # Define few-shot text mapping
+    few_shot_mapping = {
+        "reddit": FEW_SHOT_REDDIT_PROMPT_TEXT,
+        "x": FEW_SHOT_X_PROMPT_TEXT,
+        "news": FEW_SHOT_NEWS_PROMPT_TEXT,
+        "meeting_minutes": FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
+    }
+    
+    content_desc = content_descriptions.get(content_type.lower(), "content")
+    
+    # Handle few-shot text selection
+    if few_shot_text.lower() == "none":
+        few_shot_text = None  # Zero-shot
+    elif few_shot_text in valid_content_types:
+        # Use automatic selection for the specified content type
+        few_shot_text = few_shot_mapping.get(few_shot_text.lower(), FEW_SHOT_REDDIT_PROMPT_TEXT)
+    
+    base_prompt = f"""You are an expert in social behavior analysis. Your task is to analyze {content_desc} about homelessness and categorize them according to specific criteria.
 
 DEFINITIONS:
 
@@ -53,42 +89,103 @@ Reasoning: [brief explanation]
 """
     if few_shot_text:
         base_prompt += f"\n\n{few_shot_text.strip()}\n"
-    base_prompt += f"\nComment to analyze:\n\"\"\" {comment} \"\"\"\n\nAnalysis:"
+    base_prompt += f"\nContent to analyze:\n\"\"\" {comment} \"\"\"\n\nAnalysis:"
     return base_prompt
 
-def create_mitigation_prompt(comment: str, classification: str = "") -> str:
-    """Creates the mitigation prompt for rephrasing biased comments."""
-    return f"""You are a social behavior expert. Rephrase the following Reddit comment to remove any bias against people experiencing homelessness. Explain your reasoning for the changes you made.
+def create_mitigation_prompt(comment: str, content_type: str = "reddit", classification: str = "") -> str:
+    """Creates the mitigation prompt for rephrasing biased content.
+    
+    Args:
+        comment: The text content to mitigate
+        content_type: Type of content source ("reddit", "x", "news", "meeting_minutes")
+        classification: Optional classification information
+    """
+    # Validate content_type
+    valid_content_types = ["reddit", "x", "news", "meeting_minutes"]
+    if content_type.lower() not in valid_content_types:
+        raise ValueError(f"content_type must be one of {valid_content_types}, got '{content_type}'")
+    
+    # Define content type descriptions
+    content_descriptions = {
+        "reddit": "Reddit comment",
+        "x": "X (Twitter) post",
+        "news": "news article",
+        "meeting_minutes": "meeting minutes"
+    }
+    
+    content_desc = content_descriptions.get(content_type.lower(), "content")
+    
+    return f"""You are a social behavior expert. Rephrase the following {content_desc} to remove any bias against people experiencing homelessness. Explain your reasoning for the changes you made.
 
 Format your response exactly as follows:
 
-NEW COMMENT: [your rephrased comment]
+NEW CONTENT: [your rephrased content]
 REASONING: [your explanation]
 
-Comment:
+Content:
 \"\"\"{comment}\"\"\"
 
 Analysis:"""
 
-def create_mitigation_y_n_classification_prompt(comment: str) -> str:
-    """Creates a simple yes/no prompt to check if a comment is biased."""
-    return f"""You are a social behavior expert. Analyze the following Reddit comment for bias against people experiencing homelessness (PEH).
+def create_mitigation_y_n_classification_prompt(comment: str, content_type: str = "reddit") -> str:
+    """Creates a simple yes/no prompt to check if content is biased.
+    
+    Args:
+        comment: The text content to analyze
+        content_type: Type of content source ("reddit", "x", "news", "meeting_minutes")
+    """
+    # Validate content_type
+    valid_content_types = ["reddit", "x", "news", "meeting_minutes"]
+    if content_type.lower() not in valid_content_types:
+        raise ValueError(f"content_type must be one of {valid_content_types}, got '{content_type}'")
+    
+    # Define content type descriptions
+    content_descriptions = {
+        "reddit": "Reddit comment",
+        "x": "X (Twitter) post",
+        "news": "news article",
+        "meeting_minutes": "meeting minutes"
+    }
+    
+    content_desc = content_descriptions.get(content_type.lower(), "content")
+    
+    return f"""You are a social behavior expert. Analyze the following {content_desc} for bias against people experiencing homelessness (PEH).
 
-Comment:
+Content:
 \"\"\"{comment}\"\"\"
 
-Is this comment biased against PEH? Reply with Yes or No only.
+Is this content biased against PEH? Reply with Yes or No only.
 
 Analysis:"""
 
-def create_recheck_prompt(comment: str) -> str:
-    """Creates a prompt to check if a mitigated comment is still biased."""
-    return f"""You are a social behavior expert. Analyze the following revised Reddit comment for any remaining bias against people experiencing homelessness.
+def create_recheck_prompt(comment: str, content_type: str = "reddit") -> str:
+    """Creates a prompt to check if mitigated content is still biased.
+    
+    Args:
+        comment: The text content to recheck
+        content_type: Type of content source ("reddit", "x", "news", "meeting_minutes")
+    """
+    # Validate content_type
+    valid_content_types = ["reddit", "x", "news", "meeting_minutes"]
+    if content_type.lower() not in valid_content_types:
+        raise ValueError(f"content_type must be one of {valid_content_types}, got '{content_type}'")
+    
+    # Define content type descriptions
+    content_descriptions = {
+        "reddit": "Reddit comment",
+        "x": "X (Twitter) post",
+        "news": "news article",
+        "meeting_minutes": "meeting minutes"
+    }
+    
+    content_desc = content_descriptions.get(content_type.lower(), "content")
+    
+    return f"""You are a social behavior expert. Analyze the following revised {content_desc} for any remaining bias against people experiencing homelessness.
 
-Comment:
+Content:
 \"\"\"{comment}\"\"\"
 
-Is this comment still biased against PEH? Reply with Yes or No only.
+Is this content still biased against PEH? Reply with Yes or No only.
 
 Analysis:"""
 
@@ -114,21 +211,27 @@ def extract_field(text: str, field_name: str) -> str:
     return match.group(1).strip()
 
 def extract_mitigation_results(mitigation_output: str) -> Tuple[str, str]:
-    """Extracts the new comment and reasoning from the mitigation output."""
-    # Find the last NEW COMMENT: in the text
-    last_new_comment = mitigation_output.rfind("NEW COMMENT:")
-    if last_new_comment == -1:
-        return mitigation_output, "Format error in model response"
+    """Extracts the new content and reasoning from the mitigation output."""
+    # Find the last NEW CONTENT: in the text
+    last_new_content = mitigation_output.rfind("NEW CONTENT:")
+    if last_new_content == -1:
+        # Fallback to NEW COMMENT: for backward compatibility
+        last_new_content = mitigation_output.rfind("NEW COMMENT:")
+        if last_new_content == -1:
+            return mitigation_output, "Format error in model response"
+        content_label = "NEW COMMENT:"
+    else:
+        content_label = "NEW CONTENT:"
     
-    # Get everything after the last NEW COMMENT:
-    text_after_new_comment = mitigation_output[last_new_comment + len("NEW COMMENT:"):]
+    # Get everything after the last NEW CONTENT: or NEW COMMENT:
+    text_after_new_content = mitigation_output[last_new_content + len(content_label):]
     
     # Split on REASONING: if it exists
-    if "REASONING:" in text_after_new_comment:
-        new_comment, reasoning = text_after_new_comment.split("REASONING:", 1)
-        return new_comment.strip(), reasoning.strip()
+    if "REASONING:" in text_after_new_content:
+        new_content, reasoning = text_after_new_content.split("REASONING:", 1)
+        return new_content.strip(), reasoning.strip()
     else:
-        return text_after_new_comment.strip(), "No reasoning provided"
+        return text_after_new_content.strip(), "No reasoning provided"
 
 def extract_classification_results(classification_output: str) -> str:
     """Extracts the classification analysis from the model's response."""
@@ -382,6 +485,80 @@ Response Category: []
 Perception Type: []
 racist: [No]
 '''
+
+FEW_SHOT_X_PROMPT_TEXT = '''Post: [PERSON] awarded $100,000 to [PERSON] (ORG3) to enhance employment and education-related skills for [DATE] and migrant farmworkers. The award was part of a $300,000 discretionary fund award under the CSBG Program. [PERSON]
+Comment Type: [provide a fact or claim]
+Critique Category: [money aid allocation]
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Post: "Did your Black flunky mayor get the🐀[ORGANIZATION]'s memo 2 stick it 2 Rump instead of serving you by refusing 2 deport migrants + give them Black taxpayers'💰 4 shelter+food while Black citizens go homeless? [ORGANIZATION] mayors did. Charity starts at 🏠. [URL]"
+Comment Type: [ask a rhetorical question, provide a fact or claim, express their opinion]
+Critique Category: [money aid allocation, government critique]
+Response Category: []
+Perception Type: [harmful generalization, deserving/undeserving]
+racist: [Yes]
+
+Post: PERSON0 Instead of peacocking on social media for your next job, how about you concentrate on the gaggles of homeless people in [ORGANIZATION]?
+Comment Type: [ask a rhetorical question, provide a fact or claim, express their opinion]
+Critique Category: [societal critique]
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Post: [ORGANIZATION] Just what [ORGANIZATION] needs...another beggar.
+Comment Type: [express their opinion]
+Critique Category: []
+Response Category: []
+Perception Type: [not in my backyard, harmful generalization, deserving/undeserving]
+racist: [No]
+
+Post: [ORGANIZATION] area in [ORGANIZATION] is facing a housing crisis. 40% of people in this area live in poverty, and the city lacks 20,000 affordable housing units. Initiatives like [ORGANIZATION] to fix old housing, but progress depends on securing funding. [URL]
+Comment Type: [provide a fact or claim]
+Critique Category: [money aid allocation]
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+'''
+
+FEW_SHOT_NEWS_PROMPT_TEXT = '''Article: We applaud this important first step to assure the long-term resolution of homelessness.
+Comment Type: [express their opinion]
+Critique Category: []
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Article: 60 million for programs to support homeless veterans including 20 million for [ORGANIZATION]. The President proposed to eliminate the program.
+Comment Type: [provide a fact or claim]
+Critique Category: []
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Article: [ORGANIZATION] county commissioners on [ORGANIZATION] weighed options for creating a migrant support services center while city emergency managers opened a busing hub, as dozens of migrants remained in homeless conditions [LOCATION].
+Comment Type: [provide a fact or claim]
+Critique Category: []
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Article: About 1 in 3 people who are homeless in [ORGANIZATION] report having a mental illness or a substance use disorder, and the combination of homelessness and substance use or untreated mental illness has led to very public tragedies.
+Comment Type: [provide a fact or claim, express their opinion]
+Critique Category: []
+Response Category: []
+Perception Type: []
+racist: [No]
+
+Article: I would imagine she is not being delusional about being unsafe on the streets, [ORGANIZATION], executive director of [ORGANIZATION], told [ORGANIZATION]. [PERSON] specializes in treating mentally ill homeless people. Somewhere in all of this is a hook around the fear she has of being unsafe, especially as a woman who is homeless, and that is not uncommon. There should be a real conversation about that, and it could be very useful for figuring out whats going on with her.
+Comment Type: [provide a fact or claim, provide an observation, express their opinion]
+Critique Category: []
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+'''
+
+FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT = ''' TODO'''
 
 
 

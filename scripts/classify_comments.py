@@ -69,12 +69,12 @@ def process_raw_to_flags(raw_csv_path, flags_csv_path):
     print(f"Saved {len(output_data)} processed comments to {flags_csv_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Classify Reddit comments using Llama or Qwen.")
+    parser = argparse.ArgumentParser(description="Classify content about homelessness using various LLMs with support for different content types.")
     parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
     parser.add_argument('--input', type=str, default=None, help='Input CSV file (for --process_raw_only, this should be the raw CSV)')
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional, for processed/flags CSV)')
-    parser.add_argument('--few_shot', type=str, default=None, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Append few-shot examples for the specified platform (if available)')
-    parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Specify the data source (required)')
+    parser.add_argument('--few_shot', type=str, default='none', choices=['reddit', 'x', 'news', 'meeting_minutes', 'none'], help='Append few-shot examples for the specified platform (if available). Use "none" for zero-shot (default).')
+    parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news', 'meeting_minutes'], help='Specify the data source (required)')
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
     args = parser.parse_args()
@@ -115,7 +115,22 @@ def main():
             args.input = 'output/gold_subset_reddit_comments_by_city_deidentified.csv'
         elif args.source == 'reddit' and args.dataset == 'all':
             args.input = 'data/reddit/all_comments.csv'
-        # Add similar logic for other sources as needed
+        elif args.source == 'x' and args.dataset == 'gold_subset':
+            args.input = 'output/gold_subset_x_posts_by_city_deidentified.csv'
+        elif args.source == 'x' and args.dataset == 'all':
+            args.input = 'data/x/all_posts.csv'
+        elif args.source == 'news' and args.dataset == 'gold_subset':
+            args.input = 'output/gold_subset_news_articles_by_city_deidentified.csv'
+        elif args.source == 'news' and args.dataset == 'all':
+            args.input = 'data/news/all_articles.csv'
+        elif args.source == 'meeting_minutes' and args.dataset == 'gold_subset':
+            args.input = 'output/gold_subset_meeting_minutes_by_city_deidentified.csv'
+        elif args.source == 'meeting_minutes' and args.dataset == 'all':
+            args.input = 'data/meeting_minutes/all_minutes.csv'
+        else:
+            print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
+            print("Please specify --input file path")
+            exit(1)
 
     # Load data
     try:
@@ -129,25 +144,18 @@ def main():
     BATCH_SIZE = 10
     total_batches = (len(df) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    # Few-shot prompt selection
-    few_shot_text = ''
-    if args.few_shot:
-        try:
-            if args.few_shot == 'reddit':
-                from utils import FEW_SHOT_REDDIT_PROMPT_TEXT
-                few_shot_text = FEW_SHOT_REDDIT_PROMPT_TEXT
-            elif args.few_shot == 'x':
-                from utils import FEW_SHOT_X_PROMPT_TEXT
-                few_shot_text = FEW_SHOT_X_PROMPT_TEXT
-            elif args.few_shot == 'news_articles':
-                from utils import FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
-                few_shot_text = FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
-            elif args.few_shot == 'meeting_minutes':
-                from utils import FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
-                few_shot_text = FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
-        except ImportError:
-            print(f"Few-shot prompt for {args.few_shot} not found in utils.py. Proceeding without few-shot examples.")
-            few_shot_text = ''
+    # Validate content_type early
+    try:
+        # Test the content_type validation
+        test_prompt = create_classification_prompt("test", content_type=args.source)
+        print(f"Using content type: {args.source}")
+        if args.few_shot == 'none':
+            print("Using zero-shot classification (no examples)")
+        else:
+            print(f"Using few-shot examples for: {args.few_shot}")
+    except ValueError as e:
+        print(f"Error: {e}")
+        exit(1)
 
     for batch_idx in range(total_batches):
         start_idx = batch_idx * BATCH_SIZE
@@ -163,11 +171,12 @@ def main():
             comment = item["Comment"]
             city = item["City"]
             try:
-                # Compose prompt with optional few-shot examples
-                if few_shot_text:
-                    prompt = create_classification_prompt(comment, few_shot_text)
-                else:
-                    prompt = create_classification_prompt(comment)
+                # Compose prompt with content_type and few-shot examples
+                prompt = create_classification_prompt(
+                    comment, 
+                    content_type=args.source, 
+                    few_shot_text=args.few_shot
+                )
                 output = pipe(
                     prompt,
                     max_new_tokens=model_config["max_new_tokens"],
@@ -199,4 +208,55 @@ def main():
     print(f"Done! Final output saved to {flags_csv_path}")
 
 if __name__ == "__main__":
+    """
+    Examples of how to use this script:
+    
+    # Basic usage - zero-shot classification (default)
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen
+    
+    # Zero-shot classification (explicit)
+    python scripts/classify_comments.py --source x --dataset gold_subset --model llama --few_shot none
+    
+    # Few-shot classification with automatic examples for the same content type
+    python scripts/classify_comments.py --source news --dataset all --model qwen --few_shot news
+    
+    # Few-shot classification with examples from different content type
+    python scripts/classify_comments.py --source meeting_minutes --dataset gold_subset --model gemma3 --few_shot reddit
+    
+    # Process existing raw CSV to generate flags CSV (no LLM inference)
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --process_raw_only --input output/reddit/qwen/classified_comments_reddit_gold_subset_qwen_raw.csv
+    
+    # Specify custom input and output files
+    python scripts/classify_comments.py --source x --dataset all --model llama --input data/custom_x_posts.csv --output results/x_classified.csv
+    
+    # Different models available
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model llama    # Llama 3.2 3B
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen     # Qwen 2.5 7B
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model gemma3   # Gemma 3 4B
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model phi4     # Phi-4 mini
+    
+    # Content types supported
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen      # Reddit comments
+    python scripts/classify_comments.py --source x --dataset gold_subset --model qwen          # X (Twitter) posts
+    python scripts/classify_comments.py --source news --dataset gold_subset --model qwen       # News articles
+    python scripts/classify_comments.py --source meeting_minutes --dataset gold_subset --model qwen  # Meeting minutes
+    
+    # Few-shot options
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen --few_shot none        # Zero-shot
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen --few_shot reddit      # Reddit examples
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen --few_shot x           # X examples
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen --few_shot news        # News examples
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen --few_shot meeting_minutes  # Meeting minutes examples
+    
+    # Datasets available
+    python scripts/classify_comments.py --source reddit --dataset gold_subset --model qwen     # Gold standard subset
+    python scripts/classify_comments.py --source reddit --dataset all --model qwen             # All available data
+    
+    Note:
+    - Default behavior is zero-shot classification (--few_shot none)
+    - Content type is automatically determined from --source
+    - Few-shot examples are automatically selected based on content type
+    - Output files are automatically named based on source, dataset, and model
+    - Use --process_raw_only to convert existing raw CSV to flags CSV without LLM inference
+    """
     main() 

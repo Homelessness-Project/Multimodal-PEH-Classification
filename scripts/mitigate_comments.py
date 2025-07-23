@@ -21,11 +21,11 @@ from utils import (
 )
 
 def main():
-    parser = argparse.ArgumentParser(description="Mitigate and reclassify Reddit comments using Llama or Qwen.")
+    parser = argparse.ArgumentParser(description="Mitigate and reclassify content about homelessness using various LLMs with support for different content types.")
     parser.add_argument('--model', type=str, default='qwen', choices=['llama', 'qwen', 'gemma3', 'phi4'], help='Model to use (llama, qwen, gemma3, or phi4)')
     parser.add_argument('--input', type=str, default=None, help='Input CSV file')
     parser.add_argument('--output', type=str, default=None, help='Output CSV file (optional)')
-    parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news_articles', 'meeting_minutes'], help='Specify the data source (required)')
+    parser.add_argument('--source', type=str, required=True, choices=['reddit', 'x', 'news', 'meeting_minutes'], help='Specify the data source (required)')
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     parser.add_argument('--few_shot', action='store_true', help='Use this flag if the data is a few-shot dataset')
     args = parser.parse_args()
@@ -43,9 +43,9 @@ def main():
             elif args.source == 'x':
                 from utils import FEW_SHOT_X_PROMPT_TEXT
                 few_shot_text = FEW_SHOT_X_PROMPT_TEXT
-            elif args.source == 'news_articles':
-                from utils import FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
-                few_shot_text = FEW_SHOT_NEWS_ARTICLES_PROMPT_TEXT
+            elif args.source == 'news':
+                from utils import FEW_SHOT_NEWS_PROMPT_TEXT
+                few_shot_text = FEW_SHOT_NEWS_PROMPT_TEXT
             elif args.source == 'meeting_minutes':
                 from utils import FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
                 few_shot_text = FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT
@@ -101,7 +101,7 @@ def main():
             city = item["City"]
             try:
                 # Step 1: Detect bias
-                detect_prompt = create_mitigation_y_n_classification_prompt(comment)
+                detect_prompt = create_mitigation_y_n_classification_prompt(comment, content_type=args.source)
                 bias_output = pipe(
                     detect_prompt,
                     max_new_tokens=50,
@@ -116,7 +116,7 @@ def main():
                 new_comment = comment
                 reasoning = ""
                 if bias_result == "Yes":
-                    mitigate_prompt = create_mitigation_prompt(comment)
+                    mitigate_prompt = create_mitigation_prompt(comment, content_type=args.source)
                     mitigation_output = pipe(
                         mitigate_prompt,
                         max_new_tokens=500,
@@ -128,7 +128,7 @@ def main():
                     )[0]['generated_text']
                     new_comment, reasoning = extract_mitigation_results(mitigation_output)
                 # Step 3: Recheck mitigated comment
-                recheck_prompt = create_recheck_prompt(new_comment)
+                recheck_prompt = create_recheck_prompt(new_comment, content_type=args.source)
                 recheck_output = pipe(
                     recheck_prompt,
                     max_new_tokens=50,
