@@ -7,6 +7,8 @@ llama_zero_path = "output/reddit/llama/classified_comments_reddit_gold_subset_ll
 llama_few_path = "output/reddit/llama/classified_comments_reddit_gold_subset_llama_reddit_flags.csv"
 qwen_zero_path = "output/reddit/qwen/classified_comments_reddit_gold_subset_qwen_none_flags.csv"
 qwen_few_path = "output/reddit/qwen/classified_comments_reddit_gold_subset_qwen_reddit_flags.csv"
+gpt_zero_path = "output/reddit/gpt4/classified_comments_reddit_gold_subset_gpt4_none_flags.csv"
+gpt_few_path = "output/reddit/gpt4/classified_comments_reddit_gold_subset_gpt4_reddit_flags.csv"
 
 # Load soft gold and binarize at 1.0 (positive only if value is 1)
 soft_gold = pd.read_csv(soft_gold_path)
@@ -44,6 +46,8 @@ llama_zero = load_pred(llama_zero_path)
 llama_few = load_pred(llama_few_path)
 qwen_zero = load_pred(qwen_zero_path)
 qwen_few = load_pred(qwen_few_path)
+gpt_zero = load_pred(gpt_zero_path)
+gpt_few = load_pred(gpt_few_path)
 
 # Find flag columns (must be present in both gold and pred)
 def get_flag_columns(df):
@@ -52,7 +56,7 @@ def get_flag_columns(df):
     ])]
 
 # Use only columns present in all predictions and gold
-all_preds = [df for df in [llama_zero, llama_few, qwen_zero, qwen_few] if df is not None]
+all_preds = [df for df in [llama_zero, llama_few, qwen_zero, qwen_few, gpt_zero, gpt_few] if df is not None]
 flag_cols = set(get_flag_columns(soft_gold_bin))
 for pred in all_preds:
     flag_cols = flag_cols & set(get_flag_columns(pred))
@@ -85,6 +89,10 @@ if qwen_zero is not None:
     dfs.append(evaluate(soft_gold_bin, qwen_zero, flag_cols, 'qwen_zero'))
 if qwen_few is not None:
     dfs.append(evaluate(soft_gold_bin, qwen_few, flag_cols, 'qwen_few'))
+if gpt_zero is not None:
+    dfs.append(evaluate(soft_gold_bin, gpt_zero, flag_cols, 'gpt_zero'))
+if gpt_few is not None:
+    dfs.append(evaluate(soft_gold_bin, gpt_few, flag_cols, 'gpt_few'))
 
 # Merge all results on index (label)
 from functools import reduce
