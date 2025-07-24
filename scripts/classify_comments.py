@@ -148,26 +148,33 @@ def main():
 
     # Set default input file based on source and dataset if not provided
     if not args.input:
-        if args.source == 'reddit' and args.dataset == 'gold_subset':
-            args.input = 'gold_standard/gold_subset_reddit_comments_by_city_deidentified.csv'
-        elif args.source == 'reddit' and args.dataset == 'all':
-            args.input = 'data/reddit/all_comments.csv'
-        elif args.source == 'x' and args.dataset == 'gold_subset':
-            args.input = 'output/gold_subset_x_posts_by_city_deidentified.csv'
-        elif args.source == 'x' and args.dataset == 'all':
-            args.input = 'data/x/all_posts.csv'
-        elif args.source == 'news' and args.dataset == 'gold_subset':
-            args.input = 'output/gold_subset_news_articles_by_city_deidentified.csv'
-        elif args.source == 'news' and args.dataset == 'all':
-            args.input = 'data/news/all_articles.csv'
-        elif args.source == 'meeting_minutes' and args.dataset == 'gold_subset':
-            args.input = 'output/gold_subset_meeting_minutes_by_city_deidentified.csv'
-        elif args.source == 'meeting_minutes' and args.dataset == 'all':
-            args.input = 'data/meeting_minutes/all_minutes.csv'
+        # Gold standard file logic
+        if args.dataset == 'gold_subset':
+            if args.source == 'reddit':
+                args.input = 'gold_standard/sampled_redddit_comments.csv'
+            elif args.source == 'x':
+                args.input = 'gold_standard/sampled_twitter_posts.csv'
+            elif args.source == 'news':
+                args.input = 'gold_standard/sampled_lexisnexis_news.csv'
+            elif args.source == 'meeting_minutes':
+                args.input = 'output/gold_subset_meeting_minutes_by_city_deidentified.csv'
+            else:
+                print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
+                print("Please specify --input file path")
+                exit(1)
         else:
-            print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
-            print("Please specify --input file path")
-            exit(1)
+            if args.source == 'reddit' and args.dataset == 'all':
+                args.input = 'data/reddit/all_comments.csv'
+            elif args.source == 'x' and args.dataset == 'all':
+                args.input = 'data/x/all_posts.csv'
+            elif args.source == 'news' and args.dataset == 'all':
+                args.input = 'data/news/all_articles.csv'
+            elif args.source == 'meeting_minutes' and args.dataset == 'all':
+                args.input = 'data/meeting_minutes/all_minutes.csv'
+            else:
+                print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
+                print("Please specify --input file path")
+                exit(1)
 
     # Load data
     try:
@@ -176,6 +183,28 @@ def main():
     except Exception as e:
         print(f"Error loading data: {e}")
         exit(1)
+
+    # --- COLUMN SELECTION FOR GOLD STANDARD FILES ---
+    # Map source to text/city columns for gold standard files
+    gold_text_col = None
+    gold_city_col = None
+    if args.dataset == 'gold_subset':
+        if args.source == 'reddit':
+            gold_text_col = 'Comment'
+            gold_city_col = 'City'
+        elif args.source == 'x':
+            gold_text_col = 'Deidentified_text'
+            gold_city_col = 'city'
+        elif args.source == 'news':
+            gold_text_col = 'Deidentified_paragraph_text'
+            gold_city_col = 'city'
+        elif args.source == 'meeting_minutes':
+            # Fallback to default columns if needed
+            gold_text_col = 'Comment'
+            gold_city_col = 'City'
+    # If using gold standard, rename columns for uniformity
+    if gold_text_col and gold_city_col:
+        df = df.rename(columns={gold_text_col: 'Comment', gold_city_col: 'City'})
 
     # If --test and API model, only process 10 comments
     if args.test and args.model in api_models:
