@@ -38,7 +38,18 @@ def parse_bracketed_single_value(field):
     return items[0] if items else ""
 
 def process_raw_to_flags(raw_csv_path, flags_csv_path):
-    df = pd.read_csv(raw_csv_path)
+    import os
+    if not os.path.exists(raw_csv_path) or os.path.getsize(raw_csv_path) == 0:
+        print(f"[Warning] File {raw_csv_path} is empty or does not exist. Skipping flag processing.")
+        return
+    try:
+        df = pd.read_csv(raw_csv_path)
+    except pd.errors.EmptyDataError:
+        print(f"[Warning] File {raw_csv_path} has no columns to parse. Skipping flag processing.")
+        return
+    if df.shape[1] == 0:
+        print(f"[Warning] File {raw_csv_path} has no columns. Skipping flag processing.")
+        return
     output_data = []
     for _, row in tqdm(df.iterrows(), total=len(df)):
         comment = row['Comment']
@@ -190,18 +201,24 @@ def main():
 
     # Check if we're resuming from a previous run
     if os.path.exists(raw_csv_path):
-        existing_df = pd.read_csv(raw_csv_path)
-        processed_count = len(existing_df)
-        print(f"Found existing raw output with {processed_count} processed comments")
-        if processed_count >= len(df):
-            print("All comments already processed. Processing raw to flags...")
-            process_raw_to_flags(raw_csv_path, flags_csv_path)
-            print(f"Done! Final output saved to {flags_csv_path}")
-            return
+        # If the file exists but is empty, delete it and start from scratch
+        if os.path.getsize(raw_csv_path) == 0:
+            print(f"[Warning] {raw_csv_path} is empty. Deleting and starting from scratch.")
+            os.remove(raw_csv_path)
+            start_batch = 0
         else:
-            print(f"Resuming from comment {processed_count}")
-            output_data = existing_df.to_dict('records')
-            start_batch = processed_count // BATCH_SIZE
+            existing_df = pd.read_csv(raw_csv_path)
+            processed_count = len(existing_df)
+            print(f"Found existing raw output with {processed_count} processed comments")
+            if processed_count >= len(df):
+                print("All comments already processed. Processing raw to flags...")
+                process_raw_to_flags(raw_csv_path, flags_csv_path)
+                print(f"Done! Final output saved to {flags_csv_path}")
+                return
+            else:
+                print(f"Resuming from comment {processed_count}")
+                output_data = existing_df.to_dict('records')
+                start_batch = processed_count // BATCH_SIZE
     else:
         start_batch = 0
 

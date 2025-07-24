@@ -274,7 +274,7 @@ def get_model_config(model_name: str) -> Dict:
         "gpt4": {
             "api": "openai",
             "api_key_env": "OPENAI_API_KEY",
-            "model_id": "gpt-4-1106-preview",  # or latest GPT-4.1 model id
+            "model_id": "gpt-4.1",
             "max_new_tokens": 500
         },
         "gemini": {
@@ -310,16 +310,29 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
     api_key = os.environ.get(config.get("api_key_env", ""), None)
     model_id = config.get("model_id")
     if api == "openai":
-        # OpenAI GPT-4.1
-        import openai
-        openai.api_key = api_key
-        response = openai.ChatCompletion.create(
-            model=model_id,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=max_tokens,
-            temperature=0.1,
-        )
-        return response["choices"][0]["message"]["content"]
+        # Use new OpenAI SDK v1.x for gpt-4.1 and similar models
+        try:
+            from openai import OpenAI
+            client = OpenAI(api_key=api_key)
+            # Use chat.completions.create for chat models
+            response = client.chat.completions.create(
+                model=model_id,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=max_tokens,
+                temperature=0.1,
+            )
+            return response.choices[0].message.content
+        except ImportError:
+            # Fallback to old SDK if new one is not available
+            import openai
+            openai.api_key = api_key
+            response = openai.ChatCompletion.create(
+                model=model_id,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=max_tokens,
+                temperature=0.1,
+            )
+            return response["choices"][0]["message"]["content"]
     elif api == "google":
         # Gemini 2.5 Pro (Google AI Studio API)
         endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={api_key}"
