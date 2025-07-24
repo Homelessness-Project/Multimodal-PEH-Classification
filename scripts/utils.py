@@ -638,5 +638,16 @@ racist: [No]
 
 FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT = ''' TODO'''
 
-
+CITY_MAP = {
+    'south bend': 'southbend',
+    'rockford': 'rockford',
+    'kalamazoo': 'kzoo',
+    'scranton': 'scranton',
+    'fayetteville': 'fayetteville',
+    'san francisco': 'sanfrancisco',
+    'portland': 'portland',
+    'buffalo': 'buffalo',
+    'baltimore': 'baltimore',
+    'el paso': 'elpaso',
+}
 
