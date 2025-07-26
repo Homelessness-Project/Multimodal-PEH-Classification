@@ -199,9 +199,8 @@ def main():
             gold_text_col = 'Deidentified_paragraph_text'
             gold_city_col = 'city'
         elif args.source == 'meeting_minutes':
-            # Fallback to default columns if needed
-            gold_text_col = 'Comment'
-            gold_city_col = 'City'
+            gold_text_col = 'Deidentified_paragraph'
+            gold_city_col = 'city'
     # If using gold standard, rename columns for uniformity
     if gold_text_col and gold_city_col:
         df = df.rename(columns={gold_text_col: 'Comment', gold_city_col: 'City'})
