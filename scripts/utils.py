@@ -636,7 +636,40 @@ Perception Type: []
 racist: [No]
 '''
 
-FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT = ''' TODO'''
+FEW_SHOT_MEETING_MINUTES_PROMPT_TEXT = '''Meeting Minutes: Okay. But on that area, one corner is the location that is on dispute right now. And the reason that we are, that I am questioning that is because we got a lot of homeless people there.
+Comment Type: [provide a fact or claim, express their opinion]
+Critique Category: []
+Response Category: []
+Perception Type: [not in my backyard]
+racist: [No]
+
+Meeting Minutes: but they stuck with us, they got all the permissions they needed, and we would not have made the functional end of veteran homelessness in [ORGANIZATION] without them, so thank you. PERSON0? Well, thank you for this honor.
+Comment Type: [provide a fact or claim, express their opinion]
+Critique Category: []
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]
+
+Meeting Minutes: I've seen it all, like certain people being removed out of there. And I'm down there [ORGANIZATION]. And all the [ORGANIZATION] and all the residents there, like, I know them all, you know, and I love them because I was dropped off to be homeless [DATE].
+Comment Type: [provide a fact or claim, provide an observation, express their opinion]
+Critique Category: []
+Response Category: []
+Perception Type: []
+racist: [No]
+
+Meeting Minutes: Yeah. Yeah, I just think that there's a different ROI for chronically homeless folks. And there's a deeper impact, but a more narrow impact.
+Comment Type: [provide a fact or claim, express their opinion]
+Critique Category: [money aid allocation]
+Response Category: [solutions/interventions]
+Perception Type: [deserving/undeserving]
+racist: [No]
+
+Meeting Minutes: Simple delays, be they [ORGANIZATION] or [LOCATION], have been a feeble solution. Demolitions of up to 370 affordable houses a year valued at $100 million dwarfs the city's efforts at spending $20 million to support affordable housing. Can we really achieve affordable housing through demolition?
+Comment Type: [ask a rhetorical question, provide a fact or claim, express their opinion]
+Critique Category: [money aid allocation, government critique]
+Response Category: [solutions/interventions]
+Perception Type: []
+racist: [No]'''
 
 CITY_MAP = {
     'south bend': 'southbend',
