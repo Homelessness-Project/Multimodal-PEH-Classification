@@ -157,20 +157,20 @@ def main():
             elif args.source == 'news':
                 args.input = 'gold_standard/sampled_lexisnexis_news.csv'
             elif args.source == 'meeting_minutes':
-                args.input = 'output/gold_subset_meeting_minutes_by_city_deidentified.csv'
+                args.input = 'gold_standard/sampled_meeting_minutes.csv'
             else:
                 print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
                 print("Please specify --input file path")
                 exit(1)
         else:
             if args.source == 'reddit' and args.dataset == 'all':
-                args.input = 'data/reddit/all_comments.csv'
+                args.input = 'complete_dataset/all_reddit_comments.csv'
             elif args.source == 'x' and args.dataset == 'all':
-                args.input = 'data/x/all_posts.csv'
+                args.input = 'complete_dataset/all_twitter_posts.csv'
             elif args.source == 'news' and args.dataset == 'all':
-                args.input = 'data/news/all_articles.csv'
+                args.input = 'complete_dataset/all_news_articles.csv'
             elif args.source == 'meeting_minutes' and args.dataset == 'all':
-                args.input = 'data/meeting_minutes/all_minutes.csv'
+                args.input = 'complete_dataset/all_meeting_minutes.csv'
             else:
                 print(f"Warning: No default input file found for source '{args.source}' and dataset '{args.dataset}'")
                 print("Please specify --input file path")
