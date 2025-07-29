@@ -36,31 +36,67 @@ field_map = {
 RAW_SCORES_FILE = 'annotation/reddit_raw_scores.csv'
 SOFT_LABELS_FILE = 'output/annotation/reddit_soft_labels.csv'
 
-# Update file paths for Llama and Qwen classified/mitigated outputs
+# Update file paths for all models classified outputs
 LLAMA_CLASSIFIED_FILE = 'output/classified_comments_reddit_gold_subset_llama.csv'
 QWEN_CLASSIFIED_FILE = 'output/classified_comments_reddit_gold_subset_qwen.csv'
-LLAMA_MITIGATED_FILE = 'output/mitigated_comments_reddit_gold_subset_llama.csv'
-QWEN_MITIGATED_FILE = 'output/mitigated_comments_reddit_gold_subset_qwen.csv'
+GPT4_CLASSIFIED_FILE = 'output/reddit/gpt4/classified_comments_reddit_gold_subset_gpt4_none_flags.csv'
+GROK_CLASSIFIED_FILE = 'output/reddit/grok/classified_comments_reddit_gold_subset_grok_none_flags.csv'
+PHI4_CLASSIFIED_FILE = 'output/classified_comments_reddit_gold_subset_phi4.csv'
 
 def load_classifications():
-    """Load both Llama and Qwen classification results for original and mitigated data."""
+    """Load all model classification results for original and mitigated data."""
     try:
         print("Loading classification files...")
         llama_df = pd.read_csv(LLAMA_CLASSIFIED_FILE)
         qwen_df = pd.read_csv(QWEN_CLASSIFIED_FILE)
-        llama_mit_df = pd.read_csv(LLAMA_MITIGATED_FILE)
-        qwen_mit_df = pd.read_csv(QWEN_MITIGATED_FILE)
+        
+        # Load GPT-4 if available
+        try:
+            gpt4_df = pd.read_csv(GPT4_CLASSIFIED_FILE)
+            print(f"Loaded GPT-4 data: {len(gpt4_df)} comments")
+        except FileNotFoundError:
+            print("GPT-4 file not found, skipping...")
+            gpt4_df = None
+        
+        # Load Grok if available
+        try:
+            grok_df = pd.read_csv(GROK_CLASSIFIED_FILE)
+            print(f"Loaded Grok data: {len(grok_df)} comments")
+        except FileNotFoundError:
+            print("Grok file not found, skipping...")
+            grok_df = None
+        
+        # Load Phi-4 if available
+        try:
+            phi4_df = pd.read_csv(PHI4_CLASSIFIED_FILE)
+            print(f"Loaded Phi-4 data: {len(phi4_df)} comments")
+        except FileNotFoundError:
+            print("Phi-4 file not found, skipping...")
+            phi4_df = None
+        
         soft_labels_df = pd.read_csv(SOFT_LABELS_FILE)
-        print(f"Loaded {len(llama_df)} comments from each model")
-        print(f"Mitigated data lengths - Llama: {len(llama_mit_df)}, Qwen: {len(qwen_mit_df)}")
+        
+        print(f"Loaded {len(llama_df)} comments from Llama")
+        print(f"Loaded {len(qwen_df)} comments from Qwen")
         print(f"Soft labels length: {len(soft_labels_df)}")
+        
         print("\nSoft labels columns:")
         print(soft_labels_df.columns.tolist())
         print("\nLlama classification columns:")
         print(llama_df.columns.tolist())
         print("\nQwen classification columns:")
         print(qwen_df.columns.tolist())
-        return llama_df, qwen_df, llama_mit_df, qwen_mit_df, soft_labels_df
+        if gpt4_df is not None:
+            print("\nGPT-4 classification columns:")
+            print(gpt4_df.columns.tolist())
+        if grok_df is not None:
+            print("\nGrok classification columns:")
+            print(grok_df.columns.tolist())
+        if phi4_df is not None:
+            print("\nPhi-4 classification columns:")
+            print(phi4_df.columns.tolist())
+        
+        return llama_df, qwen_df, gpt4_df, grok_df, phi4_df, soft_labels_df
     except Exception as e:
         print(f"Error loading classification files: {e}")
         exit(1)
@@ -132,6 +168,59 @@ def calculate_soft_label_agreement(llama_df, qwen_df, soft_labels_df, field):
         'llama_values': llama_values,
         'qwen_values': qwen_values
     }
+
+def calculate_multi_model_f1_scores(models_dict, soft_labels_df, fields):
+    """Calculate F1 scores for multiple models against soft labels."""
+    f1_results = {}
+    
+    for field in fields:
+        field_results = {}
+        soft_values = pd.to_numeric(soft_labels_df[field], errors='coerce').fillna(0)
+        soft_bin = (soft_values == 1).astype(int)  # 1 if soft label is 1, else 0
+        
+        for model_name, model_df in models_dict.items():
+            if model_df is not None:
+                try:
+                    # Get model predictions for this field
+                    if field == 'racist':
+                        # Handle racist field specially
+                        if 'Racist_Flag' in model_df.columns:
+                            model_pred = model_df['Racist_Flag'].fillna(0).astype(int)
+                        else:
+                            # Extract from racist text field
+                            def extract_racist_value(text):
+                                if pd.isna(text):
+                                    return 0
+                                text = str(text).lower().strip()
+                                if text == "yes" or "racist: yes" in text:
+                                    return 1
+                                elif text == "no" or "racist: no" in text:
+                                    return 0
+                                return 0
+                            model_pred = model_df['racist'].apply(extract_racist_value)
+                    else:
+                        # Handle other fields
+                        field_col = field_map[field]
+                        if field_col in model_df.columns:
+                            model_pred = pd.to_numeric(model_df[field_col], errors='coerce').fillna(0).astype(int)
+                        else:
+                            model_pred = np.zeros(len(model_df))
+                    
+                    # Calculate F1 score
+                    if len(model_pred) == len(soft_bin):
+                        f1 = f1_score(soft_bin, model_pred, zero_division=0)
+                        field_results[model_name] = f1
+                    else:
+                        field_results[model_name] = np.nan
+                except Exception as e:
+                    print(f"Error calculating F1 for {model_name} on {field}: {e}")
+                    field_results[model_name] = np.nan
+            else:
+                field_results[model_name] = np.nan
+        
+        f1_results[field] = field_results
+    
+    return f1_results
 
 def plot_confusion_matrix(cm, field, kappa, llama_positives, qwen_positives, ax, delta_info=None, llama_soft_agree=None, qwen_soft_agree=None):
     """Plot confusion matrix on the given axis, with optional soft label agreement annotations."""
@@ -406,40 +495,68 @@ def gold_standard_by_city_size():
 
 def main():
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Calculate inter-coder reliability between Llama and Qwen models')
-    parser.add_argument('--include_mitigation', action='store_true', help='Include mitigation analysis')
+    parser = argparse.ArgumentParser(description='Calculate F1 scores and agreement for multiple LLM models')
     args = parser.parse_args()
     
     # Load the classification results
-    llama_df, qwen_df, llama_mit_df, qwen_mit_df, soft_labels_df = load_classifications()
+    llama_df, qwen_df, gpt4_df, grok_df, phi4_df, soft_labels_df = load_classifications()
     
-    # Ensure we're comparing the same comments
-    assert len(llama_df) == len(qwen_df), "Number of comments must match between Llama and Qwen"
+    # Create models dictionary
+    models_dict = {
+        'Llama': llama_df,
+        'Qwen': qwen_df,
+        'GPT-4': gpt4_df,
+        'Grok': grok_df,
+        'Phi-4': phi4_df
+    }
+    
+    # Remove None models
+    models_dict = {k: v for k, v in models_dict.items() if v is not None}
+    
+    print(f"\nLoaded {len(models_dict)} models: {list(models_dict.keys())}")
     
     # Fields to analyze - these match the column names in soft_labels.csv
     fields = list(field_map.keys())
     
-    # Calculate agreement statistics for original data
-    print("\nCalculating agreement statistics for original data...")
-    original_results = {}
-    for field in tqdm(fields, desc="Fields"):
-        kappa, cm, llama_positives, qwen_positives = calculate_kappa(
-            llama_df, qwen_df, field_map[field]
-        )
-        original_results[field] = {
-            'kappa': kappa,
-            'confusion_matrix': cm,
-            'llama_positives': llama_positives,
-            'qwen_positives': qwen_positives
-        }
+    # Calculate F1 scores for all models
+    print("\nCalculating F1 scores for all models...")
+    f1_results = calculate_multi_model_f1_scores(models_dict, soft_labels_df, fields)
     
-    # Calculate agreement with soft labels
-    print("\nCalculating agreement with soft labels...")
-    soft_results = {}
-    for field in tqdm(fields, desc="Fields"):
-        soft_results[field] = calculate_soft_label_agreement(
-            llama_df, qwen_df, soft_labels_df, field
-        )
+    # Create F1 scores DataFrame
+    f1_data = []
+    for field in fields:
+        row = {'Field': field}
+        for model_name in models_dict.keys():
+            row[f'{model_name}_F1'] = f1_results[field].get(model_name, np.nan)
+        f1_data.append(row)
+    
+    f1_df = pd.DataFrame(f1_data)
+    f1_df.to_csv('output/charts/llm_f1_scores_multi_models.csv', index=False)
+    print('Multi-model F1 scores saved to output/charts/llm_f1_scores_multi_models.csv')
+    
+    # Print F1 scores summary
+    print("\n=== F1 Scores Summary ===")
+    print(f"{'Field':<25} {'Llama':<8} {'Qwen':<8} {'GPT-4':<8} {'Grok':<8} {'Phi-4':<8}")
+    print("-" * 70)
+    for field in fields:
+        row = f1_df[f1_df['Field'] == field].iloc[0]
+        print(f"{field:<25} {row.get('Llama_F1', 'N/A'):<8.3f} {row.get('Qwen_F1', 'N/A'):<8.3f} {row.get('GPT-4_F1', 'N/A'):<8.3f} {row.get('Grok_F1', 'N/A'):<8.3f} {row.get('Phi-4_F1', 'N/A'):<8.3f}")
+    
+    # Calculate mean F1 scores per model
+    print("\n=== Mean F1 Scores by Model ===")
+    model_means = {}
+    for model_name in models_dict.keys():
+        model_f1s = [f1_results[field].get(model_name, np.nan) for field in fields]
+        model_means[model_name] = np.nanmean(model_f1s)
+        print(f"{model_name}: {model_means[model_name]:.3f}")
+    
+    # Save model comparison
+    comparison_df = pd.DataFrame({
+        'Model': list(model_means.keys()),
+        'Mean_F1': list(model_means.values())
+    })
+    comparison_df.to_csv('output/charts/model_comparison_f1.csv', index=False)
+    print('Model comparison saved to output/charts/model_comparison_f1.csv')
     
     # Create PDF for original data
     with PdfPages('output/charts/confusion_matrices.pdf') as pdf:
