@@ -280,13 +280,13 @@ def get_model_config(model_name: str) -> Dict:
         "gemini": {
             "api": "google",
             "api_key_env": "GOOGLE_API_KEY",
-            "model_id": "models/gemini-1.5-pro-latest",
+            "model_id": "gemini-1.5-pro-latest",
             "max_new_tokens": 500
         },
         "grok": {
             "api": "grok",
             "api_key_env": "GROK_API_KEY",
-            "model_id": "grok-1.5-4",  # or latest Grok 4 model id
+            "model_id": "grok-4-latest",
             "max_new_tokens": 500
         }
     }
@@ -294,6 +294,22 @@ def get_model_config(model_name: str) -> Dict:
 
 import requests
 import os
+import time
+import random
+
+def handle_rate_limit(response, model_name):
+    """Handle rate limit responses with exponential backoff."""
+    if response.status_code == 429:  # Rate limit
+        retry_after = response.headers.get('Retry-After')
+        if retry_after:
+            wait_time = int(retry_after)
+        else:
+            wait_time = 60  # Default 1 minute
+        
+        print(f"Rate limit hit for {model_name}. Waiting {wait_time} seconds...")
+        time.sleep(wait_time)
+        return True  # Should retry
+    return False  # Don't retry
 
 def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
     """Call an API-based LLM (GPT-4.1, Gemini 2.5 Pro, Grok 4) and return the response text."""
@@ -311,44 +327,84 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
     model_id = config.get("model_id")
     if api == "openai":
         # Use new OpenAI SDK v1.x for gpt-4.1 and similar models
-        try:
-            from openai import OpenAI
-            client = OpenAI(api_key=api_key)
-            # Use chat.completions.create for chat models
-            response = client.chat.completions.create(
-                model=model_id,
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=max_tokens,
-                temperature=0.1,
-            )
-            return response.choices[0].message.content
-        except ImportError:
-            # Fallback to old SDK if new one is not available
-            import openai
-            openai.api_key = api_key
-            response = openai.ChatCompletion.create(
-                model=model_id,
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=max_tokens,
-                temperature=0.1,
-            )
-            return response["choices"][0]["message"]["content"]
+        max_retries = 3
+        base_delay = 1
+        
+        for attempt in range(max_retries):
+            try:
+                from openai import OpenAI
+                client = OpenAI(api_key=api_key)
+                # Use chat.completions.create for chat models
+                response = client.chat.completions.create(
+                    model=model_id,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=max_tokens,
+                    temperature=0.1,
+                )
+                return response.choices[0].message.content
+            except ImportError:
+                # Fallback to old SDK if new one is not available
+                import openai
+                openai.api_key = api_key
+                response = openai.ChatCompletion.create(
+                    model=model_id,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=max_tokens,
+                    temperature=0.1,
+                )
+                return response["choices"][0]["message"]["content"]
+            except Exception as e:
+                if "rate_limit" in str(e).lower() or "429" in str(e):
+                    if attempt < max_retries - 1:
+                        delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                        print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(delay)
+                        continue
+                raise e
     elif api == "google":
         # Gemini 2.5 Pro (Google AI Studio API)
         endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={api_key}"
         headers = {"Content-Type": "application/json"}
         data = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"maxOutputTokens": max_tokens}}
-        resp = requests.post(endpoint, headers=headers, json=data)
-        resp.raise_for_status()
-        return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+        
+        max_retries = 3
+        base_delay = 1
+        
+        for attempt in range(max_retries):
+            resp = requests.post(endpoint, headers=headers, json=data)
+            if resp.status_code == 429:  # Rate limit
+                if attempt < max_retries - 1:
+                    delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                    print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
+                    time.sleep(delay)
+                    continue
+            resp.raise_for_status()
+            return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
     elif api == "grok":
-        # Grok 4 (xAI API, placeholder)
-        endpoint = "https://api.grok.x.ai/v1/chat/completions"
+        # Grok 4 (xAI API)
+        endpoint = "https://api.x.ai/v1/chat/completions"
         headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-        data = {"model": model_id, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens}
-        resp = requests.post(endpoint, headers=headers, json=data)
-        resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+        data = {
+            "model": model_id, 
+            "messages": [{"role": "user", "content": prompt}], 
+            "max_tokens": max_tokens,
+            "stream": False,
+            "temperature": 0.1
+        }
+        
+        max_retries = 3
+        base_delay = 1
+        
+        for attempt in range(max_retries):
+            resp = requests.post(endpoint, headers=headers, json=data)
+            if resp.status_code == 429:  # Rate limit
+                if attempt < max_retries - 1:
+                    delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                    print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
+                    time.sleep(delay)
+                    continue
+            resp.raise_for_status()
+            return resp.json()["choices"][0]["message"]["content"]
     else:
         raise ValueError(f"Unknown or unsupported API model: {model_name}")
 

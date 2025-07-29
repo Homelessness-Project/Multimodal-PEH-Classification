@@ -7,6 +7,8 @@ from datasets import Dataset
 import os
 import sys
 import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import time
 from utils import (
     get_model_config, 
     create_classification_prompt, 
@@ -32,10 +34,68 @@ def parse_bracketed_single_value(field):
     if not field or field.strip() in ["[]", "", "none", "n/a", "-", "no categories", "none applicable"]:
         return ""
     field = field.strip()
+    # Remove quotes if present
+    if field.startswith('"') and field.endswith('"'):
+        field = field[1:-1]
     if field.startswith('[') and field.endswith(']'):
         field = field[1:-1]
     items = [v.strip() for v in field.split(',') if v.strip()]
     return items[0] if items else ""
+
+def process_single_comment(item, args, model_config, api_models, pipe, tokenizer):
+    """Process a single comment with error handling and token counting."""
+    comment = item["Comment"]
+    city = item["City"]
+    try:
+        # Compose prompt with content_type and few-shot examples
+        prompt = create_classification_prompt(
+            comment, 
+            content_type=args.source, 
+            few_shot_text=args.few_shot
+        )
+        
+        if args.model in api_models:
+            from utils import call_api_llm
+            output = call_api_llm(prompt, args.model, max_tokens=model_config["max_new_tokens"])
+            # Estimate tokens (very rough: 1 token ~ 4 chars)
+            input_tokens = len(prompt) // 4
+            output_tokens = len(output) // 4
+        else:
+            output = pipe(
+                prompt,
+                max_new_tokens=model_config["max_new_tokens"],
+                do_sample=True,
+                temperature=model_config["temperature"],
+                top_p=model_config["top_p"],
+                repetition_penalty=model_config["repetition_penalty"],
+                pad_token_id=tokenizer.eos_token_id
+            )[0]['generated_text']
+            input_tokens = 0
+            output_tokens = 0
+        
+        analysis_start = output.find("Analysis:")
+        if analysis_start != -1:
+            output = output[analysis_start + len("Analysis:"):].strip()
+        
+        return {
+            "Comment": comment,
+            "City": city,
+            "Raw Response": output,
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "success": True
+        }
+    except Exception as e:
+        print(f"Error processing comment: {comment[:100]}...")
+        print(f"Error: {e}")
+        return {
+            "Comment": comment,
+            "City": city,
+            "Raw Response": f"ERROR: {str(e)}",
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "success": False
+        }
 
 def process_raw_to_flags(raw_csv_path, flags_csv_path):
     import os
@@ -61,6 +121,9 @@ def process_raw_to_flags(raw_csv_path, flags_csv_path):
         perception_text = ", ".join(parse_bracketed_list(extract_field(output, "Perception Type")))
         racist_text = extract_field(output, "racist")
         racist_value = parse_bracketed_single_value(racist_text).lower()
+        # Handle cases where the value might contain "racist:" prefix
+        if racist_value.startswith("racist:"):
+            racist_value = racist_value.replace("racist:", "").strip()
         racist_flag = 1 if racist_value in ["yes", "true", "1"] else 0
         reasoning = extract_field(output, "Reasoning")
         if not reasoning:
@@ -91,6 +154,7 @@ def main():
     parser.add_argument('--dataset', type=str, required=True, choices=['all', 'gold_subset'], help='Specify which dataset to use (required)')
     parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
     parser.add_argument('--test', action='store_true', help='If set and using an API model, only process 10 comments and output estimated cost.')
+    parser.add_argument('--max_workers', type=int, default=8, help='Number of parallel workers for API calls (default: 8 for API models, 1 for local models)')
     args = parser.parse_args()
 
     # Setup logging if running with nohup
@@ -131,10 +195,18 @@ def main():
     model_config = get_model_config(args.model)
     model_id = model_config["model_id"]
     api_models = ["gpt4", "gemini", "grok"]
+    pipe = None
+    tokenizer = None
+    
+    # Set default workers based on model type
     if args.model in api_models:
         from utils import call_api_llm
-        pipe = None  # Not used
+        if args.max_workers == 8:  # If using default value
+            print(f"Using 8 parallel workers for API model {args.model}")
     else:
+        if args.max_workers == 8:  # If using default value
+            args.max_workers = 1
+            print(f"Using 1 worker for local model {args.model} (parallel processing not supported)")
         try:
             tokenizer = AutoTokenizer.from_pretrained(model_id)
             tokenizer.padding_side = 'left'
@@ -151,7 +223,7 @@ def main():
         # Gold standard file logic
         if args.dataset == 'gold_subset':
             if args.source == 'reddit':
-                args.input = 'gold_standard/sampled_redddit_comments.csv'
+                args.input = 'gold_standard/sampled_reddit_comments.csv'
             elif args.source == 'x':
                 args.input = 'gold_standard/sampled_twitter_posts.csv'
             elif args.source == 'news':
@@ -211,7 +283,8 @@ def main():
         print("Test mode: Only processing first 10 comments to save API cost.")
 
     output_data = []
-    BATCH_SIZE = 10
+    # Use larger batch size for API models (with parallel workers) vs local models
+    BATCH_SIZE = 20 if args.model in api_models else 10
     total_batches = (len(df) + BATCH_SIZE - 1) // BATCH_SIZE
 
     # Validate content_type early
@@ -259,70 +332,120 @@ def main():
     api_input_tokens = 0
     api_output_tokens = 0
 
-    for batch_idx in range(start_batch, total_batches):
-        start_idx = batch_idx * BATCH_SIZE
-        end_idx = min((batch_idx + 1) * BATCH_SIZE, len(df))
-        batch_df = df.iloc[start_idx:end_idx]
-        print(f"\nProcessing batch {batch_idx + 1}/{total_batches}")
-        batch_data = {
-            "Comment": batch_df["Comment"].tolist(),
-            "City": batch_df["City"].tolist()
-        }
-        batch_dataset = Dataset.from_dict(batch_data)
-        batch_outputs = []
+    # Process comments with optional parallelization
+    if args.max_workers > 1 and args.model in api_models:
+        print(f"Using parallel processing with {args.max_workers} workers")
         
-        for item in tqdm(batch_dataset, total=len(batch_dataset)):
-            comment = item["Comment"]
-            city = item["City"]
-            try:
-                # Compose prompt with content_type and few-shot examples
-                prompt = create_classification_prompt(
-                    comment, 
-                    content_type=args.source, 
-                    few_shot_text=args.few_shot
-                )
-                if args.model in api_models:
-                    output = call_api_llm(prompt, args.model, max_tokens=model_config["max_new_tokens"])
-                    # Estimate tokens (very rough: 1 token ~ 4 chars)
-                    input_tokens = len(prompt) // 4
-                    output_tokens = len(output) // 4
-                    api_input_tokens += input_tokens
-                    api_output_tokens += output_tokens
-                else:
-                    output = pipe(
-                        prompt,
-                        max_new_tokens=model_config["max_new_tokens"],
-                        do_sample=True,
-                        temperature=model_config["temperature"],
-                        top_p=model_config["top_p"],
-                        repetition_penalty=model_config["repetition_penalty"],
-                        pad_token_id=tokenizer.eos_token_id
-                    )[0]['generated_text']
-                analysis_start = output.find("Analysis:")
-                if analysis_start != -1:
-                    output = output[analysis_start + len("Analysis:"):].strip()
-                # Save to batch outputs
-                batch_outputs.append({
-                    "Comment": comment,
-                    "City": city,
-                    "Raw Response": output
-                })
-            except Exception as e:
-                print(f"Error processing comment: {comment[:100]}...")
-                print(f"Error: {e}")
-                continue
-        
-        # Add batch outputs to main data
-        output_data.extend(batch_outputs)
-        
-        # Save progress after each batch
-        temp_df = pd.DataFrame(output_data)
-        temp_df.to_csv(raw_csv_path, index=False)
-        print(f"Saved batch {batch_idx + 1} progress: {len(output_data)}/{len(df)} comments processed")
-        
-        # Also save flags after each batch
-        process_raw_to_flags(raw_csv_path, flags_csv_path)
-        print(f"Updated flags CSV with {len(output_data)} processed comments")
+        for batch_idx in range(start_batch, total_batches):
+            start_idx = batch_idx * BATCH_SIZE
+            end_idx = min((batch_idx + 1) * BATCH_SIZE, len(df))
+            batch_df = df.iloc[start_idx:end_idx]
+            print(f"\nProcessing batch {batch_idx + 1}/{total_batches} with parallel workers")
+            
+            batch_data = {
+                "Comment": batch_df["Comment"].tolist(),
+                "City": batch_df["City"].tolist()
+            }
+            batch_dataset = Dataset.from_dict(batch_data)
+            batch_outputs = []
+            
+            # Use ThreadPoolExecutor for parallel API calls
+            with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
+                # Submit all tasks
+                future_to_item = {
+                    executor.submit(process_single_comment, item, args, model_config, api_models, pipe, tokenizer): item 
+                    for item in batch_dataset
+                }
+                
+                # Collect results as they complete
+                for future in tqdm(as_completed(future_to_item), total=len(batch_dataset), desc=f"Batch {batch_idx + 1}"):
+                    result = future.result()
+                    batch_outputs.append({
+                        "Comment": result["Comment"],
+                        "City": result["City"],
+                        "Raw Response": result["Raw Response"]
+                    })
+                    api_input_tokens += result["input_tokens"]
+                    api_output_tokens += result["output_tokens"]
+            
+            # Add batch outputs to main data
+            output_data.extend(batch_outputs)
+            
+            # Save progress after each batch
+            temp_df = pd.DataFrame(output_data)
+            temp_df.to_csv(raw_csv_path, index=False)
+            print(f"Saved batch {batch_idx + 1} progress: {len(output_data)}/{len(df)} comments processed")
+            
+            # Also save flags after each batch
+            process_raw_to_flags(raw_csv_path, flags_csv_path)
+            print(f"Updated flags CSV with {len(output_data)} processed comments")
+    
+    else:
+        # Sequential processing (original code)
+        for batch_idx in range(start_batch, total_batches):
+            start_idx = batch_idx * BATCH_SIZE
+            end_idx = min((batch_idx + 1) * BATCH_SIZE, len(df))
+            batch_df = df.iloc[start_idx:end_idx]
+            print(f"\nProcessing batch {batch_idx + 1}/{total_batches}")
+            batch_data = {
+                "Comment": batch_df["Comment"].tolist(),
+                "City": batch_df["City"].tolist()
+            }
+            batch_dataset = Dataset.from_dict(batch_data)
+            batch_outputs = []
+            
+            for item in tqdm(batch_dataset, total=len(batch_dataset)):
+                comment = item["Comment"]
+                city = item["City"]
+                try:
+                    # Compose prompt with content_type and few-shot examples
+                    prompt = create_classification_prompt(
+                        comment, 
+                        content_type=args.source, 
+                        few_shot_text=args.few_shot
+                    )
+                    if args.model in api_models:
+                        output = call_api_llm(prompt, args.model, max_tokens=model_config["max_new_tokens"])
+                        # Estimate tokens (very rough: 1 token ~ 4 chars)
+                        input_tokens = len(prompt) // 4
+                        output_tokens = len(output) // 4
+                        api_input_tokens += input_tokens
+                        api_output_tokens += output_tokens
+                    else:
+                        output = pipe(
+                            prompt,
+                            max_new_tokens=model_config["max_new_tokens"],
+                            do_sample=True,
+                            temperature=model_config["temperature"],
+                            top_p=model_config["top_p"],
+                            repetition_penalty=model_config["repetition_penalty"],
+                            pad_token_id=tokenizer.eos_token_id
+                        )[0]['generated_text']
+                    analysis_start = output.find("Analysis:")
+                    if analysis_start != -1:
+                        output = output[analysis_start + len("Analysis:"):].strip()
+                    # Save to batch outputs
+                    batch_outputs.append({
+                        "Comment": comment,
+                        "City": city,
+                        "Raw Response": output
+                    })
+                except Exception as e:
+                    print(f"Error processing comment: {comment[:100]}...")
+                    print(f"Error: {e}")
+                    continue
+            
+            # Add batch outputs to main data
+            output_data.extend(batch_outputs)
+            
+            # Save progress after each batch
+            temp_df = pd.DataFrame(output_data)
+            temp_df.to_csv(raw_csv_path, index=False)
+            print(f"Saved batch {batch_idx + 1} progress: {len(output_data)}/{len(df)} comments processed")
+            
+            # Also save flags after each batch
+            process_raw_to_flags(raw_csv_path, flags_csv_path)
+            print(f"Updated flags CSV with {len(output_data)} processed comments")
     
     print(f"Completed! Final output saved to {flags_csv_path}")
     
