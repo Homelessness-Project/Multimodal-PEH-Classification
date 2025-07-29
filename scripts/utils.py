@@ -279,8 +279,8 @@ def get_model_config(model_name: str) -> Dict:
         },
         "gemini": {
             "api": "google",
-            "api_key_env": "GOOGLE_API_KEY",
-            "model_id": "gemini-1.5-pro-latest",
+            "api_key_env": "GEMINI_API_KEY",
+            "model_id": "gemini-2.5-pro",
             "max_new_tokens": 500
         },
         "grok": {
@@ -362,24 +362,25 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
                         continue
                 raise e
     elif api == "google":
-        # Gemini 2.5 Pro (Google AI Studio API)
-        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={api_key}"
-        headers = {"Content-Type": "application/json"}
-        data = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"maxOutputTokens": max_tokens}}
-        
+        # Gemini 2.5 Pro (Google Generative AI SDK)
         max_retries = 3
         base_delay = 1
         
         for attempt in range(max_retries):
-            resp = requests.post(endpoint, headers=headers, json=data)
-            if resp.status_code == 429:  # Rate limit
-                if attempt < max_retries - 1:
-                    delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
-                    print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
-                    time.sleep(delay)
-                    continue
-            resp.raise_for_status()
-            return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+            try:
+                import google.generativeai as genai
+                genai.configure(api_key=api_key)
+                model = genai.GenerativeModel(model_id)
+                response = model.generate_content(prompt)
+                return response.text
+            except Exception as e:
+                if "rate_limit" in str(e).lower() or "429" in str(e):
+                    if attempt < max_retries - 1:
+                        delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                        print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(delay)
+                        continue
+                raise e
     elif api == "grok":
         # Grok 4 (xAI API)
         endpoint = "https://api.x.ai/v1/chat/completions"
