@@ -276,6 +276,27 @@ def main():
     # If using gold standard, rename columns for uniformity
     if gold_text_col and gold_city_col:
         df = df.rename(columns={gold_text_col: 'Comment', gold_city_col: 'City'})
+    
+    # --- COLUMN SELECTION FOR ALL DATASET FILES ---
+    # Map source to text/city columns for all dataset files
+    all_text_col = None
+    all_city_col = None
+    if args.dataset == 'all':
+        if args.source == 'reddit':
+            all_text_col = 'Deidentified_Comment'
+            all_city_col = 'city'
+        elif args.source == 'x':
+            all_text_col = 'Deidentified_text'
+            all_city_col = 'city'
+        elif args.source == 'news':
+            all_text_col = 'Deidentified_paragraph_text'
+            all_city_col = 'city'
+        elif args.source == 'meeting_minutes':
+            all_text_col = 'Deidentified_paragraph'
+            all_city_col = 'city'
+    # If using all dataset, rename columns for uniformity
+    if all_text_col and all_city_col:
+        df = df.rename(columns={all_text_col: 'Comment', all_city_col: 'City'})
 
     # If --test and API model, only process 10 comments
     if args.test and args.model in api_models:
@@ -284,7 +305,16 @@ def main():
 
     output_data = []
     # Use larger batch size for API models (with parallel workers) vs local models
-    BATCH_SIZE = 20 if args.model in api_models else 10
+    if args.model in api_models:
+        # Scale batch size based on number of workers
+        if args.max_workers >= 32:
+            BATCH_SIZE = 200  # Large batches for high worker counts
+        elif args.max_workers >= 16:
+            BATCH_SIZE = 100  # Medium batches for medium worker counts
+        else:
+            BATCH_SIZE = 20   # Default for lower worker counts
+    else:
+        BATCH_SIZE = 10  # Local models
     total_batches = (len(df) + BATCH_SIZE - 1) // BATCH_SIZE
 
     # Validate content_type early

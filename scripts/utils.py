@@ -327,7 +327,7 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
     model_id = config.get("model_id")
     if api == "openai":
         # Use new OpenAI SDK v1.x for gpt-4.1 and similar models
-        max_retries = 3
+        max_retries = 5  # Increased retries for better rate limit handling
         base_delay = 1
         
         for attempt in range(max_retries):
@@ -341,7 +341,31 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
                     max_tokens=max_tokens,
                     temperature=0.1,
                 )
-                return response.choices[0].message.content
+                response_content = response.choices[0].message.content
+                
+                # Check if response contains rate limit error
+                if "rate limit" in response_content.lower() or "tpm" in response_content.lower():
+                    if attempt < max_retries - 1:
+                        # Extract wait time from response if available
+                        wait_time = 5.0  # Default wait time
+                        if "try again in" in response_content.lower():
+                            try:
+                                import re
+                                wait_match = re.search(r'try again in (\d+\.?\d*)s', response_content.lower())
+                                if wait_match:
+                                    wait_time = float(wait_match.group(1)) + 1.0  # Add buffer
+                            except:
+                                pass
+                        
+                        delay = max(wait_time, base_delay * (2 ** attempt) + random.uniform(0, 1))
+                        print(f"Rate limit error in response for {model_name}. Waiting {delay:.1f} seconds and retrying... (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(delay)
+                        continue
+                    else:
+                        # If we've exhausted retries, raise an exception so it gets caught
+                        raise Exception(response_content)
+                
+                return response_content
             except ImportError:
                 # Fallback to old SDK if new one is not available
                 import openai
@@ -352,12 +376,48 @@ def call_api_llm(prompt: str, model_name: str, max_tokens: int = 500) -> str:
                     max_tokens=max_tokens,
                     temperature=0.1,
                 )
-                return response["choices"][0]["message"]["content"]
-            except Exception as e:
-                if "rate_limit" in str(e).lower() or "429" in str(e):
+                response_content = response["choices"][0]["message"]["content"]
+                
+                # Check if response contains rate limit error
+                if "rate limit" in response_content.lower() or "tpm" in response_content.lower():
                     if attempt < max_retries - 1:
-                        delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
-                        print(f"Rate limit hit for {model_name}. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
+                        # Extract wait time from response if available
+                        wait_time = 5.0  # Default wait time
+                        if "try again in" in response_content.lower():
+                            try:
+                                import re
+                                wait_match = re.search(r'try again in (\d+\.?\d*)s', response_content.lower())
+                                if wait_match:
+                                    wait_time = float(wait_match.group(1)) + 1.0  # Add buffer
+                            except:
+                                pass
+                        
+                        delay = max(wait_time, base_delay * (2 ** attempt) + random.uniform(0, 1))
+                        print(f"Rate limit error in response for {model_name}. Waiting {delay:.1f} seconds and retrying... (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(delay)
+                        continue
+                    else:
+                        # If we've exhausted retries, raise an exception so it gets caught
+                        raise Exception(response_content)
+                
+                return response_content
+            except Exception as e:
+                error_str = str(e).lower()
+                if ("rate_limit" in error_str or "429" in error_str or "tpm" in error_str or "tokens per min" in error_str):
+                    if attempt < max_retries - 1:
+                        # Extract wait time from error message if available
+                        wait_time = 5.0  # Default wait time
+                        if "try again in" in error_str:
+                            try:
+                                import re
+                                wait_match = re.search(r'try again in (\d+\.?\d*)s', error_str)
+                                if wait_match:
+                                    wait_time = float(wait_match.group(1)) + 1.0  # Add buffer
+                            except:
+                                pass
+                        
+                        delay = max(wait_time, base_delay * (2 ** attempt) + random.uniform(0, 1))
+                        print(f"Rate limit hit for {model_name} (TPM limit). Waiting {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries})")
                         time.sleep(delay)
                         continue
                 raise e
