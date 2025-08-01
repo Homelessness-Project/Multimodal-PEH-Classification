@@ -1,0 +1,17 @@
+label,f1_score
+ask a genuine question,0.0
+ask a rhetorical question,0.0
+provide a fact or claim,0.994475138121547
+provide an observation,0.0
+express their opinion,0.896969696969697
+express others opinions,0.0
+money aid allocation,0.0
+government critique,0.0
+societal critique,0.0
+solutions/interventions,0.7183098591549296
+personal interaction,0.0
+media portrayal,0.0
+not in my backyard,0.0
+harmful generalization,0.0
+deserving/undeserving,0.0
+Racist,0.0
