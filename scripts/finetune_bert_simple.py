@@ -55,9 +55,9 @@ def load_and_preprocess_data(source):
     # Get text column
     text_col = 'Deidentified_Comment'
     if source == 'x':
-        text_col = 'Deidentified_text'
+        text_col = 'Deidentified text'
     elif source == 'news':
-        text_col = 'Deidentified_paragraph_text'
+        text_col = 'Deidentified_paragraph'
     elif source == 'meeting_minutes':
         text_col = 'Deidentified_paragraph'
     
@@ -329,3 +329,8 @@ def main():
 
 if __name__ == '__main__':
     main() 
+"""
+Script run: venv/bin/activate && python scripts/finetune_bert_simple.py --source news --epochs 3 --batch_size 16 --learning_rate 2e-5
+
+Switch sources to all 4 sources and run for each.
+"""
