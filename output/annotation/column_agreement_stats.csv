@@ -1,17 +1,65 @@
-Label,Positive Agreement (2),Partial Agreement (1),Negative Agreement (0),Total,Agreement Rate (%),Positive Prevalence (%)
-ask a genuine question,48,47,405,500,90.6,19.0
-ask a rhetorical question,37,69,394,500,86.2,21.2
-provide a fact or claim,196,181,123,500,63.8,75.4
-provide an observation,98,138,264,500,72.4,47.2
-express their opinion,350,103,47,500,79.4,90.6
-express others opinions,27,123,350,500,75.4,30.0
-money aid allocation,39,153,308,500,69.4,38.4
-government critique,28,79,393,500,84.2,21.4
-societal critique,37,157,306,500,68.6,38.8
-solutions/interventions,152,151,197,500,69.8,60.6
-personal interaction,37,66,397,500,86.8,20.6
-media portrayal,1,17,482,500,96.6,3.6
-not in my backyard,21,81,398,500,83.8,20.4
-harmful generalization,36,134,330,500,73.2,34.0
-deserving/undeserving,1,39,460,500,92.2,8.0
-racist,0,3,497,500,99.4,0.6
+Data_Type,Label,Full Agreement (3),Partial Agreement (1-2),No Agreement (0),Total,Agreement Rate (%),Positive Prevalence (%)
+reddit,ask a genuine question,24,75,401,500,85.0,20.16
+reddit,ask a rhetorical question,33,94,373,500,81.2,25.69
+reddit,provide a fact or claim,142,263,95,500,47.4,80.63
+reddit,provide an observation,39,208,253,500,58.4,49.41
+reddit,express their opinion,241,214,45,500,57.2,90.51
+reddit,express others opinions,10,153,337,500,69.4,33.0
+reddit,money aid allocation,15,213,272,500,57.4,45.85
+reddit,government critique,22,133,345,500,73.4,31.42
+reddit,societal critique,12,209,279,500,58.2,44.47
+reddit,solutions/interventions,53,255,192,500,49.0,61.66
+reddit,personal interaction,23,86,391,500,82.8,22.33
+reddit,media portrayal,0,28,474,502,94.42,5.93
+reddit,not in my backyard,2,107,392,501,78.64,22.13
+reddit,harmful generalization,16,171,313,500,65.8,37.75
+reddit,deserving/undeserving,0,54,447,501,89.22,11.26
+reddit,racist,0,14,488,502,97.21,3.16
+news,ask a genuine question,2,7,373,382,98.17,2.36
+news,ask a rhetorical question,2,10,370,382,97.38,3.14
+news,provide a fact or claim,319,54,8,381,85.83,97.91
+news,provide an observation,1,53,328,382,86.13,14.14
+news,express their opinion,11,135,236,382,64.66,38.22
+news,express others opinions,3,134,245,382,64.92,35.86
+news,money aid allocation,44,142,195,381,62.73,48.95
+news,government critique,6,65,311,382,82.98,18.59
+news,societal critique,1,73,308,382,80.89,19.37
+news,solutions/interventions,57,234,90,381,38.58,76.44
+news,personal interaction,0,19,363,382,95.03,4.97
+news,media portrayal,0,11,371,382,97.12,2.88
+news,not in my backyard,0,6,376,382,98.43,1.57
+news,harmful generalization,0,25,357,382,93.46,6.54
+news,deserving/undeserving,0,20,362,382,94.76,5.24
+news,racist,0,11,371,382,97.12,2.88
+meeting_minutes,ask a genuine question,13,41,309,363,88.71,15.11
+meeting_minutes,ask a rhetorical question,1,23,340,364,93.68,6.59
+meeting_minutes,provide a fact or claim,257,105,2,364,71.15,99.45
+meeting_minutes,provide an observation,0,50,314,364,86.26,13.74
+meeting_minutes,express their opinion,55,253,56,364,30.49,84.62
+meeting_minutes,express others opinions,0,52,312,364,85.71,14.29
+meeting_minutes,money aid allocation,39,97,228,364,73.35,37.36
+meeting_minutes,government critique,6,99,259,364,72.8,28.85
+meeting_minutes,societal critique,1,65,298,364,82.14,18.13
+meeting_minutes,solutions/interventions,48,258,58,364,29.12,84.07
+meeting_minutes,personal interaction,0,37,327,364,89.84,10.16
+meeting_minutes,media portrayal,0,4,360,364,98.9,1.1
+meeting_minutes,not in my backyard,1,18,345,364,95.05,5.22
+meeting_minutes,harmful generalization,0,40,323,363,88.98,11.26
+meeting_minutes,deserving/undeserving,0,19,345,364,94.78,5.22
+meeting_minutes,racist,0,1,363,364,99.73,0.27
+x,ask a genuine question,7,33,416,456,92.76,8.77
+x,ask a rhetorical question,17,43,396,456,90.57,13.16
+x,provide a fact or claim,363,87,6,456,80.92,98.68
+x,provide an observation,3,65,388,456,85.75,14.91
+x,express their opinion,111,220,125,456,51.75,72.59
+x,express others opinions,2,102,352,456,77.63,22.81
+x,money aid allocation,38,98,320,456,78.51,29.82
+x,government critique,21,107,328,456,76.54,28.07
+x,societal critique,5,147,304,456,67.76,33.33
+x,solutions/interventions,47,226,183,456,50.44,59.87
+x,personal interaction,5,37,414,456,91.89,9.21
+x,media portrayal,1,76,379,456,83.33,16.89
+x,not in my backyard,1,43,412,456,90.57,9.65
+x,harmful generalization,12,96,348,456,78.95,23.68
+x,deserving/undeserving,2,50,404,456,89.04,11.4
+x,racist,3,19,434,456,95.83,4.82
