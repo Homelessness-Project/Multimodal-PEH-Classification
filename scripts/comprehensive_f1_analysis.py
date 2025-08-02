@@ -179,7 +179,7 @@ def create_latex_table(summary_df):
     latex_table = []
     latex_table.append(r"\begin{table}[htbp]")
     latex_table.append(r"\centering")
-    latex_table.append(r"\caption{Best Macro F1 Scores by Data Source}")
+    latex_table.append(r"\centering\caption{Best Macro F1 Scores by Data Source}")
     latex_table.append(r"\label{tab:best_macro_f1_scores}")
     latex_table.append(r"\begin{tabular}{lccc}")
     latex_table.append(r"\toprule")
@@ -192,8 +192,8 @@ def create_latex_table(summary_df):
             source_display = 'X (Twitter)'
         
         model_display = model['Model'].replace('_', ' ').upper()
-        macro_f1 = f"{model['Macro_F1']:.2f}"
-        micro_f1 = f"{model['Micro_F1']:.2f}"
+        macro_f1 = f"{model['Macro_F1'] * 100:.2f}"
+        micro_f1 = f"{model['Micro_F1'] * 100:.2f}"
         
         latex_table.append(f"{source_display} & {model_display} & {macro_f1} & {micro_f1} \\\\")
     
@@ -208,7 +208,7 @@ def create_detailed_latex_table(summary_df):
     latex_table = []
     latex_table.append(r"\begin{table*}[htbp]")
     latex_table.append(r"\centering")
-    latex_table.append(r"\caption{Macro and Micro F1 Scores for All Models by Data Source}")
+    latex_table.append(r"\centering\caption{Macro and Micro F1 Scores for All Models by Data Source}")
     latex_table.append(r"\label{tab:detailed_f1_scores}")
     latex_table.append(r"\resizebox{\textwidth}{!}{")
     latex_table.append(r"\begin{tabular}{lcccccccccccc}")
@@ -273,7 +273,7 @@ def create_detailed_latex_table(summary_df):
                 if not model_data.empty:
                     macro_f1 = model_data.iloc[0]['Macro_F1']
                     macro_values.append(macro_f1)
-                    macro_row.append(f"{macro_f1:.2f}")
+                    macro_row.append(f"{macro_f1 * 100:.2f}")
                     
                     # Store for weighted average
                     if shot_type == 'zero_shot':
@@ -289,7 +289,7 @@ def create_detailed_latex_table(summary_df):
         if not bert_data.empty:
             bert_macro = bert_data.iloc[0]['Macro_F1']
             macro_values.append(bert_macro)
-            macro_row.append(f"{bert_macro:.2f}")
+            macro_row.append(f"{bert_macro * 100:.2f}")
             bert_macro_values.append((bert_macro, sample_sizes[source]))
         else:
             macro_values.append(0)
@@ -318,7 +318,7 @@ def create_detailed_latex_table(summary_df):
                 if not model_data.empty:
                     micro_f1 = model_data.iloc[0]['Micro_F1']
                     micro_values.append(micro_f1)
-                    micro_row.append(f"{micro_f1:.2f}")
+                    micro_row.append(f"{micro_f1 * 100:.2f}")
                     
                     # Store for weighted average
                     if shot_type == 'zero_shot':
@@ -334,7 +334,7 @@ def create_detailed_latex_table(summary_df):
         if not bert_data.empty:
             bert_micro = bert_data.iloc[0]['Micro_F1']
             micro_values.append(bert_micro)
-            micro_row.append(f"{bert_micro:.2f}")
+            micro_row.append(f"{bert_micro * 100:.2f}")
             bert_micro_values.append((bert_micro, sample_sizes[source]))
         else:
             micro_values.append(0)
@@ -373,12 +373,12 @@ def create_detailed_latex_table(summary_df):
         for shot_type in ['zero', 'few']:
             weighted_avg = calculate_weighted_average(all_macro_values[model][shot_type])
             weighted_macro_values.append(weighted_avg)
-            weighted_macro_row.append(f"{weighted_avg:.2f}")
+            weighted_macro_row.append(f"{weighted_avg * 100:.2f}")
     
     # Add BERT weighted average
     bert_weighted_macro = calculate_weighted_average(bert_macro_values)
     weighted_macro_values.append(bert_weighted_macro)
-    weighted_macro_row.append(f"{bert_weighted_macro:.2f}")
+    weighted_macro_row.append(f"{bert_weighted_macro * 100:.2f}")
     
     # Bold best weighted macro F1
     valid_weighted_macro = [v for v in weighted_macro_values if v > 0]
@@ -398,12 +398,12 @@ def create_detailed_latex_table(summary_df):
         for shot_type in ['zero', 'few']:
             weighted_avg = calculate_weighted_average(all_micro_values[model][shot_type])
             weighted_micro_values.append(weighted_avg)
-            weighted_micro_row.append(f"{weighted_avg:.2f}")
+            weighted_micro_row.append(f"{weighted_avg * 100:.2f}")
     
     # Add BERT weighted average
     bert_weighted_micro = calculate_weighted_average(bert_micro_values)
     weighted_micro_values.append(bert_weighted_micro)
-    weighted_micro_row.append(f"{bert_weighted_micro:.2f}")
+    weighted_micro_row.append(f"{bert_weighted_micro * 100:.2f}")
     
     # Bold best weighted micro F1
     valid_weighted_micro = [v for v in weighted_micro_values if v > 0]
@@ -429,6 +429,7 @@ def create_individual_model_tables(all_results):
     category_display_names = {
         'ask a genuine question': 'Ask Genuine Question',
         'ask a rhetorical question': 'Ask Rhetorical Question',
+        'ask a rheorical question': 'Ask Rhetorical Question',  # Handle typo in BERT data
         'provide a fact or claim': 'Provide Fact/Claim',
         'provide an observation': 'Provide Observation',
         'express their opinion': 'Express Opinion',
@@ -442,7 +443,8 @@ def create_individual_model_tables(all_results):
         'not in my backyard': 'Not in My Backyard',
         'harmful generalization': 'Harmful Generalization',
         'deserving/undeserving': 'Deserving/Undeserving',
-        'racist': 'Racist'
+        'racist': 'Racist',
+        'Racist': 'Racist'  # Handle case variations
     }
     
     # Define source display names
@@ -511,29 +513,38 @@ def create_individual_model_tables(all_results):
             latex_table.append(r"\midrule")
             
             # Add rows for each category
+            processed_categories = set()
             for category in sorted_categories:
-                if category in category_display_names:
-                    category_display = category_display_names[category]
-                    row_data = [category_display]
-                    
-                    # Add data for each source
-                    for source in SOURCES:
-                        key = f"{source}_bert"
-                        if key in model_data and category in model_data[key]:
-                            # BERT has direct F1 scores, not nested structure
-                            f1_score = model_data[key][category]
-                            if isinstance(f1_score, dict):
-                                f1_score = f1_score['f1']
-                            f1_score = f1_score * 100  # Convert to percentage
-                            row_data.append(f"{f1_score:.2f}")
-                        else:
-                            row_data.append("--")
-                    
-                    latex_table.append(" & ".join(row_data) + " \\\\")
+                # Skip unnamed categories and handle display names
+                if category.startswith('Unnamed:') or category not in category_display_names:
+                    continue
+                
+                # Skip if we've already processed this category (handle duplicates)
+                category_display = category_display_names[category]
+                if category_display in processed_categories:
+                    continue
+                processed_categories.add(category_display)
+                
+                row_data = [category_display]
+                
+                # Add data for each source
+                for source in SOURCES:
+                    key = f"{source}_bert"
+                    if key in model_data and category in model_data[key]:
+                        # BERT has direct F1 scores, not nested structure
+                        f1_score = model_data[key][category]
+                        if isinstance(f1_score, dict):
+                            f1_score = f1_score['f1']
+                        f1_score = f1_score * 100  # Convert to percentage
+                        row_data.append(f"{f1_score:.2f}")
+                    else:
+                        row_data.append("--")
+                
+                latex_table.append(" & ".join(row_data) + " \\\\")
             
             latex_table.append(r"\bottomrule")
             latex_table.append(r"\end{tabular}")
-            latex_table.append(fr"\caption{{Category-wise F1 Scores for BERT Fine-tuned Model}}")
+            latex_table.append(fr"\centering\caption{{Category-wise F1 Scores for BERT Fine-tuned Model}}")
             latex_table.append(fr"\label{{tab:bert_category_breakdown}}")
         else:
             # Other models table format (with zero/few shot distinction)
@@ -592,7 +603,7 @@ def create_individual_model_tables(all_results):
             
             latex_table.append(r"\bottomrule")
             latex_table.append(r"\end{tabular}")
-            latex_table.append(fr"\caption{{Category-wise F1 Scores for {model.upper()} Model}}")
+            latex_table.append(fr"\centering\caption{{Category-wise F1 Scores for {model.upper()} Model}}")
             latex_table.append(fr"\label{{tab:{model}_category_breakdown}}")
         
         latex_table.append(r"\end{table*}")
@@ -613,13 +624,13 @@ def create_individual_model_tables(all_results):
                 key = f"{source}_bert"
                 if key in macro_micro_data:
                     source_display = source_display_names[source]
-                    macro_f1 = f"{macro_micro_data[key]['macro_f1']:.2f}"
-                    micro_f1 = f"{macro_micro_data[key]['micro_f1']:.2f}"
+                    macro_f1 = f"{macro_micro_data[key]['macro_f1'] * 100:.2f}"
+                    micro_f1 = f"{macro_micro_data[key]['micro_f1'] * 100:.2f}"
                     macro_micro_table.append(f"{source_display} & {macro_f1} & {micro_f1} \\\\")
             
             macro_micro_table.append(r"\bottomrule")
             macro_micro_table.append(r"\end{tabular}")
-            macro_micro_table.append(fr"\caption{{Macro and Micro F1 Scores for BERT Fine-tuned Model}}")
+            macro_micro_table.append(fr"\centering\caption{{Macro and Micro F1 Scores for BERT Fine-tuned Model}}")
             macro_micro_table.append(fr"\label{{tab:bert_macro_micro}}")
         else:
             # Other models macro/micro table
@@ -635,7 +646,7 @@ def create_individual_model_tables(all_results):
                 for shot_type in ['zero_shot', 'few_shot']:
                     key = f"{source}_{shot_type}"
                     if key in macro_micro_data:
-                        macro_f1 = f"{macro_micro_data[key]['macro_f1']:.2f}"
+                        macro_f1 = f"{macro_micro_data[key]['macro_f1'] * 100:.2f}"
                         macro_row.append(macro_f1)
                     else:
                         macro_row.append("--")
@@ -647,7 +658,7 @@ def create_individual_model_tables(all_results):
                 for shot_type in ['zero_shot', 'few_shot']:
                     key = f"{source}_{shot_type}"
                     if key in macro_micro_data:
-                        micro_f1 = f"{macro_micro_data[key]['micro_f1']:.2f}"
+                        micro_f1 = f"{macro_micro_data[key]['micro_f1'] * 100:.2f}"
                         micro_row.append(micro_f1)
                     else:
                         micro_row.append("--")
@@ -655,7 +666,7 @@ def create_individual_model_tables(all_results):
             
             macro_micro_table.append(r"\bottomrule")
             macro_micro_table.append(r"\end{tabular}")
-            macro_micro_table.append(fr"\caption{{Macro and Micro F1 Scores for {model.upper()} Model}}")
+            macro_micro_table.append(fr"\centering\caption{{Macro and Micro F1 Scores for {model.upper()} Model}}")
             macro_micro_table.append(fr"\label{{tab:{model}_macro_micro}}")
         
         macro_micro_table.append(r"\end{table}")

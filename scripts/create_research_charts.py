@@ -131,6 +131,8 @@ def extract_city_stats(df):
 
 def create_publication_charts(df_stats, data_source="reddit"):
     """Create publication-quality charts."""
+    from scipy import stats
+    
     # Set up publication-quality styling
     plt.style.use('default')
     sns.set_palette("husl")
@@ -207,24 +209,46 @@ def create_publication_charts(df_stats, data_source="reddit"):
     ax5.set_xlabel('City', fontweight='bold')
     ax5.set_ylabel('Category', fontweight='bold')
     
+    # Make axis tick labels bold
+    ax5.set_xticklabels(ax5.get_xticklabels(), fontweight='bold')
+    ax5.set_yticklabels(ax5.get_yticklabels(), fontweight='bold')
+    
     plt.tight_layout()
     plt.savefig(output_dir / f'{data_source}_heatmap.pdf', bbox_inches='tight')
     plt.close()
     
-    # Figure 7: Large vs Small Cities Comparison
-    large_means = large_cities[subcategory_cols].mean()
-    small_means = small_cities[subcategory_cols].mean()
-    x = np.arange(len(subcategory_cols))
-    width = 0.35
-    fig7, ax7 = plt.subplots(1, 1, figsize=(max(12, len(subcategory_cols)*0.7), 8))
-    bars1 = ax7.bar(x - width/2, large_means, width, label='Large Cities', 
-                     color='#2E86AB', alpha=0.8, edgecolor='black', linewidth=0.5)
-    bars2 = ax7.bar(x + width/2, small_means, width, label='Small Cities', 
-                     color='#A23B72', alpha=0.8, edgecolor='black', linewidth=0.5)
-    ax7.set_title(f'{data_source.title()}: Large vs Small Cities Classification Patterns', fontweight='bold', pad=20)
-    ax7.set_ylabel('Average Percentage (%)', fontweight='bold')
-    ax7.set_xlabel('Classification Subcategory', fontweight='bold')
-    ax7.set_xticks(x)
+    # Figure 7: Comprehensive Large vs Small Cities Comparison with Error Bars and Statistical Significance
+    # Calculate means, standard errors, and p-values
+    large_means = []
+    small_means = []
+    large_sems = []
+    small_sems = []
+    p_values = []
+    
+    for col in subcategory_cols:
+        large_data = large_cities[col].values
+        small_data = small_cities[col].values
+        
+        # Calculate means
+        large_mean = np.mean(large_data)
+        small_mean = np.mean(small_data)
+        large_means.append(large_mean)
+        small_means.append(small_mean)
+        
+        # Calculate standard errors
+        large_sem = np.std(large_data, ddof=1) / np.sqrt(len(large_data))
+        small_sem = np.std(small_data, ddof=1) / np.sqrt(len(small_data))
+        large_sems.append(large_sem)
+        small_sems.append(small_sem)
+        
+        # Calculate p-value (t-test)
+        t_stat, p_val = stats.ttest_ind(large_data, small_data)
+        p_values.append(p_val)
+    
+    # Bonferroni correction for 16 comparisons
+    bonferroni_alpha = 0.05 / 16
+    significant_categories = [i for i, p in enumerate(p_values) if p < bonferroni_alpha]
+    
     # Clean subcategory labels for x-axis
     clean_labels = []
     for col in subcategory_cols:
@@ -239,17 +263,68 @@ def create_publication_charts(df_stats, data_source="reddit"):
         else:
             clean_label = clean_label.replace('_', ' ').title()
         clean_labels.append(clean_label)
-    ax7.set_xticklabels(clean_labels, rotation=45, ha='right')
-    ax7.legend()
+    
+    # Create the comprehensive chart
+    fig7, (ax7, ax7b) = plt.subplots(2, 1, figsize=(max(16, len(subcategory_cols)*0.7), 12), height_ratios=[3, 1])
+    
+    # Main comparison chart with error bars
+    x = np.arange(len(subcategory_cols))
+    width = 0.35
+    
+    # Plot bars with error bars
+    bars1 = ax7.bar(x - width/2, large_means, width, label='Large Cities', 
+                     color='#2E86AB', alpha=0.8, edgecolor='black', linewidth=0.5,
+                     yerr=large_sems, capsize=5)
+    bars2 = ax7.bar(x + width/2, small_means, width, label='Small Cities', 
+                     color='#A23B72', alpha=0.8, edgecolor='black', linewidth=0.5,
+                     yerr=small_sems, capsize=5)
+    
+    # Add significance indicators
+    for i, p_val in enumerate(p_values):
+        if p_val < bonferroni_alpha:
+            # Add asterisk for significant differences
+            max_height = max(large_means[i] + large_sems[i], small_means[i] + small_sems[i])
+            ax7.text(i, max_height + 0.5, '*', ha='center', va='bottom', 
+                    fontsize=14, fontweight='bold', color='red')
+    
+    ax7.set_title(f'{data_source.title()}: Large vs Small Cities Comparison\n(16 Categories with Error Bars and Statistical Significance)', 
+                  fontweight='bold', pad=20, fontsize=14)
+    ax7.set_ylabel('Average Percentage (%)', fontweight='bold')
+    ax7.set_xlabel('Classification Category', fontweight='bold')
+    ax7.set_xticks(x)
+    ax7.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
+    ax7.legend(loc='upper right')
     ax7.grid(axis='y', alpha=0.3)
+    
+    # Add value labels on bars (values are already in percentage form)
     for bar in bars1:
         height = bar.get_height()
-        ax7.text(bar.get_x() + bar.get_width()/2., height + 0.5,
+        ax7.text(bar.get_x() + bar.get_width()/2., height + 0.1,
                 f'{height:.1f}%', ha='center', va='bottom', fontsize=8)
     for bar in bars2:
         height = bar.get_height()
-        ax7.text(bar.get_x() + bar.get_width()/2., height + 0.5,
+        ax7.text(bar.get_x() + bar.get_width()/2., height + 0.1,
                 f'{height:.1f}%', ha='center', va='bottom', fontsize=8)
+    
+    # Statistical significance chart
+    colors = ['red' if p < bonferroni_alpha else 'gray' for p in p_values]
+    bars = ax7b.bar(x, [-np.log10(p) for p in p_values], color=colors, alpha=0.7)
+    ax7b.axhline(y=-np.log10(bonferroni_alpha), color='red', linestyle='--', 
+                 label=f'Bonferroni α={bonferroni_alpha:.4f}')
+    ax7b.set_title('Statistical Significance: -log10(p-value)', fontweight='bold', pad=20)
+    ax7b.set_ylabel('-log10(p-value)', fontweight='bold')
+    ax7b.set_xlabel('Classification Category', fontweight='bold')
+    ax7b.set_xticks(x)
+    ax7b.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
+    ax7b.legend()
+    ax7b.grid(axis='y', alpha=0.3)
+    
+    # Add p-value labels for significant categories
+    for i, (bar, p_val) in enumerate(zip(bars, p_values)):
+        if p_val < bonferroni_alpha:
+            ax7b.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.1,
+                    f'p={p_val:.3g}', ha='center', va='bottom', fontsize=8, fontweight='bold')
+    
     plt.tight_layout()
     plt.savefig(output_dir / f'{data_source}_city_size_comparison.pdf', bbox_inches='tight')
     plt.close()
@@ -257,54 +332,51 @@ def create_publication_charts(df_stats, data_source="reddit"):
     # Figure 8: Confusion Matrix of Category Relationships
     fig8, ax8 = plt.subplots(1, 1, figsize=(max(12, len(subcategory_cols)*0.7), 10))
     correlation_matrix = df_stats[subcategory_cols].corr()
-    sns.heatmap(correlation_matrix, annot=True, fmt='.2f', cmap='RdBu_r', center=0,
+    
+    # Clean category names for display (same mapping as other charts)
+    clean_cat_names = []
+    for col in subcategory_cols:
+        clean_col = col
+        for prefix in ['Comment_', 'Critique_', 'Response_', 'Perception_']:
+            if col.startswith(prefix):
+                clean_col = col.replace(prefix, '')
+                break
+        # Handle Racist_Flag specifically
+        if col == 'Racist_Flag':
+            clean_col = 'Racist'
+        else:
+            clean_col = clean_col.replace('_', ' ').title()
+        clean_cat_names.append(clean_col)
+    
+    # Create correlation matrix with clean labels
+    correlation_df = pd.DataFrame(correlation_matrix.values, 
+                                 index=clean_cat_names, 
+                                 columns=clean_cat_names)
+    
+    sns.heatmap(correlation_df, annot=True, fmt='.2f', cmap='RdBu_r', center=0,
                 cbar_kws={'label': 'Correlation Coefficient'}, ax=ax8, square=True)
     ax8.set_title(f'{data_source.title()} Category Relationship Matrix', fontweight='bold', pad=20)
+    
+    # Make axis tick labels bold
+    ax8.set_xticklabels(ax8.get_xticklabels(), fontweight='bold')
+    ax8.set_yticklabels(ax8.get_yticklabels(), fontweight='bold')
+    
     plt.tight_layout()
     plt.savefig(output_dir / f'{data_source}_category_correlation.pdf', bbox_inches='tight')
     plt.close()
 
-    # Figure 9: Statistical Significance Test Results
-    from scipy import stats
-    bonferroni_alpha = 0.05 / 16  # Fixed Bonferroni correction for 16 comparisons
-    significant_differences = []
-    p_values = []
-    for col in subcategory_cols:
-        large_data = large_cities[col].values
-        small_data = small_cities[col].values
-        t_stat, p_val = stats.ttest_ind(large_data, small_data)
-        p_values.append(p_val)
-        if p_val < bonferroni_alpha:
-            significant_differences.append(col)
-    x_pos = np.arange(len(subcategory_cols))
-    colors = ['red' if p < bonferroni_alpha else 'gray' for p in p_values]
-    fig9, ax9 = plt.subplots(1, 1, figsize=(max(12, len(subcategory_cols)*0.7), 8))
-    bars = ax9.bar(x_pos, [-np.log10(p) for p in p_values], color=colors, alpha=0.7)
-    ax9.axhline(y=-np.log10(bonferroni_alpha), color='red', linestyle='--', label=f'Bonferroni α={bonferroni_alpha:.4f}')
-    ax9.set_title(f'{data_source.title()} Statistical Significance: Large vs Small Cities', fontweight='bold', pad=20)
-    ax9.set_ylabel('-log10(p-value)', fontweight='bold')
-    ax9.set_xlabel('Classification Subcategory', fontweight='bold')
-    ax9.set_xticks(x_pos)
-    ax9.set_xticklabels(clean_labels, rotation=45, ha='right')
-    ax9.legend()
-    ax9.grid(axis='y', alpha=0.3)
-    for i, (bar, p_val) in enumerate(zip(bars, p_values)):
-        if p_val < bonferroni_alpha:
-            ax9.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.1,
-                    f'p={p_val:.3g}', ha='center', va='bottom', fontsize=8, fontweight='bold')
-    plt.tight_layout()
-    plt.savefig(output_dir / f'{data_source}_significance_test.pdf', bbox_inches='tight')
-    plt.close()
 
-    print(f"📊 Created 4 publication-quality figures (PDF only) for {data_source}:")
+
+    print(f"📊 Created 3 publication-quality figures (PDF only) for {data_source}:")
     print(f"  - {data_source}_heatmap.pdf: Classification Categories Heatmap")
-    print(f"  - {data_source}_city_size_comparison.pdf: Large vs Small Cities Comparison")
+    print(f"  - {data_source}_city_size_comparison.pdf: Comprehensive Large vs Small Cities Comparison (with Error Bars and Statistical Significance)")
     print(f"  - {data_source}_category_correlation.pdf: Category Relationship Matrix")
-    print(f"  - {data_source}_significance_test.pdf: Statistical Significance Test")
-    if significant_differences:
+    if significant_categories:
         print(f"\n🔍 Statistically significant differences (Bonferroni α={bonferroni_alpha:.4f}) between large and small cities:")
-        for diff in significant_differences:
-            print(f"  - {diff.replace('_', ' ').title()}")
+        for i in significant_categories:
+            print(f"  - {clean_labels[i]}: p = {p_values[i]:.4f}")
+            print(f"    Large: {large_means[i]:.2f}% ± {large_sems[i]:.2f}%")
+            print(f"    Small: {small_means[i]:.2f}% ± {small_sems[i]:.2f}%")
     else:
         print(f"\n🔍 No statistically significant differences found (Bonferroni α={bonferroni_alpha:.4f}).")
     
@@ -472,6 +544,10 @@ def create_combined_analysis(results):
     ax1.set_ylabel('Number of Comments', fontweight='bold')
     ax1.set_xlabel('Data Source', fontweight='bold')
     
+    # Make axis tick labels bold
+    ax1.set_xticklabels(ax1.get_xticklabels(), fontweight='bold')
+    ax1.set_yticklabels(ax1.get_yticklabels(), fontweight='bold')
+    
     # Add value labels on bars
     for bar in bars:
         height = bar.get_height()
@@ -537,7 +613,7 @@ def create_combined_analysis(results):
             clean_label = clean_label.replace('_', ' ').title()
         clean_labels.append(clean_label)
     
-    ax2.set_xticklabels(clean_labels, rotation=45, ha='right')
+    ax2.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
     ax2.legend()
     ax2.grid(axis='y', alpha=0.3)
     plt.tight_layout()
@@ -582,7 +658,7 @@ def create_combined_analysis(results):
             clean_label = clean_label.replace('_', ' ').title()
         clean_labels.append(clean_label)
     
-    ax3.set_xticklabels(clean_labels, rotation=45, ha='right')
+    ax3.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
     ax3.grid(axis='y', alpha=0.3)
     
     # Add value labels
@@ -620,6 +696,10 @@ def create_combined_analysis(results):
     ax4.set_title('Data Source Comparison Heatmap', fontweight='bold', pad=20)
     ax4.set_xlabel('Data Source', fontweight='bold')
     ax4.set_ylabel('Classification Category', fontweight='bold')
+    
+    # Make axis tick labels bold
+    ax4.set_xticklabels(ax4.get_xticklabels(), fontweight='bold')
+    ax4.set_yticklabels(ax4.get_yticklabels(), fontweight='bold')
     
     plt.tight_layout()
     plt.savefig(output_dir / 'combined_source_comparison_heatmap.pdf', bbox_inches='tight')
@@ -832,7 +912,212 @@ def create_combined_analysis(results):
     plt.savefig(output_dir / 'combined_comprehensive_source_comparison.pdf', bbox_inches='tight')
     plt.close()
     
-    # Figure 5: Statistical Significance Testing
+    # Figure 5: Combined Weighted Confusion Matrix
+    # Create a combined confusion matrix weighted by number of posts from each source
+    print("\n📊 Creating combined weighted confusion matrix...")
+    
+    # Calculate total posts per source for weighting
+    source_weights = combined_df.groupby('Source')['Total_Comments'].sum()
+    total_posts = source_weights.sum()
+    
+    # Create weighted confusion matrix data
+    weighted_confusion_data = {}
+    for source in sources:
+        source_weight = source_weights[source] / total_posts
+        source_data = combined_df[combined_df['Source'] == source]
+        
+        for cat in all_categories:
+            if cat in source_data.columns:
+                # Weight the category percentages by the source's proportion of total posts
+                weighted_avg = np.average(source_data[cat], weights=source_data['Total_Comments'])
+                weighted_confusion_data[(source, cat)] = weighted_avg * source_weight
+            else:
+                weighted_confusion_data[(source, cat)] = 0.0
+    
+    # Convert to matrix format
+    confusion_matrix_data = []
+    for source in sources:
+        row = []
+        for cat in all_categories:
+            row.append(weighted_confusion_data.get((source, cat), 0.0))
+        confusion_matrix_data.append(row)
+    
+    confusion_df = pd.DataFrame(confusion_matrix_data, 
+                               index=[s.title() for s in sources],
+                               columns=[cat.replace('_', ' ').title() for cat in all_categories])
+    
+    # Clean column names for display
+    clean_columns = []
+    for col in confusion_df.columns:
+        clean_col = col
+        for prefix in ['Comment ', 'Critique ', 'Response ', 'Perception ']:
+            if col.startswith(prefix):
+                clean_col = col.replace(prefix, '')
+                break
+        if col == 'Racist Flag':
+            clean_col = 'Racist'
+        clean_columns.append(clean_col)
+    confusion_df.columns = clean_columns
+    
+    # Create the confusion matrix heatmap
+    fig5, ax5 = plt.subplots(1, 1, figsize=(max(16, len(clean_columns)*0.8), 8))
+    sns.heatmap(confusion_df.T, annot=True, fmt='.2f', cmap='YlOrRd', 
+                cbar_kws={'label': 'Weighted Average (%)'}, ax=ax5, square=False)
+    ax5.set_title('Combined Weighted Confusion Matrix\n(Weighted by Number of Posts per Data Source)', 
+                  fontweight='bold', pad=20, fontsize=14)
+    ax5.set_xlabel('Data Source', fontweight='bold', fontsize=12)
+    ax5.set_ylabel('Classification Category', fontweight='bold', fontsize=12)
+    
+    # Make axis tick labels bold
+    ax5.set_xticklabels(ax5.get_xticklabels(), fontweight='bold')
+    ax5.set_yticklabels(ax5.get_yticklabels(), fontweight='bold')
+    
+    # Add source weight information
+    weight_text = "Source Weights: " + ", ".join([f"{s.title()}: {source_weights[s]/total_posts:.1%}" 
+                                                  for s in sources])
+    ax5.text(0.5, -0.15, weight_text, ha='center', va='top', 
+             transform=ax5.transAxes, fontsize=10, style='italic')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'combined_weighted_confusion_matrix.pdf', bbox_inches='tight')
+    plt.close()
+    
+    # Figure 6: 16x16 Category Relationship Matrix (Same Style as Individual Charts)
+    # Create a correlation matrix showing relationships between all 16 categories
+    print("\n📊 Creating 16x16 category relationship matrix...")
+    
+    # Prepare data for correlation analysis across all sources
+    correlation_data = []
+    for _, row in combined_df.iterrows():
+        # Get all category values for this city-source combination
+        category_values = {}
+        for cat in all_categories:
+            if cat in row:
+                category_values[cat] = row[cat]
+            else:
+                category_values[cat] = 0.0
+        correlation_data.append(category_values)
+    
+    # Create correlation dataframe
+    correlation_df = pd.DataFrame(correlation_data)
+    
+    # Clean category names for display (same mapping as individual source charts)
+    clean_cat_names = []
+    for cat in all_categories:
+        clean_cat = cat
+        for prefix in ['Comment_', 'Critique_', 'Response_', 'Perception_']:
+            if cat.startswith(prefix):
+                clean_cat = cat.replace(prefix, '')
+                break
+        # Handle Racist_Flag specifically
+        if cat == 'Racist_Flag':
+            clean_cat = 'Racist'
+        else:
+            clean_cat = clean_cat.replace('_', ' ').title()
+        clean_cat_names.append(clean_cat)
+    
+    correlation_df.columns = clean_cat_names
+    
+    # Calculate correlation matrix
+    correlation_matrix = correlation_df.corr()
+    
+    # Create the 16x16 correlation heatmap (same style as individual charts)
+    fig6, ax6 = plt.subplots(1, 1, figsize=(max(12, len(all_categories)*0.7), 10))
+    sns.heatmap(correlation_matrix, annot=True, fmt='.2f', cmap='RdBu_r', center=0,
+                cbar_kws={'label': 'Correlation Coefficient'}, ax=ax6, square=True)
+    ax6.set_title('Combined Category Relationship Matrix', fontweight='bold', pad=20)
+    
+    # Make axis tick labels bold
+    ax6.set_xticklabels(ax6.get_xticklabels(), fontweight='bold')
+    ax6.set_yticklabels(ax6.get_yticklabels(), fontweight='bold')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'combined_16x16_category_relationship_matrix.pdf', bbox_inches='tight')
+    plt.close()
+    
+    # Figure 7: Weighted Category Correlation Matrix (Main)
+    # Create a weighted correlation matrix for the main combined analysis
+    print("\n📊 Creating weighted category correlation matrix for main analysis...")
+    
+    # Calculate weighted correlation matrix across all sources
+    weighted_correlation_data = []
+    for _, row in combined_df.iterrows():
+        # Get all category values for this city-source combination
+        category_values = {}
+        for cat in all_categories:
+            if cat in row:
+                category_values[cat] = row[cat]
+            else:
+                category_values[cat] = 0.0
+        weighted_correlation_data.append(category_values)
+    
+    # Create weighted correlation dataframe
+    weighted_corr_df = pd.DataFrame(weighted_correlation_data)
+    
+    # Clean category names for display (same mapping as individual charts)
+    clean_cat_names = []
+    for cat in all_categories:
+        clean_cat = cat
+        for prefix in ['Comment_', 'Critique_', 'Response_', 'Perception_']:
+            if cat.startswith(prefix):
+                clean_cat = cat.replace(prefix, '')
+                break
+        # Handle Racist_Flag specifically
+        if cat == 'Racist_Flag':
+            clean_cat = 'Racist'
+        else:
+            clean_cat = clean_cat.replace('_', ' ').title()
+        clean_cat_names.append(clean_cat)
+    
+    weighted_corr_df.columns = clean_cat_names
+    
+    # Calculate weighted correlation matrix
+    weighted_correlation_matrix = weighted_corr_df.corr()
+    
+    # Create the weighted correlation heatmap
+    fig7, ax7 = plt.subplots(1, 1, figsize=(16, 14))
+    mask = np.triu(np.ones_like(weighted_correlation_matrix, dtype=bool))  # Mask upper triangle
+    
+    # Create custom colormap for better visualization
+    from matplotlib.colors import LinearSegmentedColormap
+    colors = ['#d73027', '#f46d43', '#fdae61', '#fee08b', '#e6f598', '#abdda4', '#66c2a5', '#3288bd']
+    cmap = LinearSegmentedColormap.from_list('custom_diverging', colors, N=256)
+    
+    sns.heatmap(weighted_correlation_matrix, 
+                mask=mask,  # Only show lower triangle
+                annot=True, 
+                fmt='.2f', 
+                cmap=cmap, 
+                center=0,
+                cbar_kws={'label': 'Correlation Coefficient'},
+                ax=ax7, 
+                square=True,
+                linewidths=0.5,
+                annot_kws={'size': 8})
+    
+    ax7.set_title('Weighted Category Correlation Matrix\n(All Data Sources Combined)', 
+                  fontweight='bold', pad=20, fontsize=16)
+    ax7.set_xlabel('Classification Categories', fontweight='bold', fontsize=12)
+    ax7.set_ylabel('Classification Categories', fontweight='bold', fontsize=12)
+    
+    # Rotate x-axis labels for better readability and make them bold
+    ax7.set_xticklabels(ax7.get_xticklabels(), rotation=45, ha='right', fontweight='bold')
+    ax7.set_yticklabels(ax7.get_yticklabels(), rotation=0, fontweight='bold')
+    
+    # Add summary statistics
+    total_correlations = len(weighted_correlation_matrix.values.flatten())
+    significant_correlations = np.sum(np.abs(weighted_correlation_matrix.values) > 0.3)
+    strong_correlations = np.sum(np.abs(weighted_correlation_matrix.values) > 0.5)
+    
+    stats_text = f"Total Correlations: {total_correlations}, Significant (>0.3): {significant_correlations}, Strong (>0.5): {strong_correlations}"
+    ax7.text(0.5, -0.02, stats_text, ha='center', va='top', 
+             transform=ax7.transAxes, fontsize=10, style='italic')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'combined_weighted_category_correlation_matrix.pdf', bbox_inches='tight')
+    plt.close()
+    
+    # Figure 8: Statistical Significance Testing
     # Test for significant differences between sources
     if len(sources) > 1:
         from scipy import stats
@@ -868,7 +1153,7 @@ def create_combined_analysis(results):
         ax5.set_ylabel('-log10(p-value)', fontweight='bold')
         ax5.set_xlabel('Classification Category', fontweight='bold')
         ax5.set_xticks(x_pos)
-        ax5.set_xticklabels(clean_labels, rotation=45, ha='right')
+        ax5.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
         ax5.legend()
         ax5.grid(axis='y', alpha=0.3)
         
@@ -898,16 +1183,195 @@ def create_combined_analysis(results):
         else:
             print(f"\n🔍 No statistically significant differences found between data sources (Bonferroni α={bonferroni_alpha:.4f}).")
     
-    print(f"\n📊 Created 6 combined analysis figures:")
+    print(f"\n📊 Created 9 combined analysis figures:")
     print("  - combined_data_source_distribution.pdf: Data Source Distribution")
     print("  - combined_weighted_averages.pdf: Weighted Average by Source")
     print("  - combined_overall_weighted_average.pdf: Overall Weighted Average")
     print("  - combined_source_comparison_heatmap.pdf: Source Comparison Heatmap")
     print("  - combined_comprehensive_source_comparison.pdf: Comprehensive Source Comparison (All 16 Categories)")
+    print("  - combined_weighted_confusion_matrix.pdf: Combined Weighted Confusion Matrix")
+    print("  - combined_16x16_category_relationship_matrix.pdf: 16x16 Category Relationship Matrix")
+    print("  - combined_weighted_category_correlation_matrix.pdf: Weighted Category Correlation Matrix")
     if len(sources) > 1:
         print("  - combined_significance_test.pdf: Statistical Significance Test")
     
     return combined_df, weighted_avgs, overall_weighted_avg
+
+def create_combined_city_size_analysis(combined_df):
+    """Create combined city size analysis across all data sources."""
+    print("\n🔬 Creating Combined City Size Analysis")
+    print("=" * 80)
+    
+    # Create output directory
+    output_dir = Path("output/charts/gpt_research_analysis/combined")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Define city size groups
+    large_cities_list = ['san francisco', 'portland', 'buffalo', 'baltimore', 'el paso']
+    small_cities_list = ['kalamazoo', 'south bend', 'rockford', 'scranton', 'fayetteville']
+    
+    combined_df['City_Size'] = 'Small'
+    combined_df.loc[combined_df['City'].str.lower().isin(large_cities_list), 'City_Size'] = 'Large'
+    
+    # Get subcategory columns
+    exclude_cols = ['Total_Comments', 'Source', 'City_Size', 'Comment Type', 'Critique Category', 
+                   'Response Category', 'Perception Type', 'racist', 'Reasoning', 'Raw Response']
+    flag_columns = [col for col in combined_df.columns if col not in ['City', 'Total_Comments', 'Source', 'City_Size']]
+    subcategory_cols = [col for col in flag_columns if col not in exclude_cols]
+    
+    # Calculate group statistics
+    large_cities = combined_df[combined_df['City_Size'] == 'Large']
+    small_cities = combined_df[combined_df['City_Size'] == 'Small']
+    
+    print(f"Large cities: {len(large_cities)} total observations")
+    print(f"Small cities: {len(small_cities)} total observations")
+    
+    # Calculate means, standard errors, and p-values
+    large_means = []
+    small_means = []
+    large_sems = []
+    small_sems = []
+    p_values = []
+    
+    for col in subcategory_cols:
+        large_data = large_cities[col].values
+        small_data = small_cities[col].values
+        
+        # Calculate means
+        large_mean = np.mean(large_data)
+        small_mean = np.mean(small_data)
+        large_means.append(large_mean)
+        small_means.append(small_mean)
+        
+        # Calculate standard errors
+        large_sem = np.std(large_data, ddof=1) / np.sqrt(len(large_data))
+        small_sem = np.std(small_data, ddof=1) / np.sqrt(len(small_data))
+        large_sems.append(large_sem)
+        small_sems.append(small_sem)
+        
+        # Calculate p-value (t-test)
+        from scipy import stats
+        t_stat, p_val = stats.ttest_ind(large_data, small_data)
+        p_values.append(p_val)
+    
+    # Bonferroni correction for 16 comparisons
+    bonferroni_alpha = 0.05 / 16
+    significant_categories = [i for i, p in enumerate(p_values) if p < bonferroni_alpha]
+    
+    # Clean category labels for display
+    clean_labels = []
+    for col in subcategory_cols:
+        clean_label = col
+        for prefix in ['Comment_', 'Critique_', 'Response_', 'Perception_']:
+            if col.startswith(prefix):
+                clean_label = col.replace(prefix, '')
+                break
+        if col == 'Racist_Flag':
+            clean_label = 'Racist'
+        else:
+            clean_label = clean_label.replace('_', ' ').title()
+        clean_labels.append(clean_label)
+    
+    # Create the comprehensive chart
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(18, 14), height_ratios=[3, 1])
+    
+    # Main comparison chart with error bars
+    x = np.arange(len(subcategory_cols))
+    width = 0.35
+    
+    # Plot bars with error bars
+    bars1 = ax1.bar(x - width/2, large_means, width, label='Large Cities', 
+                     color='#2E86AB', alpha=0.8, edgecolor='black', linewidth=0.5,
+                     yerr=large_sems, capsize=5)
+    bars2 = ax1.bar(x + width/2, small_means, width, label='Small Cities', 
+                     color='#A23B72', alpha=0.8, edgecolor='black', linewidth=0.5,
+                     yerr=small_sems, capsize=5)
+    
+    # Add significance indicators
+    for i, p_val in enumerate(p_values):
+        if p_val < bonferroni_alpha:
+            # Add asterisk for significant differences
+            max_height = max(large_means[i] + large_sems[i], small_means[i] + small_sems[i])
+            ax1.text(i, max_height + 0.5, '*', ha='center', va='bottom', 
+                    fontsize=16, fontweight='bold', color='red')
+    
+    ax1.set_title('Combined Analysis: Large vs Small Cities Comparison\n(All Data Sources - 16 Categories with Error Bars and Statistical Significance)', 
+                  fontweight='bold', pad=20, fontsize=16)
+    ax1.set_ylabel('Average Percentage (%)', fontweight='bold')
+    ax1.set_xlabel('Classification Category', fontweight='bold')
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
+    ax1.legend(loc='upper right')
+    ax1.grid(axis='y', alpha=0.3)
+    
+    # Add value labels on bars (values are already in percentage form)
+    for bar in bars1:
+        height = bar.get_height()
+        ax1.text(bar.get_x() + bar.get_width()/2., height + 0.1,
+                f'{height:.1f}%', ha='center', va='bottom', fontsize=8)
+    for bar in bars2:
+        height = bar.get_height()
+        ax1.text(bar.get_x() + bar.get_width()/2., height + 0.1,
+                f'{height:.1f}%', ha='center', va='bottom', fontsize=8)
+    
+    # Statistical significance chart
+    colors = ['red' if p < bonferroni_alpha else 'gray' for p in p_values]
+    bars = ax2.bar(x, [-np.log10(p) for p in p_values], color=colors, alpha=0.7)
+    ax2.axhline(y=-np.log10(bonferroni_alpha), color='red', linestyle='--', 
+                label=f'Bonferroni α={bonferroni_alpha:.4f}')
+    ax2.set_title('Statistical Significance: -log10(p-value)', fontweight='bold', pad=20)
+    ax2.set_ylabel('-log10(p-value)', fontweight='bold')
+    ax2.set_xlabel('Classification Category', fontweight='bold')
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(clean_labels, rotation=45, ha='right', fontweight='bold')
+    ax2.legend()
+    ax2.grid(axis='y', alpha=0.3)
+    
+    # Add p-value labels for significant categories
+    for i, (bar, p_val) in enumerate(zip(bars, p_values)):
+        if p_val < bonferroni_alpha:
+            ax2.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.1,
+                    f'p={p_val:.3g}', ha='center', va='bottom', fontsize=8, fontweight='bold')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'combined_city_size_comparison.pdf', bbox_inches='tight')
+    plt.close()
+    
+    # Print summary statistics
+    print(f"\n📊 Combined City Size Comparison Results:")
+    print("=" * 80)
+    print(f"Bonferroni-corrected α = {bonferroni_alpha:.4f}")
+    print(f"Large cities (n={len(large_cities)}): {', '.join(large_cities['City'].unique())}")
+    print(f"Small cities (n={len(small_cities)}): {', '.join(small_cities['City'].unique())}")
+    print(f"Data sources: {', '.join(combined_df['Source'].unique())}")
+    
+    if significant_categories:
+        print(f"\n🔍 Statistically significant differences (p < {bonferroni_alpha:.4f}):")
+        for i in significant_categories:
+            print(f"  - {clean_labels[i]}: p = {p_values[i]:.4f}")
+            print(f"    Large: {large_means[i]:.2f}% ± {large_sems[i]:.2f}%")
+            print(f"    Small: {small_means[i]:.2f}% ± {small_sems[i]:.2f}%")
+    else:
+        print(f"\n🔍 No statistically significant differences found (p < {bonferroni_alpha:.4f})")
+    
+    # Create summary table
+    summary_data = []
+    for i, category in enumerate(subcategory_cols):
+        summary_data.append({
+            'Category': clean_labels[i],
+            'Large_Mean': f"{large_means[i]:.2f}%",
+            'Large_SEM': f"±{large_sems[i]:.2f}%",
+            'Small_Mean': f"{small_means[i]:.2f}%", 
+            'Small_SEM': f"±{small_sems[i]:.2f}%",
+            'P_Value': f"{p_values[i]:.4f}",
+            'Significant': 'Yes' if p_values[i] < bonferroni_alpha else 'No'
+        })
+    
+    summary_df = pd.DataFrame(summary_data)
+    summary_df.to_csv(output_dir / 'combined_city_size_comparison_summary.csv', index=False)
+    print(f"\n📋 Summary table saved to: {output_dir / 'combined_city_size_comparison_summary.csv'}")
+    
+    return combined_df
 
 def create_combined_summary_table(combined_df, weighted_avgs, overall_weighted_avg):
     """Create a comprehensive summary table for combined analysis."""
@@ -1125,6 +1589,9 @@ def main():
         
         # Create combined summary table
         create_combined_summary_table(combined_df, weighted_avgs, overall_weighted_avg)
+        
+        # Create combined city size analysis
+        create_combined_city_size_analysis(combined_df)
         
         print(f"\n✅ Combined analysis completed!")
         print(f"📁 Combined results saved to: output/charts/gpt_research_analysis/combined/")

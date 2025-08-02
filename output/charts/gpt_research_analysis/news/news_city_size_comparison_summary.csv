@@ -1,0 +1,17 @@
+Category,Large_Mean,Large_SEM,Small_Mean,Small_SEM,P_Value,Significant
+Ask A Genuine Question,0.02%,±0.01%,0.00%,±0.00%,0.0749,No
+Ask A Rhetorical Question,0.04%,±0.01%,0.01%,±0.01%,0.0858,No
+Provide A Fact Or Claim,0.93%,±0.01%,0.89%,±0.04%,0.3480,No
+Provide An Observation,0.32%,±0.05%,0.38%,±0.08%,0.5667,No
+Express Their Opinion,0.39%,±0.04%,0.32%,±0.04%,0.2424,No
+Express Others Opinions,0.24%,±0.03%,0.16%,±0.03%,0.0848,No
+Money Aid Allocation,0.22%,±0.02%,0.12%,±0.07%,0.1537,No
+Government Critique,0.22%,±0.06%,0.11%,±0.04%,0.1761,No
+Societal Critique,0.30%,±0.05%,0.12%,±0.04%,0.0200,No
+Solutions/Interventions,0.62%,±0.05%,0.66%,±0.09%,0.6999,No
+Personal Interaction,0.05%,±0.01%,0.05%,±0.02%,0.7910,No
+Media Portrayal,0.09%,±0.02%,0.05%,±0.03%,0.3839,No
+Not In My Backyard,0.03%,±0.01%,0.03%,±0.02%,0.8784,No
+Harmful Generalization,0.07%,±0.02%,0.08%,±0.05%,0.8022,No
+Deserving/Undeserving,0.07%,±0.01%,0.02%,±0.01%,0.0142,No
+Racist,0.00%,±0.00%,0.00%,±0.00%,0.3466,No

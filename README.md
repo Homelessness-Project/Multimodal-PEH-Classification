@@ -221,6 +221,8 @@ This script:
 - Generates charts for each data source (Reddit, X, News, Meeting Minutes)
 - Creates combined analysis across all sources
 - Produces city size comparisons and category correlations
+- Creates a weighted confusion matrix that accounts for different post volumes across sources
+- Generates a comprehensive 16x16 category relationship matrix showing correlations between all classification categories
 - Outputs publication-ready PDFs to `output/charts/gpt_research_analysis/`
 - Creates annotation agreement charts in `output/charts/`
 

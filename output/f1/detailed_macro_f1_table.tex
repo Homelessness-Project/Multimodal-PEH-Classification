@@ -1,6 +1,6 @@
 \begin{table*}[htbp]
 \centering
-\caption{Macro and Micro F1 Scores for All Models by Data Source}
+\centering\caption{Macro and Micro F1 Scores for All Models by Data Source}
 \label{tab:detailed_f1_scores}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{lcccccccccccc}
@@ -8,20 +8,20 @@
 Data Source & \multicolumn{2}{c}{GPT-4} & \multicolumn{2}{c}{LLaMA} & \multicolumn{2}{c}{Qwen} & \multicolumn{2}{c}{Phi-4} & \multicolumn{2}{c}{Grok} & \multicolumn{2}{c}{Gemini} & BERT \\
 & Zero & Few & Zero & Few & Zero & Few & Zero & Few & Zero & Few & Zero & Few & Fine-tuned \\
 \midrule
-Reddit (Macro) & 0.75 & \textbf{0.77} & 0.65 & 0.60 & 0.66 & 0.71 & 0.61 & 0.63 & 0.60 & 0.62 & 0.61 & 0.63 & 0.37 \\
-Reddit (Micro) & 0.81 & \textbf{0.83} & 0.81 & 0.69 & 0.74 & 0.80 & 0.81 & 0.79 & 0.77 & 0.77 & 0.69 & 0.72 & 0.60 \\
+Reddit (Macro) & 75.00 & \textbf{77.00} & 65.00 & 60.00 & 66.00 & 71.00 & 61.00 & 63.00 & 60.00 & 62.00 & 61.00 & 63.00 & 37.00 \\
+Reddit (Micro) & 81.00 & \textbf{83.00} & 81.00 & 69.00 & 74.00 & 80.00 & 81.00 & 79.00 & 77.00 & 77.00 & 69.00 & 72.00 & 60.00 \\
 \addlinespace[0.5em]
-X (Twitter) (Macro) & 0.65 & 0.66 & 0.65 & 0.60 & 0.60 & \textbf{0.71} & 0.56 & 0.67 & 0.64 & 0.65 & 0.68 & 0.68 & 0.16 \\
-X (Twitter) (Micro) & 0.77 & 0.79 & 0.83 & 0.70 & 0.71 & 0.80 & 0.82 & 0.82 & \textbf{0.84} & 0.82 & 0.80 & 0.80 & 0.59 \\
+X (Twitter) (Macro) & 65.00 & 66.00 & 65.00 & 60.00 & 60.00 & \textbf{71.00} & 56.00 & 67.00 & 64.00 & 65.00 & 68.00 & 68.00 & 16.00 \\
+X (Twitter) (Micro) & 77.00 & 79.00 & 83.00 & 70.00 & 71.00 & 80.00 & 82.00 & 82.00 & \textbf{84.00} & 82.00 & 80.00 & 80.00 & 59.00 \\
 \addlinespace[0.5em]
-News (Macro) & 0.68 & 0.71 & 0.64 & 0.56 & 0.55 & \textbf{0.73} & 0.60 & 0.71 & 0.67 & 0.69 & 0.70 & 0.72 & 0.18 \\
-News (Micro) & 0.81 & 0.83 & 0.85 & 0.74 & 0.63 & 0.85 & \textbf{0.87} & \textbf{0.87} & 0.86 & 0.86 & 0.82 & 0.84 & 0.66 \\
+News (Macro) & 68.00 & 71.00 & 64.00 & 56.00 & 55.00 & \textbf{73.00} & 60.00 & 71.00 & 67.00 & 69.00 & 70.00 & 72.00 & 18.00 \\
+News (Micro) & 81.00 & 83.00 & 85.00 & 74.00 & 63.00 & 85.00 & \textbf{87.00} & \textbf{87.00} & 86.00 & 86.00 & 82.00 & 84.00 & 66.00 \\
 \addlinespace[0.5em]
-Meeting Minutes (Macro) & 0.67 & 0.70 & 0.66 & 0.61 & 0.64 & \textbf{0.75} & 0.60 & 0.64 & 0.67 & 0.71 & 0.71 & 0.73 & 0.21 \\
-Meeting Minutes (Micro) & 0.78 & 0.81 & \textbf{0.85} & 0.75 & 0.74 & 0.84 & \textbf{0.85} & 0.81 & 0.84 & 0.84 & 0.81 & 0.82 & 0.76 \\
+Meeting Minutes (Macro) & 67.00 & 70.00 & 66.00 & 61.00 & 64.00 & \textbf{75.00} & 60.00 & 64.00 & 67.00 & 71.00 & 71.00 & 73.00 & 21.00 \\
+Meeting Minutes (Micro) & 78.00 & 81.00 & \textbf{85.00} & 75.00 & 74.00 & 84.00 & \textbf{85.00} & 81.00 & 84.00 & 84.00 & 81.00 & 82.00 & 76.00 \\
 \addlinespace[0.5em]
-Weighted Avg (Macro) & 0.74 & \textbf{0.76} & 0.65 & 0.60 & 0.65 & 0.71 & 0.61 & 0.63 & 0.61 & 0.63 & 0.62 & 0.64 & 0.34 \\
-Weighted Avg (Micro) & 0.81 & \textbf{0.83} & 0.81 & 0.70 & 0.74 & 0.80 & 0.81 & 0.79 & 0.78 & 0.78 & 0.71 & 0.73 & 0.61 \\
+Weighted Avg (Macro) & 73.77 & \textbf{75.80} & 65.05 & 59.99 & 65.32 & 71.31 & 60.64 & 63.44 & 60.84 & 62.92 & 62.24 & 64.13 & 34.38 \\
+Weighted Avg (Micro) & 80.57 & \textbf{82.64} & 81.46 & 69.56 & 73.62 & 80.37 & 81.44 & 79.46 & 78.04 & 77.93 & 70.68 & 73.36 & 61.16 \\
 \bottomrule
 \end{tabular}
 }
