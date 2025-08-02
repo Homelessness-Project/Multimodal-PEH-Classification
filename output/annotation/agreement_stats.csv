@@ -1,0 +1,5 @@
+Data_Type,Total Labels,Full Agreement (3),Partial Agreement (1-2),No Agreement (0),Gold Standard Agreement Rate (%)
+reddit,8006,632,2277,5097,7.89
+news,6109,446,999,4664,7.3
+meeting_minutes,5822,421,1162,4239,7.23
+x,7296,638,1449,5209,8.74
