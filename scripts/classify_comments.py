@@ -155,6 +155,7 @@ def main():
     parser.add_argument('--process_raw_only', action='store_true', help='Only process an existing raw CSV to produce the one-hot encoded CSV (no LLM inference)')
     parser.add_argument('--test', action='store_true', help='If set and using an API model, only process 10 comments and output estimated cost.')
     parser.add_argument('--max_workers', type=int, default=8, help='Number of parallel workers for API calls (default: 8 for API models, 1 for local models)')
+    parser.add_argument('--batch_size', type=int, default=None, help='Batch size for processing (overrides automatic batch size calculation)')
     args = parser.parse_args()
 
     # Setup logging if running with nohup
@@ -305,7 +306,11 @@ def main():
 
     output_data = []
     # Use larger batch size for API models (with parallel workers) vs local models
-    if args.model in api_models:
+    if args.batch_size is not None:
+        # Use user-specified batch size
+        BATCH_SIZE = args.batch_size
+        print(f"Using user-specified batch size: {BATCH_SIZE}")
+    elif args.model in api_models:
         # Scale batch size based on number of workers
         if args.max_workers >= 32:
             BATCH_SIZE = 200  # Large batches for high worker counts
