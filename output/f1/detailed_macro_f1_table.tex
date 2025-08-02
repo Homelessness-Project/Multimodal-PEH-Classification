@@ -1,0 +1,28 @@
+\begin{table*}[htbp]
+\centering
+\caption{Macro and Micro F1 Scores for All Models by Data Source}
+\label{tab:detailed_f1_scores}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccccccc}
+\toprule
+Data Source & \multicolumn{2}{c}{GPT-4} & \multicolumn{2}{c}{LLaMA} & \multicolumn{2}{c}{Qwen} & \multicolumn{2}{c}{Phi-4} & \multicolumn{2}{c}{Grok} & \multicolumn{2}{c}{Gemini} & BERT \\
+& Zero & Few & Zero & Few & Zero & Few & Zero & Few & Zero & Few & Zero & Few & Fine-tuned \\
+\midrule
+Reddit (Macro) & 0.75 & \textbf{0.77} & 0.65 & 0.60 & 0.66 & 0.71 & 0.61 & 0.63 & 0.60 & 0.62 & 0.61 & 0.63 & 0.37 \\
+Reddit (Micro) & 0.81 & \textbf{0.83} & 0.81 & 0.69 & 0.74 & 0.80 & 0.81 & 0.79 & 0.77 & 0.77 & 0.69 & 0.72 & 0.60 \\
+\addlinespace[0.5em]
+X (Twitter) (Macro) & 0.65 & 0.66 & 0.65 & 0.60 & 0.60 & \textbf{0.71} & 0.56 & 0.67 & 0.64 & 0.65 & 0.68 & 0.68 & 0.16 \\
+X (Twitter) (Micro) & 0.77 & 0.79 & 0.83 & 0.70 & 0.71 & 0.80 & 0.82 & 0.82 & \textbf{0.84} & 0.82 & 0.80 & 0.80 & 0.59 \\
+\addlinespace[0.5em]
+News (Macro) & 0.68 & 0.71 & 0.64 & 0.56 & 0.55 & \textbf{0.73} & 0.60 & 0.71 & 0.67 & 0.69 & 0.70 & 0.72 & 0.18 \\
+News (Micro) & 0.81 & 0.83 & 0.85 & 0.74 & 0.63 & 0.85 & \textbf{0.87} & \textbf{0.87} & 0.86 & 0.86 & 0.82 & 0.84 & 0.66 \\
+\addlinespace[0.5em]
+Meeting Minutes (Macro) & 0.67 & 0.70 & 0.66 & 0.61 & 0.64 & \textbf{0.75} & 0.60 & 0.64 & 0.67 & 0.71 & 0.71 & 0.73 & 0.21 \\
+Meeting Minutes (Micro) & 0.78 & 0.81 & \textbf{0.85} & 0.75 & 0.74 & 0.84 & \textbf{0.85} & 0.81 & 0.84 & 0.84 & 0.81 & 0.82 & 0.76 \\
+\addlinespace[0.5em]
+Weighted Avg (Macro) & 0.74 & \textbf{0.76} & 0.65 & 0.60 & 0.65 & 0.71 & 0.61 & 0.63 & 0.61 & 0.63 & 0.62 & 0.64 & 0.34 \\
+Weighted Avg (Micro) & 0.81 & \textbf{0.83} & 0.81 & 0.70 & 0.74 & 0.80 & 0.81 & 0.79 & 0.78 & 0.78 & 0.71 & 0.73 & 0.61 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
