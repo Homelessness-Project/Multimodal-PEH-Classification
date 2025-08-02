@@ -222,6 +222,7 @@ This script:
 - Creates combined analysis across all sources
 - Produces city size comparisons and category correlations
 - Outputs publication-ready PDFs to `output/charts/gpt_research_analysis/`
+- Creates annotation agreement charts in `output/charts/`
 
 ### 7. Soft Label Evaluation
 Evaluate model performance against soft labels:
@@ -253,6 +254,7 @@ The project generates extensive outputs organized by:
 ### Analysis Outputs
 - `output/f1/` - Comprehensive F1 analysis tables and LaTeX files
 - `output/charts/gpt_research_analysis/` - Publication-quality research charts
+- `output/charts/` - Annotation agreement charts
 - `output/annotation/` - Agreement statistics and soft labels
 
 ### Data Organization

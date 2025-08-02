@@ -208,7 +208,7 @@ def create_publication_charts(df_stats, data_source="reddit"):
     ax5.set_ylabel('Category', fontweight='bold')
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure5_heatmap.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / f'{data_source}_heatmap.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 7: Large vs Small Cities Comparison
@@ -251,7 +251,7 @@ def create_publication_charts(df_stats, data_source="reddit"):
         ax7.text(bar.get_x() + bar.get_width()/2., height + 0.5,
                 f'{height:.1f}%', ha='center', va='bottom', fontsize=8)
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure7_city_size_comparison.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / f'{data_source}_city_size_comparison.pdf', bbox_inches='tight')
     plt.close()
 
     # Figure 8: Confusion Matrix of Category Relationships
@@ -261,7 +261,7 @@ def create_publication_charts(df_stats, data_source="reddit"):
                 cbar_kws={'label': 'Correlation Coefficient'}, ax=ax8, square=True)
     ax8.set_title(f'{data_source.title()} Category Relationship Matrix', fontweight='bold', pad=20)
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure8_category_correlation.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / f'{data_source}_category_correlation.pdf', bbox_inches='tight')
     plt.close()
 
     # Figure 9: Statistical Significance Test Results
@@ -293,14 +293,14 @@ def create_publication_charts(df_stats, data_source="reddit"):
             ax9.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.1,
                     f'p={p_val:.3g}', ha='center', va='bottom', fontsize=8, fontweight='bold')
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure9_significance_test.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / f'{data_source}_significance_test.pdf', bbox_inches='tight')
     plt.close()
 
     print(f"📊 Created 4 publication-quality figures (PDF only) for {data_source}:")
-    print("  - Figure 5: Classification Categories Heatmap")
-    print("  - Figure 7: Large vs Small Cities Comparison")
-    print("  - Figure 8: Category Relationship Matrix")
-    print("  - Figure 9: Statistical Significance Test")
+    print(f"  - {data_source}_heatmap.pdf: Classification Categories Heatmap")
+    print(f"  - {data_source}_city_size_comparison.pdf: Large vs Small Cities Comparison")
+    print(f"  - {data_source}_category_correlation.pdf: Category Relationship Matrix")
+    print(f"  - {data_source}_significance_test.pdf: Statistical Significance Test")
     if significant_differences:
         print(f"\n🔍 Statistically significant differences (Bonferroni α={bonferroni_alpha:.4f}) between large and small cities:")
         for diff in significant_differences:
@@ -479,7 +479,7 @@ def create_combined_analysis(results):
                 f'{int(height):,}', ha='center', va='bottom', fontweight='bold')
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure1_data_source_distribution.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / 'combined_data_source_distribution.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 2: Weighted Average by Source
@@ -541,7 +541,7 @@ def create_combined_analysis(results):
     ax2.legend()
     ax2.grid(axis='y', alpha=0.3)
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure2_weighted_averages.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / 'combined_weighted_averages.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 3: Overall Weighted Average (Combined)
@@ -592,7 +592,7 @@ def create_combined_analysis(results):
                     f'{val:.1f}%', ha='center', va='bottom', fontweight='bold')
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure3_overall_weighted_average.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / 'combined_overall_weighted_average.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 4: Source Comparison Heatmap
@@ -622,7 +622,7 @@ def create_combined_analysis(results):
     ax4.set_ylabel('Classification Category', fontweight='bold')
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure4_source_comparison_heatmap.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / 'combined_source_comparison_heatmap.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 4.5: Comprehensive Source Comparison with Significance Testing
@@ -829,7 +829,7 @@ def create_combined_analysis(results):
                 ax4_5.axvspan(x[j] - width/2, x[j] + width*3.5, alpha=0.1, color='red')
     
     plt.tight_layout()
-    plt.savefig(output_dir / 'figure4_5_comprehensive_source_comparison.pdf', bbox_inches='tight')
+    plt.savefig(output_dir / 'combined_comprehensive_source_comparison.pdf', bbox_inches='tight')
     plt.close()
     
     # Figure 5: Statistical Significance Testing
@@ -879,7 +879,7 @@ def create_combined_analysis(results):
                         f'p={p_val:.3g}', ha='center', va='bottom', fontsize=8, fontweight='bold')
         
         plt.tight_layout()
-        plt.savefig(output_dir / 'figure5_significance_test.pdf', bbox_inches='tight')
+        plt.savefig(output_dir / 'combined_significance_test.pdf', bbox_inches='tight')
         plt.close()
         
         if significant_categories:
@@ -899,13 +899,13 @@ def create_combined_analysis(results):
             print(f"\n🔍 No statistically significant differences found between data sources (Bonferroni α={bonferroni_alpha:.4f}).")
     
     print(f"\n📊 Created 6 combined analysis figures:")
-    print("  - Figure 1: Data Source Distribution")
-    print("  - Figure 2: Weighted Average by Source")
-    print("  - Figure 3: Overall Weighted Average")
-    print("  - Figure 4: Source Comparison Heatmap")
-    print("  - Figure 4.5: Comprehensive Source Comparison (All 16 Categories)")
+    print("  - combined_data_source_distribution.pdf: Data Source Distribution")
+    print("  - combined_weighted_averages.pdf: Weighted Average by Source")
+    print("  - combined_overall_weighted_average.pdf: Overall Weighted Average")
+    print("  - combined_source_comparison_heatmap.pdf: Source Comparison Heatmap")
+    print("  - combined_comprehensive_source_comparison.pdf: Comprehensive Source Comparison (All 16 Categories)")
     if len(sources) > 1:
-        print("  - Figure 5: Statistical Significance Test")
+        print("  - combined_significance_test.pdf: Statistical Significance Test")
     
     return combined_df, weighted_avgs, overall_weighted_avg
 
@@ -1069,18 +1069,22 @@ def create_agreement_plots():
     """Create and save agreement rate plots"""
     print("\n📊 Creating agreement rate plots...")
     
+    # Create charts directory if it doesn't exist
+    charts_dir = Path('output/charts')
+    charts_dir.mkdir(parents=True, exist_ok=True)
+    
     try:
         # Create the detailed plot
         fig1 = create_agreement_plot()
-        fig1.savefig('output/annotation/agreement_by_category_detailed.pdf', 
+        fig1.savefig(charts_dir / 'annotation_agreement_by_category_detailed.pdf', 
                      bbox_inches='tight', dpi=300)
-        print("✅ Detailed plot saved as: output/annotation/agreement_by_category_detailed.pdf")
+        print("✅ Detailed plot saved as: output/charts/annotation_agreement_by_category_detailed.pdf")
         
         # Create the simplified plot
         fig2 = create_simplified_plot()
-        fig2.savefig('output/annotation/agreement_by_category.pdf', 
+        fig2.savefig(charts_dir / 'annotation_agreement_by_category.pdf', 
                      bbox_inches='tight', dpi=300)
-        print("✅ Simplified plot saved as: output/annotation/agreement_by_category.pdf")
+        print("✅ Simplified plot saved as: output/charts/annotation_agreement_by_category.pdf")
         
     except FileNotFoundError:
         print("⚠️  Warning: Could not find agreement data file. Skipping agreement plots.")
