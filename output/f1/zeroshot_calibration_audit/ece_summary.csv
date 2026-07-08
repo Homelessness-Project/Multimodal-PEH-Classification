@@ -1,0 +1,5 @@
+category,ece,n,gold_positives
+not in my backyard,0.13788056206088994,1708,46
+provide a fact or claim,0.3420179547228728,1708,1423
+express their opinion,0.03669008587041375,1708,910
+harmful generalization,0.11309523809523808,1708,122

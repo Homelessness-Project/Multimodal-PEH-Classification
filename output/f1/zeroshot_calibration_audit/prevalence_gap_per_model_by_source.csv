@@ -1,0 +1,97 @@
+source,model,category,gap_pp,gold_positives,low_support
+reddit,llama,not in my backyard,19.0,26,False
+reddit,llama,provide a fact or claim,-45.4,282,False
+reddit,llama,express their opinion,3.9999999999999925,393,False
+reddit,llama,harmful generalization,14.600000000000001,65,False
+reddit,phi4,not in my backyard,20.0,26,False
+reddit,phi4,provide a fact or claim,-51.19999999999999,282,False
+reddit,phi4,express their opinion,-25.8,393,False
+reddit,phi4,harmful generalization,-5.0,65,False
+reddit,qwen,not in my backyard,32.800000000000004,26,False
+reddit,qwen,provide a fact or claim,-9.199999999999998,282,False
+reddit,qwen,express their opinion,9.399999999999997,393,False
+reddit,qwen,harmful generalization,42.800000000000004,65,False
+reddit,gemini,not in my backyard,8.300395256916998,30,False
+reddit,gemini,provide a fact or claim,19.76284584980238,285,False
+reddit,gemini,express their opinion,6.719367588932801,396,False
+reddit,gemini,harmful generalization,15.019762845849804,69,False
+reddit,grok,not in my backyard,3.3999999999999995,26,False
+reddit,grok,provide a fact or claim,-17.599999999999994,282,False
+reddit,grok,express their opinion,-37.60000000000001,393,False
+reddit,grok,harmful generalization,-2.800000000000001,65,False
+reddit,gpt4,not in my backyard,8.600000000000001,26,False
+reddit,gpt4,provide a fact or claim,14.400000000000002,282,False
+reddit,gpt4,express their opinion,9.599999999999998,393,False
+reddit,gpt4,harmful generalization,16.599999999999998,65,False
+news,llama,not in my backyard,14.136125654450263,0,True
+news,llama,provide a fact or claim,-42.93193717277487,357,False
+news,llama,express their opinion,29.581151832460733,62,False
+news,llama,harmful generalization,7.068062827225131,4,True
+news,phi4,not in my backyard,7.068062827225131,0,True
+news,phi4,provide a fact or claim,-73.29842931937172,357,False
+news,phi4,express their opinion,-9.947643979057592,62,False
+news,phi4,harmful generalization,0.0,4,True
+news,qwen,not in my backyard,48.167539267015705,0,True
+news,qwen,provide a fact or claim,-16.492146596858635,357,False
+news,qwen,express their opinion,53.403141361256544,62,False
+news,qwen,harmful generalization,51.30890052356021,4,True
+news,gemini,not in my backyard,4.18848167539267,0,True
+news,gemini,provide a fact or claim,0.2617801047120505,357,False
+news,gemini,express their opinion,7.591623036649215,62,False
+news,gemini,harmful generalization,7.853403141361256,4,True
+news,grok,not in my backyard,1.5706806282722512,0,True
+news,grok,provide a fact or claim,-39.79057591623037,357,False
+news,grok,express their opinion,-4.712041884816755,62,False
+news,grok,harmful generalization,1.832460732984293,4,True
+news,gpt4,not in my backyard,2.8795811518324608,0,True
+news,gpt4,provide a fact or claim,-0.2617801047120394,357,False
+news,gpt4,express their opinion,8.37696335078534,62,False
+news,gpt4,harmful generalization,8.37696335078534,4,True
+meeting_minutes,llama,not in my backyard,11.263736263736265,4,True
+meeting_minutes,llama,provide a fact or claim,-59.61538461538461,351,False
+meeting_minutes,llama,express their opinion,-2.7472527472527486,213,False
+meeting_minutes,llama,harmful generalization,3.8461538461538463,8,False
+meeting_minutes,phi4,not in my backyard,17.032967032967033,4,True
+meeting_minutes,phi4,provide a fact or claim,-82.14285714285714,351,False
+meeting_minutes,phi4,express their opinion,-31.318681318681325,213,False
+meeting_minutes,phi4,harmful generalization,-1.098901098901099,8,False
+meeting_minutes,qwen,not in my backyard,40.38461538461539,4,True
+meeting_minutes,qwen,provide a fact or claim,-39.83516483516484,351,False
+meeting_minutes,qwen,express their opinion,33.241758241758234,213,False
+meeting_minutes,qwen,harmful generalization,28.296703296703303,8,False
+meeting_minutes,gemini,not in my backyard,4.670329670329671,4,True
+meeting_minutes,gemini,provide a fact or claim,-12.08791208791209,351,False
+meeting_minutes,gemini,express their opinion,6.043956043956045,213,False
+meeting_minutes,gemini,harmful generalization,4.945054945054944,8,False
+meeting_minutes,grok,not in my backyard,1.648351648351648,4,True
+meeting_minutes,grok,provide a fact or claim,-53.2967032967033,351,False
+meeting_minutes,grok,express their opinion,-29.120879120879124,213,False
+meeting_minutes,grok,harmful generalization,-1.098901098901099,8,False
+meeting_minutes,gpt4,not in my backyard,4.1208791208791204,4,True
+meeting_minutes,gpt4,provide a fact or claim,-24.17582417582418,351,False
+meeting_minutes,gpt4,express their opinion,5.769230769230771,213,False
+meeting_minutes,gpt4,harmful generalization,5.769230769230768,8,False
+x,llama,not in my backyard,17.105263157894736,12,False
+x,llama,provide a fact or claim,-72.58771929824562,430,False
+x,llama,express their opinion,19.517543859649123,239,False
+x,llama,harmful generalization,10.087719298245615,41,False
+x,phi4,not in my backyard,20.614035087719298,12,False
+x,phi4,provide a fact or claim,-91.44736842105263,430,False
+x,phi4,express their opinion,-22.587719298245617,239,False
+x,phi4,harmful generalization,-2.631578947368421,41,False
+x,qwen,not in my backyard,31.35964912280702,12,False
+x,qwen,provide a fact or claim,-51.53508771929825,430,False
+x,qwen,express their opinion,29.605263157894733,239,False
+x,qwen,harmful generalization,27.631578947368418,41,False
+x,gemini,not in my backyard,2.850877192982456,12,False
+x,gemini,provide a fact or claim,-15.350877192982459,430,False
+x,gemini,express their opinion,3.7280701754385914,239,False
+x,gemini,harmful generalization,12.5,41,False
+x,grok,not in my backyard,0.0,12,False
+x,grok,provide a fact or claim,-50.43859649122808,430,False
+x,grok,express their opinion,-29.385964912280706,239,False
+x,grok,harmful generalization,-5.043859649122807,41,False
+x,gpt4,not in my backyard,1.0964912280701753,12,False
+x,gpt4,provide a fact or claim,-20.394736842105267,430,False
+x,gpt4,express their opinion,6.578947368421051,239,False
+x,gpt4,harmful generalization,14.912280701754385,41,False

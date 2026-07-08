@@ -1,0 +1,5 @@
+category,ece,n,gold_positives,shot_type
+not in my backyard,0.09851155503329417,1702,42,few_shot
+provide a fact or claim,0.2510771641206424,1702,1420,few_shot
+express their opinion,0.04455542499020759,1702,907,few_shot
+harmful generalization,0.12416764590677633,1702,118,few_shot
