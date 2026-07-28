@@ -1,0 +1,13 @@
+{
+  "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "temp": 0.1,
+  "max_tokens": 48,
+  "n": 6,
+  "variants": [
+    "A",
+    "B",
+    "C"
+  ],
+  "note": "NIMBY-only one-category-at-a-time prompts; MLX 4-bit for Mac 18GB.",
+  "why_hf_mps_was_slow": "7B fp16 (~14GB) on 18GB unified memory causes swap thrashing; MLX 4-bit + short NIMBY-only outputs avoids that."
+}

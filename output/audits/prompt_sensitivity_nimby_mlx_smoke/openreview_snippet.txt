@@ -1,0 +1,1 @@
+We ran three prompt audit variants on the gold-standard set with local Qwen (MLX 4-bit; NIMBY scored one category at a time): A (baseline), B (within-block category shuffle, seed 7), and C (role line removed). NIMBY prevalence gaps were +0.0, +0.0, and +0.0 pp, confirming that over-tagging is robust to label ordering and role framing.

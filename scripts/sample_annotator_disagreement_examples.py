@@ -67,7 +67,7 @@ def main() -> None:
     ap.add_argument(
         "--out_dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "disagreement_examples",
+        default=REPO_ROOT / "output" / "audits" / "disagreement_examples",
     )
     ap.add_argument("--max_chars", type=int, default=280)
     args = ap.parse_args()

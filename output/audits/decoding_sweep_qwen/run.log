@@ -1,0 +1,11 @@
+/Users/jonathankarr/Documents/Multidomain-PEH-Classification/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Sampled 48 items -> output/openreview_artifacts/decoding_sweep_qwen
+Loading Qwen/Qwen2.5-7B-Instruct on mps...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:25<01:16, 25.42s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:46<00:45, 22.83s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:11<00:24, 24.00s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:27<00:00, 20.73s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:27<00:00, 21.89s/it]
+
+=== qwen_T0.0_seed0 ===
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  [1/48] T=0.0 reddit#215 (12488.1s/item)
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

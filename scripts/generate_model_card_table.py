@@ -28,7 +28,7 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "model_card",
+        default=REPO_ROOT / "output" / "audits" / "model_card",
     )
     ap.add_argument("--snapshot-date", default="2025-05--2025-08 collection window")
     args = ap.parse_args()

@@ -80,7 +80,7 @@ def main() -> None:
     ap.add_argument(
         "--out_dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "pii_spotcheck",
+        default=REPO_ROOT / "output" / "audits" / "pii_spotcheck",
     )
     args = ap.parse_args()
     out_dir: Path = args.out_dir

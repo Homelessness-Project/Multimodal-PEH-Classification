@@ -63,7 +63,7 @@ def main() -> None:
     ap.add_argument(
         "--out_dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "calibration",
+        default=REPO_ROOT / "output" / "audits" / "calibration",
     )
     args = ap.parse_args()
 

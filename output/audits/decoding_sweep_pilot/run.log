@@ -1,0 +1,8 @@
+/Users/jonathankarr/Documents/Multidomain-PEH-Classification/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Sampled 8 gold items -> output/openreview_artifacts/decoding_sweep_pilot/gold_subsample.csv
+Loading local model qwen...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.20s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:08,  4.24s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:14<00:05,  5.41s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:21<00:00,  5.87s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:21<00:00,  5.31s/it]
+Loaded on mps
+Running qwen_T0.0_seed0 on 8 items...
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.

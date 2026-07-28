@@ -276,7 +276,7 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "nimby_representation",
+        default=REPO_ROOT / "output" / "audits" / "nimby_representation",
     )
     ap.add_argument("--device", default=None)
     args = ap.parse_args()

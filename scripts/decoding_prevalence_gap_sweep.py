@@ -406,7 +406,7 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "decoding_sweep",
+        default=REPO_ROOT / "output" / "audits" / "decoding_sweep",
     )
     ap.add_argument(
         "--dry-run-sample-only",

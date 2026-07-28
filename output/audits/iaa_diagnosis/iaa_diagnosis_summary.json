@@ -1,0 +1,27 @@
+{
+  "n_cells": 64,
+  "n_cells_ge5_pos": 50,
+  "spearman_kappa_vs_prevalence": 0.31834235786773724,
+  "spearman_kappa_vs_split": -0.0467211189481555,
+  "spearman_kappa_vs_Po": 0.04578319517913886,
+  "spearman_kappa_vs_PABAK": 0.04578319517913886,
+  "mechanism_counts": {
+    "sparsity_degeneracy": 29,
+    "boundary_subjectivity": 19,
+    "moderate_agreement": 12,
+    "high_base_rate_kappa_paradox": 4
+  },
+  "mean_Po_overall": 0.8599441833137484,
+  "mean_kappa_like_overall": 0.30916327901156593,
+  "mean_PABAK_overall": 0.719888366627497,
+  "mean_unanimity_overall": 0.783747062279671,
+  "meeting_minutes_fact_claim": {
+    "P_o": 0.8076923076923077,
+    "kappa_like": 0.031096839614669945,
+    "PABAK": 0.6153846153846154,
+    "split_rate": 0.28846153846153844,
+    "prevalence_2of3": 0.9642857142857143,
+    "mechanism": "high_base_rate_kappa_paradox",
+    "paper_kappa": 0.31
+  }
+}

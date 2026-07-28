@@ -211,7 +211,7 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT
         / "output"
-        / "openreview_artifacts"
+        / "audits"
         / "prompt_sensitivity_nimby_mlx",
     )
     ap.add_argument("--no-resume", action="store_true")

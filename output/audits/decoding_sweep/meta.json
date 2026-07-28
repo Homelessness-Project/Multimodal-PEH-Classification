@@ -1,0 +1,23 @@
+{
+  "n_items": 40,
+  "n_per_source": 10,
+  "models": [
+    "qwen"
+  ],
+  "temperatures": [
+    0.0,
+    0.1,
+    0.7
+  ],
+  "top_p": 0.95,
+  "seeds": [
+    0
+  ],
+  "categories": [
+    "not in my backyard",
+    "provide a fact or claim",
+    "express their opinion",
+    "harmful generalization"
+  ],
+  "note": "Main paper used temperature=0.1 elsewhere."
+}

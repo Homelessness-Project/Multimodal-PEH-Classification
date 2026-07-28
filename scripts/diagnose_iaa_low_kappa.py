@@ -239,7 +239,7 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "iaa_diagnosis",
+        default=REPO_ROOT / "output" / "audits" / "iaa_diagnosis",
     )
     ap.add_argument(
         "--kappa-tex",

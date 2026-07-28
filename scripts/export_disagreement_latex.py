@@ -31,7 +31,7 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT
         / "output"
-        / "openreview_artifacts"
+        / "audits"
         / "disagreement_examples"
         / "disagreement_provide_a_fact_or_claim.csv",
     )
@@ -41,7 +41,7 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT
         / "output"
-        / "openreview_artifacts"
+        / "audits"
         / "disagreement_examples"
         / "disagreement_fact_claim.tex",
     )

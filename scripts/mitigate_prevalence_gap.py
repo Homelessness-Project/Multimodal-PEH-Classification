@@ -168,7 +168,7 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=Path,
-        default=REPO_ROOT / "output" / "openreview_artifacts" / "mitigation",
+        default=REPO_ROOT / "output" / "audits" / "mitigation",
     )
     args = ap.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)

@@ -217,7 +217,7 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT
         / "output"
-        / "openreview_artifacts"
+        / "audits"
         / "decoding_sweep_qwen",
     )
     ap.add_argument("--no-resume", action="store_true")

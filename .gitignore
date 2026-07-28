@@ -1,9 +1,39 @@
 venv/
 .venv/
 .env
-.DS_Storemodels/*.pt
+.DS_Store
+models/*.pt
 *.pt
 
 # Large CSV files that exceed GitHub's 100MB limit
 output/charts/sentiment_analysis/all_sentiment_scores.csv
 output/charts/sentiment_analysis/sentiment_with_categories.csv
+
+# ---------------------------------------------------------------------------
+# Paper / manuscript / review materials
+# ---------------------------------------------------------------------------
+# Manuscript, bib, response docs, LaTeX sources
+*.tex
+*.bib
+*.docx
+emnlp*.log
+paper_includes/
+figures/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+_minted*/
