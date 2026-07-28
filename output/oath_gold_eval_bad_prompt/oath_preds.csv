@@ -1,0 +1,1699 @@
+source,row_index,oath_frames_raw,pred_labels,pred_money aid allocation,pred_government critique,pred_societal critique,pred_solutions/interventions,pred_personal interaction,pred_media portrayal,pred_not in my backyard,pred_harmful generalization,pred_deserving/undeserving
+meeting_minutes,0,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,1,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,2,a. STREET,,0,0,0,0,0,0,0,0,0
+meeting_minutes,3,"[ORGANIZATION], [ORGANIZATION], 4723, first reading on an ordinance of [ORGANIZATION], [OR",,0,0,0,0,0,0,0,0,0
+meeting_minutes,4,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,5,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,6,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,7,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,8,"[ORGANIZATION], [ORGANIZATION], [PERSON], [LOCATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,9,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,10,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,11,DATE0. THE HIGH LEVEL 50 AFFORDABLE THE HIGH LEVEL 50 [ORGANIZATION] ACROSS 37 HOUSING,,0,0,0,0,0,0,0,0,0
+meeting_minutes,12,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,13,"a,b,c,d,e,f",,0,0,0,0,0,0,0,0,0
+meeting_minutes,14,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,15,[STREET],,0,0,0,0,0,0,0,0,0
+meeting_minutes,16,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,17,"ada, govt, sarah",,0,0,0,0,0,0,0,0,0
+meeting_minutes,18,"encampments,chemical toilets,porta-potties",,0,0,0,0,0,0,0,0,0
+meeting_minutes,19,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,20,"[ORGANIZATION], At-Large Councilwoman.",,0,0,0,0,0,0,0,0,0
+meeting_minutes,21,[TIME],,0,0,0,0,0,0,0,0,0
+meeting_minutes,22,a) Mental health services b) Substance abuse c) Homelessness,,0,0,0,0,0,0,0,0,0
+meeting_minutes,23,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,24,"fac0,fac1",,0,0,0,0,0,0,0,0,0
+meeting_minutes,25,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,26,[INSTITUTE],,0,0,0,0,0,0,0,0,0
+meeting_minutes,27,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,28,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,29,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,30,"[ORGANIZATION], [ORGANIZATION], [ORG3]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,31,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,32,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,33,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,34,"[ORGANIZATION], [PERSON], [LOCATION], [FUNDING]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,35,"[ORGANIZATION], [ORG1]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,36,[DATE],,0,0,0,0,0,0,0,0,0
+meeting_minutes,37,"[PERSON], [ORGANIZATION] decided that they would not overturn a ruling in ORG1 that basically ruled it's",,0,0,0,0,0,0,0,0,0
+meeting_minutes,38,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,39,a) government employees b) faith leaders c) government employees d) government employees,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,40,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+meeting_minutes,41,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,42,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,43,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,44,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,45,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,46,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,47,"[ORGANIZATION], MENTAL HEALTH",,0,0,0,0,0,0,0,0,0
+meeting_minutes,48,"[PERSON], [ORGANIZATION], [ORGANIZATION], acknowledging and thanking Pastor [PERSON] for his kindness and",,0,0,0,0,0,0,0,0,0
+meeting_minutes,49,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,50,"[ORGANIZATION], finance director, legal director, [DATE]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,51,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,52,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,53,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,54,a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,55,"[TIME], [DATE]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,56,"[ORGANIZATION], [INSTITUTION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,57,"a, b, c, d",,0,0,0,0,0,0,0,0,0
+meeting_minutes,58,"[PERSON], [STREET]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,59,"0, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,60,[ORGANIZATION]ns 76,,0,0,0,0,0,0,0,0,0
+meeting_minutes,61,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,62,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,63,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,64,"[ORGANIZATION], STREET, ITS_WAS_NOT_AT_FAULT, IF",,0,0,0,0,0,0,0,0,0
+meeting_minutes,65,"a, b, c, d, e, f, g, h",,0,0,0,0,0,0,0,0,0
+meeting_minutes,66,[ORGANIZATION] [PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,67,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,68,"[ORGANIZATION], '$30 million for a $225 million revitalization project of [ORGANIZATION]'s [",,0,0,0,0,0,0,0,0,0
+meeting_minutes,69,money to lower the unemployment rate by putting people to work money to eliminate homelessness in [ORGANIZATION] by putting people in the home,money aid allocation,1,0,0,0,0,0,0,0,0
+meeting_minutes,70,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,71,[TIME],,0,0,0,0,0,0,0,0,0
+meeting_minutes,72,"a, b, c, d, e, f",,0,0,0,0,0,0,0,0,0
+meeting_minutes,73,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,74,[ORG1],,0,0,0,0,0,0,0,0,0
+meeting_minutes,75,"[PERSON] at the city bus stop, [PERSON] selling cigarettes at a higher price to the homeless people because they don't have cigarettes",,0,0,0,0,0,0,0,0,0
+meeting_minutes,76,"[ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+meeting_minutes,77,"alcoholics, drug addicts, homeless fellows",,0,0,0,0,0,0,0,0,0
+meeting_minutes,78,"a), b), c)",,0,0,0,0,0,0,0,0,0
+meeting_minutes,79,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,80,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,81,"[ORGANIZATION], [ORGANIZATION], regarding the acceptance of amended [ORGANIZATION] Employment Barrier Reduction Pilot [",,0,0,0,0,0,0,0,0,0
+meeting_minutes,82,"[ORGANIZATION], PERSON0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,83,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,84,"alcoholics, homeless, school",,0,0,0,0,0,0,0,0,0
+meeting_minutes,85,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+meeting_minutes,86,a) Mental health b) Mental health c) Mental health d) Mental health e) Mental health f) Mental health g,,0,0,0,0,0,0,0,0,0
+meeting_minutes,87,"% of homelessness, runaway children, alcohol and drugs",,0,0,0,0,0,0,0,0,0
+meeting_minutes,88,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,89,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,90,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,91,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,92,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,93,"[TIME], [PERSON], [LOCATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,94,"[ORGANIZATION], [PERSON], [ORG2]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,95,PERSON0 GPE0 [PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,96,]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]],,0,0,0,0,0,0,0,0,0
+meeting_minutes,97,"[PERSON], 113,952, veterans",,0,0,0,0,0,0,0,0,0
+meeting_minutes,98,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,99,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,100,a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,101,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,102,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,103,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,104,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,105,"[TIME], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,106,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,107,"0, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,108,[2],,0,0,0,0,0,0,0,0,0
+meeting_minutes,109,[ORG1],,0,0,0,0,0,0,0,0,0
+meeting_minutes,110,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,111,0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,112,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+meeting_minutes,113,"[DATE], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,114,"[ORGANIZATION] $100,000.Purchase [ORGANIZATION] EngineNo.7. The next allocations ORG",,0,0,0,0,0,0,0,0,0
+meeting_minutes,115,[TIME] 18 19 20 21 22 23 [DATE],,0,0,0,0,0,0,0,0,0
+meeting_minutes,116,0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,117,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,118,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,119,0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,120,[DATE] 3 4 5 6 7 8 9 10 11 12 13 14 15 [DATE] 18 19 20 2[DATE]2 23 [,,0,0,0,0,0,0,0,0,0
+meeting_minutes,121,"mud funds, money for the homeless",money aid allocation,1,0,0,0,0,0,0,0,0
+meeting_minutes,122,"[PERSON], [LOCATION], [DATE]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,123,a) government b) private sector c) nonprofit d) community,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,124,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,125,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,126,"[LOCATION], ___, ___",,0,0,0,0,0,0,0,0,0
+meeting_minutes,127,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,128,[TIME] [LOCATION] [NOTE] [TIME] [NOTE] [TIME] [NOTE] [TIME,,0,0,0,0,0,0,0,0,0
+meeting_minutes,129,a) money b) money c) money d) money e) money f) money g) money h) money,money aid allocation,1,0,0,0,0,0,0,0,0
+meeting_minutes,130,"solutions,space in the shelter",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,131,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+meeting_minutes,132,"PERSON1, PERSON2, PERSON3, PERSON4, PERSON5, PER",,0,0,0,0,0,0,0,0,0
+meeting_minutes,133,"[1] - 5:2 Home [2] - 11:10, 11:14 home [3] - 12:3, 12:",,0,0,0,0,0,0,0,0,0
+meeting_minutes,134,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,135,"[ADDRESS] [ORGANIZATION], [TIME]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,136,[ORG1] [ORG2] [ORG3] [ORG4] [ORG5] [ORG6] [OR,,0,0,0,0,0,0,0,0,0
+meeting_minutes,137,"0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",,0,0,0,0,0,0,0,0,0
+meeting_minutes,138,"[PERSON], [DATE] [DATE] [DATE] [DATE] [DATE] [DATE] [DATE]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,139,[6],,0,0,0,0,0,0,0,0,0
+meeting_minutes,140,"Will the public be notified of the next meeting, date, time, and location?",,0,0,0,0,0,0,0,0,0
+meeting_minutes,141,"a bathhouse, human",,0,0,0,0,0,0,0,0,0
+meeting_minutes,142,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,143,"[1] - 0:27, 0:27, 0:27, 0:27, 0:29, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,144,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,145,a) a) a) a) a) a) a) a) a) a) a,,0,0,0,0,0,0,0,0,0
+meeting_minutes,146,"[PERSON],[ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,147,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,148,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+meeting_minutes,149,[59],,0,0,0,0,0,0,0,0,0
+meeting_minutes,150,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,151,[STREET]'s plan deals with long-term care of these people. I think it's really important to fund,,0,0,0,0,0,0,0,0,0
+meeting_minutes,152,"[ORGANIZATION],Funding for homelessness services,Affordable housing activities",,0,0,0,0,0,0,0,0,0
+meeting_minutes,153,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,154,a) zoning b) affluent c) affluent d) affluent e,,0,0,0,0,0,0,0,0,0
+meeting_minutes,155,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,156,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,157,a) societal costs b) benefits c) costs d) benefits e) benefits f) benefits g) benefits h,societal critique,0,0,1,0,0,0,0,0,0
+meeting_minutes,158,a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,159,"[LOCATION], HO[LOCATION]ING CRISIS RESOLUTION",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,160,"a staircase that is about to fall through a home, a fire hazard, a fire hazard",,0,0,0,0,0,0,0,0,0
+meeting_minutes,161,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,162,"resolutions, number 7, resolutions, number 8, resolutions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,163,"ad,government,sellers",government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,164,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,165,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,166,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,167,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,168,a) concerns about the property's development history b) concerns about the property's ultimate sales price c) concerns about parking,,0,0,0,0,0,0,0,0,0
+meeting_minutes,169,[TIME],,0,0,0,0,0,0,0,0,0
+meeting_minutes,170,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+meeting_minutes,171,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,172,a,,0,0,0,0,0,0,0,0,0
+meeting_minutes,173,"__, __, __, __",,0,0,0,0,0,0,0,0,0
+meeting_minutes,174,"[ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+meeting_minutes,175,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,176,"a), b), c)",,0,0,0,0,0,0,0,0,0
+meeting_minutes,177,a) a) a) b) c) d) e) f) g) h) i,,0,0,0,0,0,0,0,0,0
+meeting_minutes,178,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,179,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,180,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,181,"[TIME], [ORG2], [ORG2]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,182,"[ORGANIZATION], the folks from [ORGANIZATION], the folks who work with [ORGANIZATION], those who work",,0,0,0,0,0,0,0,0,0
+meeting_minutes,183,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,184,[NO],,0,0,0,0,0,0,0,0,0
+meeting_minutes,185,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,186,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,187,"__, __, __",,0,0,0,0,0,0,0,0,0
+meeting_minutes,188,"a) people are living in multiple families, just trying to survive b) people are living in a very, very poor environment",,0,0,0,0,0,0,0,0,0
+meeting_minutes,189,"a) housing,b) housing,c)",,0,0,0,0,0,0,0,0,0
+meeting_minutes,190,"0, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,191,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,192,,,0,0,0,0,0,0,0,0,0
+meeting_minutes,193,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [ORGANIZATION], one term involving",,0,0,0,0,0,0,0,0,0
+meeting_minutes,194,solutions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,195,[ORGANIZATION] is a Housing Problem,,0,0,0,0,0,0,0,0,0
+meeting_minutes,196,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,197,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,198,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,199,"[ORGANIZATION], [ORGANIZATION], [PERSON], [DATE], Affordable Housing and [INSTITUTION] Ex",,0,0,0,0,0,0,0,0,0
+meeting_minutes,200,,,0,0,0,0,0,0,0,0,0
+meeting_minutes,201,"aing mental health and drug crisis, if",,0,0,0,0,0,0,0,0,0
+meeting_minutes,202,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,203,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,204,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,205,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,206,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,207,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,208,PERSON0. PERSON1.,,0,0,0,0,0,0,0,0,0
+meeting_minutes,209,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,210,[ORGANIZATION]],,0,0,0,0,0,0,0,0,0
+meeting_minutes,211,comma-separated list,,0,0,0,0,0,0,0,0,0
+meeting_minutes,212,a) societal determinants b) societal determinants c) societal determinants d) societal determinants,societal critique,0,0,1,0,0,0,0,0,0
+meeting_minutes,213,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,214,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,215,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,216,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,217,a) shelter b) design c) redevelopment d) redevelopment,,0,0,0,0,0,0,0,0,0
+meeting_minutes,218,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,219,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,220,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,221,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,222,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,223,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,224,"d, e",,0,0,0,0,0,0,0,0,0
+meeting_minutes,225,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,226,"a) rising rents, homelessness, non-affordable housing, conflict",,0,0,0,0,0,0,0,0,0
+meeting_minutes,227,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,228,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,229,[DATE],,0,0,0,0,0,0,0,0,0
+meeting_minutes,230,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,231,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,232,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,233,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,234,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,235,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,236,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,237,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,238,"[ORG2, [PERSON], the [LOCATION], the [ORG6]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,239,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,240,"[ORGANIZATION]-round shelter, a [STREET] that stays open and allows a father and a mother to put their",,0,0,0,0,0,0,0,0,0
+meeting_minutes,241,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,242,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,243,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,244,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,245,"[STREET], [INSTITUTION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,246,"0, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,247,a history of racial covenants,,0,0,0,0,0,0,0,0,0
+meeting_minutes,248,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,249,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,250,"ORGANIZATION, ",,0,0,0,0,0,0,0,0,0
+meeting_minutes,251,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,252,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,253,"a, b, c, d, e, f",,0,0,0,0,0,0,0,0,0
+meeting_minutes,254,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,255,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,256,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,257,"[PERSON], [ORGANIZATION], [STREET]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,258,a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,259,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,260,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,261,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,262,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,263,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,264,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,265,a) a) a) a b) a c) a d) a e) a ,,0,0,0,0,0,0,0,0,0
+meeting_minutes,266,"[PERSON], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,267,[ORG1],,0,0,0,0,0,0,0,0,0
+meeting_minutes,268,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,269,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,270,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,271,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,272,"[PERSON], [TIME], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,273,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,274,"PERSON0, [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,275,a) zoning b) inclusionary zoning c) zoning d) zoning e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,276,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,277,[ORGANIZATION] [PERSON].,,0,0,0,0,0,0,0,0,0
+meeting_minutes,278,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,279,"[ORGANIZATION], 'I support the need for affordable housing, and I understand the need for affordable housing, particularly in the east side'",,0,0,0,0,0,0,0,0,0
+meeting_minutes,280,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,281,a) affordable housing b) workforce housing c) market rate,,0,0,0,0,0,0,0,0,0
+meeting_minutes,282,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,283,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,284,"[PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,285,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,286,"advocacy, philanthropy, community, societal, economic, personal, societal,",societal critique;personal interaction,0,0,1,0,1,0,0,0,0
+meeting_minutes,287,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,288,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,289,a) resisted b) questioned c) resisted d) resisted,,0,0,0,0,0,0,0,0,0
+meeting_minutes,290,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,291,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,292,"ada, eviction, redevelopment, redevelopment, redevelopment, redevelopment, redevelopment, redevelopment",,0,0,0,0,0,0,0,0,0
+meeting_minutes,293,[PERSON] [PERSON] [PERSON] [PERSON] [PERSON] [PERSON] [PERSON] [PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,294,"affluent, affordable housing, policing, health, health",,0,0,0,0,0,0,0,0,0
+meeting_minutes,295,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,296,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,297,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,298,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,299,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,300,a) zoning b) inclusionary zoning c) subsidized housing d) subsidized housing,,0,0,0,0,0,0,0,0,0
+meeting_minutes,301,appoints appoints appoints appoints appoints appoints a,,0,0,0,0,0,0,0,0,0
+meeting_minutes,302,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,303,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,304,"adolescent,family,homelessness,solutions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,305,a tax break,,0,0,0,0,0,0,0,0,0
+meeting_minutes,306,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,307,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,308,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,309,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,310,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,311,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,312,"0, 616, 0",,0,0,0,0,0,0,0,0,0
+meeting_minutes,313,a) bringing every child up to grade level in their reading and mathematics b) ensuring every person who is working or does not have a,,0,0,0,0,0,0,0,0,0
+meeting_minutes,314,"[ORGANIZATION], ___, ___, ___, ___, ___,",,0,0,0,0,0,0,0,0,0
+meeting_minutes,315,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,316,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,317,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,318,"a, b",,0,0,0,0,0,0,0,0,0
+meeting_minutes,319,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,320,a) rebuff any intention to displace current residents of the area in favor of more affluent residents b) assure that,,0,0,0,0,0,0,0,0,0
+meeting_minutes,321,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,322,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,323,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,324,"[ORGANIZATION], [PERSON], ''",,0,0,0,0,0,0,0,0,0
+meeting_minutes,325,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [ORGANI",,0,0,0,0,0,0,0,0,0
+meeting_minutes,326,"whereas addressing hunger and homelessness is critical for the economic prosperity of [ORGANIZATION] families, And whereas [ORGANIZ",,0,0,0,0,0,0,0,0,0
+meeting_minutes,327,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,328,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+meeting_minutes,329,"a, b, c",,0,0,0,0,0,0,0,0,0
+meeting_minutes,330,[ORGANIZATION] looked at,,0,0,0,0,0,0,0,0,0
+meeting_minutes,331,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,332,"Creating housing affordability., Climate action initiatives",,0,0,0,0,0,0,0,0,0
+meeting_minutes,333,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,334,[STREET],,0,0,0,0,0,0,0,0,0
+meeting_minutes,335,"a) homeless shelters, the employees, and the homeless themselves who are vulnerable at times",,0,0,0,0,0,0,0,0,0
+meeting_minutes,336,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,337,a) money b) money c) money d) money e) money f) money g) money h) money,money aid allocation,1,0,0,0,0,0,0,0,0
+meeting_minutes,338,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,339,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,340,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+meeting_minutes,341,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,342,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,343,[INSTITUTIONS],,0,0,0,0,0,0,0,0,0
+meeting_minutes,344,"[ORGANIZATION], %_OF_OUR_PATIENTS_ARE_UNFINANCED, %_OF",,0,0,0,0,0,0,0,0,0
+meeting_minutes,345,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,346,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,347,_______________________________,,0,0,0,0,0,0,0,0,0
+meeting_minutes,348,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,349,"[TIME], [ORGANIZATION], City Manager. DATE0, [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,350,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,351,[PERSON],,0,0,0,0,0,0,0,0,0
+meeting_minutes,352,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,353,a) a list of issues b) a list of solutions c) a list of solutions d) a list of solutions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,354,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+meeting_minutes,355,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,356,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+meeting_minutes,357,[ORG1],,0,0,0,0,0,0,0,0,0
+meeting_minutes,358,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,359,"fusioncenters,homelessness",,0,0,0,0,0,0,0,0,0
+meeting_minutes,360,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+meeting_minutes,361,PER to approve the following motions:,,0,0,0,0,0,0,0,0,0
+meeting_minutes,362,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+meeting_minutes,363,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+news,0,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,1,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,2,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,3,"0, 1, 2",,0,0,0,0,0,0,0,0,0
+news,4,[PERSON],,0,0,0,0,0,0,0,0,0
+news,5,"PERSON1, PERSON2",,0,0,0,0,0,0,0,0,0
+news,6,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,7,"0, 0, 0, 0, 0, 0, 0, 0,",,0,0,0,0,0,0,0,0,0
+news,8,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,9,[PERSON],,0,0,0,0,0,0,0,0,0
+news,10,"0, 0, 1, 2, 3, 4, 5, 6, 7, 8,",,0,0,0,0,0,0,0,0,0
+news,11,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,12,a) veterans b) homeless c) govt d) govt e),,0,0,0,0,0,0,0,0,0
+news,13,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,14,0,,0,0,0,0,0,0,0,0,0
+news,15,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,16,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,17,"a, b, c",,0,0,0,0,0,0,0,0,0
+news,18,"[ORG1] [PERSON], [ORG2] [PERSON], [ORG1]",,0,0,0,0,0,0,0,0,0
+news,19,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,20,"], ], ], ], ], ], ], ],",,0,0,0,0,0,0,0,0,0
+news,21,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,22,affordable housing.,,0,0,0,0,0,0,0,0,0
+news,23,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,24,rehabilitate permanently affordable housing units within mixed-income development.,,0,0,0,0,0,0,0,0,0
+news,25,"[DATE], [ORGANIZATION], [DATE]",,0,0,0,0,0,0,0,0,0
+news,26,[ORG1],,0,0,0,0,0,0,0,0,0
+news,27,a new grant called [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,28,"a, b",,0,0,0,0,0,0,0,0,0
+news,29,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,30,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,31,[ORG1],,0,0,0,0,0,0,0,0,0
+news,32,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,33,[PERSON],,0,0,0,0,0,0,0,0,0
+news,34,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,35,"[ORGANIZATION] v. PERSON1, [ORGANIZATION] v. PERSON1, [ORGANI",,0,0,0,0,0,0,0,0,0
+news,36,PERSON0,,0,0,0,0,0,0,0,0,0
+news,37,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,38,0,,0,0,0,0,0,0,0,0,0
+news,39,a) societal problems b) personal problems,societal critique;personal interaction,0,0,1,0,1,0,0,0,0
+news,40,[PERSON],,0,0,0,0,0,0,0,0,0
+news,41,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,42,[STREET],,0,0,0,0,0,0,0,0,0
+news,43,[PERSON],,0,0,0,0,0,0,0,0,0
+news,44,"[ORGANIZATION], bags",,0,0,0,0,0,0,0,0,0
+news,45,"0, 0, 0, 0, 0, 0, 0, 0,",,0,0,0,0,0,0,0,0,0
+news,46,"[ORGANIZATION],,,,,,,,,,,, ",,0,0,0,0,0,0,0,0,0
+news,47,a history of domestic violence,,0,0,0,0,0,0,0,0,0
+news,48,"[PERSON], '[PERSON]', '[PERSON]', '[PERSON]', '[PER",,0,0,0,0,0,0,0,0,0
+news,49,"[PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,50,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,51,"[PERSON] [ORGANIZATION] count finds 4,025 homeless people living in [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,52,post: Thumbs up to initiative to improve coordinated service for the homeless,,0,0,0,0,0,0,0,0,0
+news,53,"[ORG1], [ORGANIZATION], GPE1was recently awarded the Area Homeless Coalition Outstanding Volunteer of the Year Award for bringing",,0,0,0,0,0,0,0,0,0
+news,54,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,55,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+news,56,"[PERSON], [PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,57,"[ORGANIZATION], Leaving the Jungle",,0,0,0,0,0,0,0,0,0
+news,58,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,59,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,60,[ORGANIZATION] veterans with substance use and mental health disorders who are in the criminal justice system5.,,0,0,0,0,0,0,0,0,0
+news,61,"[PERSON], [ADDRESS], [DATE], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,62,[DATE],,0,0,0,0,0,0,0,0,0
+news,63,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,64,"ada, bc, cc, dc, e, f, g, h, i,",,0,0,0,0,0,0,0,0,0
+news,65,[STREET],,0,0,0,0,0,0,0,0,0
+news,66,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,67,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,68,[PERSON] Calls on [ORGANIZATION] to Blow Suspect Out the Door After DATE1 Shooting69,,0,0,0,0,0,0,0,0,0
+news,69,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,70,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,71,AB 3030 - Investment in [ORGANIZATION] Opportunity Zones by creating a statutory exemption for affordable housing and mixed-use,,0,0,0,0,0,0,0,0,0
+news,72,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,73,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,74,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,75,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,76,"PERSON3, PERSON2, PERSON3, PERSON3, PERSON3, PER",,0,0,0,0,0,0,0,0,0
+news,77,[PERSON],,0,0,0,0,0,0,0,0,0
+news,78,"[ORGANIZATION], [PERSON]. [ORGANIZATION] from the Streets Program Fosters a Sense of Community ",,0,0,0,0,0,0,0,0,0
+news,79,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,80,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,81,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,82,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+news,83,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,84,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,85,"bills_senate_years, bills_senator_name",,0,0,0,0,0,0,0,0,0
+news,86,"[ORGANIZATION] Republicans outline several critical priorities including combating chronic homelessness, saving jobs, wildfire preparation, and making [ORGANI",,0,0,0,0,0,0,0,0,0
+news,87,[AB],,0,0,0,0,0,0,0,0,0
+news,88,"[ORGANIZATION], affordable housing private-nonprofit",,0,0,0,0,0,0,0,0,0
+news,89,"adolescent, sex, racial, sex, sex",,0,0,0,0,0,0,0,0,0
+news,90,"[ORGANIZATION], homeless prevention",,0,0,0,0,0,0,0,0,0
+news,91,"[PERSON], menstrual care",,0,0,0,0,0,0,0,0,0
+news,92,"[ORGANIZATION], ''",,0,0,0,0,0,0,0,0,0
+news,93,"[PERSON]-Vento, [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,94,"[ORGANIZATION] 48 Wiener--Makes the location of a [INSTITUTION] a use by right, and",,0,0,0,0,0,0,0,0,0
+news,95,[DATE] by [ORGANIZATION] DGPE0GPE1 Property taxation assessments affordable housing,,0,0,0,0,0,0,0,0,0
+news,96,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+news,97,"[ORGANIZATION] insecurity over [ORGANIZATION]  0.68, p [DATE]",,0,0,0,0,0,0,0,0,0
+news,98,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,99,PERSON0,,0,0,0,0,0,0,0,0,0
+news,100,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,101,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,102,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+news,103,gov. [PERSON],,0,0,0,0,0,0,0,0,0
+news,104,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,105,"[ORGANIZATION] has a higher number of unaccompanied young adults, while [PERSON] has a lower number of unaccompanied young",,0,0,0,0,0,0,0,0,0
+news,106,0,,0,0,0,0,0,0,0,0,0
+news,107,"[ORGANIZATION], ORG1, ORG2, ",,0,0,0,0,0,0,0,0,0
+news,108,[PERSON],,0,0,0,0,0,0,0,0,0
+news,109,"[PERSON], [LOCATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,110,[STREET],,0,0,0,0,0,0,0,0,0
+news,111,"adolescent depression, air pollution exposure",,0,0,0,0,0,0,0,0,0
+news,112,money to reduce homelessness,money aid allocation,1,0,0,0,0,0,0,0,0
+news,113,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,114,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,115,"[ORGANIZATION], [PERSON], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,116,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,117,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,118,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,119,"[ORG1], ___",,0,0,0,0,0,0,0,0,0
+news,120,[PERSON],,0,0,0,0,0,0,0,0,0
+news,121,[ADDRESS],,0,0,0,0,0,0,0,0,0
+news,122,[PERSON],,0,0,0,0,0,0,0,0,0
+news,123,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,124,PERSON 0,,0,0,0,0,0,0,0,0,0
+news,125,"[PERSON], [ORGANIZATION] to End Poverty",,0,0,0,0,0,0,0,0,0
+news,126,[PERSON],,0,0,0,0,0,0,0,0,0
+news,127,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,128,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,129,"[PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,130,"[PERSON]. For services to [PERSON] and to the community in [ORGANIZATION], [ORGANIZATION], particularly during",,0,0,0,0,0,0,0,0,0
+news,131,[PERSON0],,0,0,0,0,0,0,0,0,0
+news,132,"[ORGANIZATION], [ORGANIZATION]. For services to [PERSON]. [PERSON] 0",,0,0,0,0,0,0,0,0,0
+news,133,"PERSON1, PERSON2, PERSON3, PERSON4, PERSON5, PERSON6, PERSON7, PERSON",,0,0,0,0,0,0,0,0,0
+news,134,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,135,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,136,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,137,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,138,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,139,[PERSON],,0,0,0,0,0,0,0,0,0
+news,140,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,141,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,142,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,143,[PERSON],,0,0,0,0,0,0,0,0,0
+news,144,[PERSON],,0,0,0,0,0,0,0,0,0
+news,145,"PERSON8, for services to the community in [ORGANIZATION], [ORGANIZATION], [ORGANIZATION] for",,0,0,0,0,0,0,0,0,0
+news,146,"PERSON0, for services to [ORGANIZATION] in Sport PERSON3, for services to [ORGANIZATION] and",,0,0,0,0,0,0,0,0,0
+news,147,"[ORG2], [PERSON]. [ORG]",,0,0,0,0,0,0,0,0,0
+news,148,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,149,[PERSON],,0,0,0,0,0,0,0,0,0
+news,150,"[ORGANIZATION] and [PERSON], for services to [PERSON] and Order Prof PERSON0, [ORGANIZ",,0,0,0,0,0,0,0,0,0
+news,151,0,,0,0,0,0,0,0,0,0,0
+news,152,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,153,[ORGANIZATION] Democrats opposed it. Local officials and some affordable housing advocates argue it would strip local control over housing decisions and would not provide sufficient,,0,0,0,0,0,0,0,0,0
+news,154,[ORGANIZATION] by [ORGANIZATION] [ORGANIZATION] has opened a temporary sanctioned tent ,,0,0,0,0,0,0,0,0,0
+news,155,_______________________________,,0,0,0,0,0,0,0,0,0
+news,156,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,157,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,158,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,159,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,160,"a) Housing status, comparing effects in people living with homelessness or unstable housing and those with stable housing",,0,0,0,0,0,0,0,0,0
+news,161,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,162,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,163,[PERSON],,0,0,0,0,0,0,0,0,0
+news,164,a nationwide shortage of housing,,0,0,0,0,0,0,0,0,0
+news,165,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,166,[URL][URL][URL][URL][URL][URL][URL][URL][URL][URL][URL,,0,0,0,0,0,0,0,0,0
+news,167,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,168,a) societal solutions b) solutions c) solutions d) solutions e) solutions f) solutions g) solutions h,societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+news,169,"[PERSON], [LOCATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,170,[ORGANIZATION] Fiber,,0,0,0,0,0,0,0,0,0
+news,171,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,172,[PERSON],,0,0,0,0,0,0,0,0,0
+news,173,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,174,[ORG2],,0,0,0,0,0,0,0,0,0
+news,175,ORG1],,0,0,0,0,0,0,0,0,0
+news,176,[PERSON],,0,0,0,0,0,0,0,0,0
+news,177,[PERSON],,0,0,0,0,0,0,0,0,0
+news,178,"[PERSON] led to more than 1,600 pandemic evictions [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,179,"[PERSON], GPE2 ORG1 center, [PERSON]",,0,0,0,0,0,0,0,0,0
+news,180,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,181,"[ORG1], [ORG2], [ORG3]",,0,0,0,0,0,0,0,0,0
+news,182,"[ORGANIZATION], [PERSON], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,183,[PERSON] is getting a government-run tent city for homeless veterans amidst the coronavirus pandemic. [ORGANI,government critique,0,1,0,0,0,0,0,0,0
+news,184,[PERSON],,0,0,0,0,0,0,0,0,0
+news,185,"[ORGANIZATION], 0",,0,0,0,0,0,0,0,0,0
+news,186,"[PERSON] 4, [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,187,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,188,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,189,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,190,_______________________________,,0,0,0,0,0,0,0,0,0
+news,191,[ORGANIZATION] by [PERSON],,0,0,0,0,0,0,0,0,0
+news,192,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,193,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,194,"âCriminalsâ, âHomelessnessâ, âCriminalsâ, â",,0,0,0,0,0,0,0,0,0
+news,195,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,196,[ORGANIZATION]âs policy exemplifies what [ORGANIZATION] calls a âtough love,,0,0,0,0,0,0,0,0,0
+news,197,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,198,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+news,199,"[PERSON], sex, public urination, decriminalize poverty, poop",,0,0,0,0,0,0,0,0,0
+news,200,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+news,201,0,,0,0,0,0,0,0,0,0,0
+news,202,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,203,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,204,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,205,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,206,[ORG],,0,0,0,0,0,0,0,0,0
+news,207,"[ORGANIZATION], 'public relations manager'",,0,0,0,0,0,0,0,0,0
+news,208,"0, 0",,0,0,0,0,0,0,0,0,0
+news,209,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,210,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,211,0,,0,0,0,0,0,0,0,0,0
+news,212,"PERSON1, a coalition of community organizations, a government agency, a bicycle advocacy organization, a transportation advocacy organization",government critique,0,1,0,0,0,0,0,0,0
+news,213,"[PERSON] housing, affordable food, mental health services",,0,0,0,0,0,0,0,0,0
+news,214,"veterans, children",,0,0,0,0,0,0,0,0,0
+news,215,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,216,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,217,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,218,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+news,219,DATE0 ORG0 Delivered by ORG1,,0,0,0,0,0,0,0,0,0
+news,220,[PERSON] to Accept Migrants From [PERSON] But Agree to Donate Aid176 GPE2 and [PERSON],,0,0,0,0,0,0,0,0,0
+news,221,"[PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,222,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,223,"[PERSON], [PERSON2]",,0,0,0,0,0,0,0,0,0
+news,224,"[PERSON], [PERSON] mayoral candidate PERSON0 new plan to tackle homelessness includes two statements plagiarized from his rival,",,0,0,0,0,0,0,0,0,0
+news,225,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,226,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,227,"[ORGANIZATION], on helping [ORGANIZATION] chronically homeless being a choice to save lives",,0,0,0,0,0,0,0,0,0
+news,228,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,229,"[ORGANIZATION], programs, transitioning, mental health, addiction",,0,0,0,0,0,0,0,0,0
+news,230,[ORGANIZATION] - or ORG1 - is embedded in the areas 911 system. Dispatchers who receive calls about mental,,0,0,0,0,0,0,0,0,0
+news,231,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,232,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,233,"[PERSON], Homeless Camping as [ORGANIZATION] Performs Fewer Sweeps161 GPE1, OR [PER",,0,0,0,0,0,0,0,0,0
+news,234,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,235,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,236,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,237,a) a) a) a b) c) d) e) f) g) h),,0,0,0,0,0,0,0,0,0
+news,238,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+news,239,a) reducing the number of arrests b) reducing the number of arrests for mental health c) reducing the number of arrest,,0,0,0,0,0,0,0,0,0
+news,240,a) schools b) children who are homeless c) children who are hungry,,0,0,0,0,0,0,0,0,0
+news,241,"[PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,242,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,243,[PERSON],,0,0,0,0,0,0,0,0,0
+news,244,[ORG1],,0,0,0,0,0,0,0,0,0
+news,245,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,246,[STREET],,0,0,0,0,0,0,0,0,0
+news,247,a) reducing utility bills b) reducing homelessness c) lowering utility bills d) reducing homelessness,,0,0,0,0,0,0,0,0,0
+news,248,"a, b, c",,0,0,0,0,0,0,0,0,0
+news,249,a) reducing the number of arrests b) reducing the number of arrests for mental health c) reducing the number of arrest,,0,0,0,0,0,0,0,0,0
+news,250,a) veterans b) homeless,,0,0,0,0,0,0,0,0,0
+news,251,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,252,"[ORGANIZATION], Emergency Solutions Grants Program [ORGANIZATION], Homelessness Prevention Programs",solutions/interventions,0,0,0,1,0,0,0,0,0
+news,253,"[ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+news,254,[ORG0],,0,0,0,0,0,0,0,0,0
+news,255,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,256,"[ORGANIZATION], [ORGANIZATION], [ORG2], [PERSON], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,257,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,258,"[ORG0], [PERSON] of [ORG0], [ORG0] of [ORG0], [ORG0] of",,0,0,0,0,0,0,0,0,0
+news,259,"a) poverty, hunger, homelessness, unemployment, under-employment, debt, inequality, anxiety, insecurity",,0,0,0,0,0,0,0,0,0
+news,260,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,261,"[PERSON], [PERSON2]",,0,0,0,0,0,0,0,0,0
+news,262,a) mental health b) addiction c) homelessness,,0,0,0,0,0,0,0,0,0
+news,263,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,264,"[ORGANIZATION], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,265,"[ORGANIZATION] 210,255",,0,0,0,0,0,0,0,0,0
+news,266,"550,136",,0,0,0,0,0,0,0,0,0
+news,267,"[ORGANIZATION] DATE1, clothing and shelter to the homeless",,0,0,0,0,0,0,0,0,0
+news,268,[ORGANIZATION]-Allied Democrat Backtracks on Saying the Homeless Should Break Into and Occupy Homes After Back,,0,0,0,0,0,0,0,0,0
+news,269,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,270,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,271,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,272,[PERSON],,0,0,0,0,0,0,0,0,0
+news,273,Homeless Assistance GrantsNumber of programs to provide critical safety net to the homeless.2.46 billion2.38 billion,,0,0,0,0,0,0,0,0,0
+news,274,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,275,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,276,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,277,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,278,[ORG1],,0,0,0,0,0,0,0,0,0
+news,279,affordable housing,,0,0,0,0,0,0,0,0,0
+news,280,"[ORGANIZATION], preventing, securing, affordable housing, children, healthy, nurturing and enriched environments",,0,0,0,0,0,0,0,0,0
+news,281,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,282,[ORGANIZATION] System,,0,0,0,0,0,0,0,0,0
+news,283,[PERSON],,0,0,0,0,0,0,0,0,0
+news,284,CBAs to the community.,,0,0,0,0,0,0,0,0,0
+news,285,"[ORGANIZATION] of [LOCATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,286,"[PERSON], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,287,"a, b, c, d",,0,0,0,0,0,0,0,0,0
+news,288,[STREET],,0,0,0,0,0,0,0,0,0
+news,289,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,290,[ORGANIZATION] [PERSON],,0,0,0,0,0,0,0,0,0
+news,291,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,292,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,293,[ORG1],,0,0,0,0,0,0,0,0,0
+news,294,"[ORGANIZATION], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,295,[ORG0],,0,0,0,0,0,0,0,0,0
+news,296,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,297,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,298,"a, b, c",,0,0,0,0,0,0,0,0,0
+news,299,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,300,"[PERSON], [PERSON], GPE2",,0,0,0,0,0,0,0,0,0
+news,301,[ORGANIZATION] relocating three more monuments outside FAC0 FAC1,,0,0,0,0,0,0,0,0,0
+news,302,[PERSON],,0,0,0,0,0,0,0,0,0
+news,303,_______________________________,,0,0,0,0,0,0,0,0,0
+news,304,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,305,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,306,"[ORGANIZATION] in [LOCATION] Focus on Youth, [PERSON], [ORGANIZATION], available at library[",,0,0,0,0,0,0,0,0,0
+news,307,"[PERSON3], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,308,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,309,ltnlgt 1 2 3 4 5 6,,0,0,0,0,0,0,0,0,0
+news,310,"[PERSON], [ORGANIZATION], PERSON1",,0,0,0,0,0,0,0,0,0
+news,311,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,312,[PERSON],,0,0,0,0,0,0,0,0,0
+news,313,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,314,"[PERSON], [ORGANIZATION], [PERSON], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,315,_______________________________,,0,0,0,0,0,0,0,0,0
+news,316,"[PERSON], 0",,0,0,0,0,0,0,0,0,0
+news,317,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,318,"[ORG1], [ORG2], [ORG3]",,0,0,0,0,0,0,0,0,0
+news,319,"[ORG1], [ORG2]",,0,0,0,0,0,0,0,0,0
+news,320,PERSON0,,0,0,0,0,0,0,0,0,0
+news,321,"[PERSON], [ORGANIZATION], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,322,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,323,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,324,[PERSON],,0,0,0,0,0,0,0,0,0
+news,325,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,326,"[PERSON], [PERSON], [PERSON], [PERSON], [PERSON], [PERSON], of [PERSON], entered FAC",,0,0,0,0,0,0,0,0,0
+news,327,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+news,328,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,329,[ORG1] reports that an [ORGANIZATION] fire statement says [ORGANIZATION] and [PERSON] fire departments,,0,0,0,0,0,0,0,0,0
+news,330,_______________________________,,0,0,0,0,0,0,0,0,0
+news,331,"[ORGANIZATION],,,,,,,,,,,, ",,0,0,0,0,0,0,0,0,0
+news,332,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,333,[PERSON],,0,0,0,0,0,0,0,0,0
+news,334,[ORGANIZATION] [DATE] on Rent Per Migrant Per Day189,,0,0,0,0,0,0,0,0,0
+news,335,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,336,[ORGANIZATION] among five cities targeted in new federal initiative to fight homelessness,,0,0,0,0,0,0,0,0,0
+news,337,[ORGANIZATION] to work with [ORGANIZATION] administration on plan to fight homelessness,,0,0,0,0,0,0,0,0,0
+news,338,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,339,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,340,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,341,[PERSON],,0,0,0,0,0,0,0,0,0
+news,342,"0, 0, 0, 0, 0, 0, 0, 0,",,0,0,0,0,0,0,0,0,0
+news,343,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION], [PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,344,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,345,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,346,a) reducing housing cost burdens b) mitigating the effects of segregation and disinvestment c) removing barriers to,,0,0,0,0,0,0,0,0,0
+news,347,[PERSON],,0,0,0,0,0,0,0,0,0
+news,348,"PERSON1, Teacher Senior Class Adviser at [ORGANIZATION], 196 seniors",,0,0,0,0,0,0,0,0,0
+news,349,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,350,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,351,"[ORGANIZATION] veterans, [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,352,[ORGANIZATION] Announces Immediate Steps To Increase Affordable Housing Supply,media portrayal,0,0,0,0,0,1,0,0,0
+news,353,"87,government aid",government critique,0,1,0,0,0,0,0,0,0
+news,354,"[ORGANIZATION], __, HERO",,0,0,0,0,0,0,0,0,0
+news,355,"[ORG1], [ORG2], [ORG3]",,0,0,0,0,0,0,0,0,0
+news,356,[TABLECONTEXT] [TITLE] Homelessness in the United States,,0,0,0,0,0,0,0,0,0
+news,357,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,358,"[ORGANIZATION], [PERSON], [DATE]",,0,0,0,0,0,0,0,0,0
+news,359,"[ORGANIZATION], [INSTITUTION], [JUDGE]",,0,0,0,0,0,0,0,0,0
+news,360,[ORG1],,0,0,0,0,0,0,0,0,0
+news,361,] are based in [ORGANIZATION] and [ORGANIZATION] are based in [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,362,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,363,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,364,"[ORGANIZATION], [LOCATION], and Retrofit More Than 2 Million Affordable Housing Units",,0,0,0,0,0,0,0,0,0
+news,365,[PERSON],,0,0,0,0,0,0,0,0,0
+news,366,"[PERSON], [ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+news,367,"[ORG1], [ORG2], [LOCATION]",,0,0,0,0,0,0,0,0,0
+news,368,[ORGANIZATION] are looking for volunteers who can safely access the shelters.,,0,0,0,0,0,0,0,0,0
+news,369,migrant_housing_system_resources_estimated_to_be_in_[ORGANIZATION] ,,0,0,0,0,0,0,0,0,0
+news,370,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,371,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,372,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,373,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+news,374,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,375,"a whole child approach, community schools",,0,0,0,0,0,0,0,0,0
+news,376,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+news,377,a) a) a b) a c) a d) a e) a f) ,,0,0,0,0,0,0,0,0,0
+news,378,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,379,"[PERSON] a $130,000 grant for financial assistance",,0,0,0,0,0,0,0,0,0
+news,380,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+news,381,"[PERSON], [STREET]",,0,0,0,0,0,0,0,0,0
+reddit,0,0,,0,0,0,0,0,0,0,0,0
+reddit,1,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,2,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,3,a) societal sucks at providing a trashbag and $10 an hour to pick up trash b) mental health c) money,money aid allocation;societal critique,1,0,1,0,0,0,0,0,0
+reddit,4,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,5,0,,0,0,0,0,0,0,0,0,0
+reddit,6,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,7,"[ORGANIZATION], it doesn't matter [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,8,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,9,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,10,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,11,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,12,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,13,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,14,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,15,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+reddit,16,"advocacies,government,not for profit",government critique,0,1,0,0,0,0,0,0,0
+reddit,17,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,18,"a little different than a soup kitchen or shelter. Its actually housing, it's designed",,0,0,0,0,0,0,0,0,0
+reddit,19,"[LOCATION], ___, ___, ___, ___, ___, _",,0,0,0,0,0,0,0,0,0
+reddit,20,PERSON0,,0,0,0,0,0,0,0,0,0
+reddit,21,[ORG1],,0,0,0,0,0,0,0,0,0
+reddit,22,a) not all of the homeless want to go to those shelters b) not all of the homeless want to go to those shelters,,0,0,0,0,0,0,0,0,0
+reddit,23,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,24,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,25,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,26,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,27,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,28,"[ORGANIZATION] had a budget, they would have a better chance of getting money.",money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,29,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,30,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+reddit,31,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+reddit,32,[ORGANIZATION] be a good place to start a business but it's hard to get a job in [ORGANI,,0,0,0,0,0,0,0,0,0
+reddit,33,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,34,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,35,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,36,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,37,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,38,"0, 0, 1, 2, 3, 4, 5, 6, 7, 8,",,0,0,0,0,0,0,0,0,0
+reddit,39,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,40,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+reddit,41,"a, b, c, d",,0,0,0,0,0,0,0,0,0
+reddit,42,"[LOCATION], a comma-separated list of 0",,0,0,0,0,0,0,0,0,0
+reddit,43,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,44,"[PERSON], [GPE2]",,0,0,0,0,0,0,0,0,0
+reddit,45,"1 - yes, housing first is scientifically the most effective model for caring for the homeless. It's math, not feelings. It [LOC",,0,0,0,0,0,0,0,0,0
+reddit,46,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,47,a school,,0,0,0,0,0,0,0,0,0
+reddit,48,"[PERSON], [ORGANIZATION], [STREET]",,0,0,0,0,0,0,0,0,0
+reddit,49,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,50,a) a) a) a) a) a) a) a) a) a) a,,0,0,0,0,0,0,0,0,0
+reddit,51,PERSON1: 0 PERSON2: 0 PERSON3: 0,,0,0,0,0,0,0,0,0,0
+reddit,52,?,,0,0,0,0,0,0,0,0,0
+reddit,53,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,54,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,55,"[ORGANIZATION], 211, temporary homelessness",,0,0,0,0,0,0,0,0,0
+reddit,56,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,57,"a drifter, a con man, a scumbag, a thief",,0,0,0,0,0,0,0,0,0
+reddit,58,"[PERSON], [ORGANIZATION], [PERSON], [PERSON], [PERSON] ",,0,0,0,0,0,0,0,0,0
+reddit,59,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,60,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,61,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,62,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,63,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,64,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,65,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,66,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,67,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+reddit,68,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,69,[URL],,0,0,0,0,0,0,0,0,0
+reddit,70,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,71,,,0,0,0,0,0,0,0,0,0
+reddit,72,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,73,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,74,[PERSON] was pretty safe.,,0,0,0,0,0,0,0,0,0
+reddit,75,"housing, societal, government",government critique;societal critique,0,1,1,0,0,0,0,0,0
+reddit,76,[ORGANIZATION] would be a good idea,,0,0,0,0,0,0,0,0,0
+reddit,77,"PERSON0, PERSON0, PERSON0, PERSON0, PERSON0, PER",,0,0,0,0,0,0,0,0,0
+reddit,78,'s helping,,0,0,0,0,0,0,0,0,0
+reddit,79,"[ORGANIZATION], '', ''",,0,0,0,0,0,0,0,0,0
+reddit,80,],,0,0,0,0,0,0,0,0,0
+reddit,81,"[ORGANIZATION], [PHONE], [PHONE] extension 5",,0,0,0,0,0,0,0,0,0
+reddit,82,a) a) a) a) a) a) a) a) a) a) a,,0,0,0,0,0,0,0,0,0
+reddit,83,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,84,[ORGANIZATION] for not picking up trash.,,0,0,0,0,0,0,0,0,0
+reddit,85,"0, 1",,0,0,0,0,0,0,0,0,0
+reddit,86,"0, 0",,0,0,0,0,0,0,0,0,0
+reddit,87,[URL],,0,0,0,0,0,0,0,0,0
+reddit,88,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,89,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,90,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,91,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,92,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,93,"[PERSON], [ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,94,a life,,0,0,0,0,0,0,0,0,0
+reddit,95,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,96,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,97,"[ORGANIZATION], or even paying for car repairs for someone so that they're able to continue working.",,0,0,0,0,0,0,0,0,0
+reddit,98,[PERSON] sucks but trafficking is a huge problem in [ORGANIZATION] [PERSON] sucks,,0,0,0,0,0,0,0,0,0
+reddit,99,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,100,"a) societal,government,personal,solutions",government critique;societal critique;solutions/interventions;personal interaction,0,1,1,1,1,0,0,0,0
+reddit,101,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,102,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,103,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,104,0,,0,0,0,0,0,0,0,0,0
+reddit,105,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,106,[PERSON] were thrown in his path.,,0,0,0,0,0,0,0,0,0
+reddit,107,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,108,"a city surrounded by a lot of rural areas, if folks need supports, there is very little to be had in small towns.",,0,0,0,0,0,0,0,0,0
+reddit,109,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,110,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,111,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,112,arguing that we're not doing enough to solve these problems.,,0,0,0,0,0,0,0,0,0
+reddit,113,a) a) a) a b) c) d) e) f) g) h),,0,0,0,0,0,0,0,0,0
+reddit,114,0,,0,0,0,0,0,0,0,0,0
+reddit,115,",,,,,,,,,,,,,,,,",,0,0,0,0,0,0,0,0,0
+reddit,116,societal change is a stumbling block.,societal critique,0,0,1,0,0,0,0,0,0
+reddit,117,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,118,"a good drug rehabilitation program, and a good mental health facility for people to get help getting jobs, finding housing and getting help for their medical issues WITH",,0,0,0,0,0,0,0,0,0
+reddit,119,a) a) a) a b) a c) a d) a e) a ,,0,0,0,0,0,0,0,0,0
+reddit,120,"[STREET], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,121,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,122,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,123,"[LOCATION], [DATE]",,0,0,0,0,0,0,0,0,0
+reddit,124,housing is not available,,0,0,0,0,0,0,0,0,0
+reddit,125,"[ORG1], [ORG2]",,0,0,0,0,0,0,0,0,0
+reddit,126,post: “Go to church and learn some empathy”,,0,0,0,0,0,0,0,0,0
+reddit,127,a city handling their homeless problem,,0,0,0,0,0,0,0,0,0
+reddit,128,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,129,comma-separated list.,,0,0,0,0,0,0,0,0,0
+reddit,130,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,131,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,132,abolish (at least) corporate landlords,,0,0,0,0,0,0,0,0,0
+reddit,133,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,134,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,135,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,136,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,137,0],,0,0,0,0,0,0,0,0,0
+reddit,138,government-funded,government critique,0,1,0,0,0,0,0,0,0
+reddit,139,"solutions,not a solution",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,140,"s, t, e, f, g, h, i, j,",,0,0,0,0,0,0,0,0,0
+reddit,141,a) shit on your porch b) shit on your porch c) shit on your porch d) s,,0,0,0,0,0,0,0,0,0
+reddit,142,money,money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,143,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,144,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,145,0,,0,0,0,0,0,0,0,0,0
+reddit,146,"[PERSON], [STREET]",,0,0,0,0,0,0,0,0,0
+reddit,147,a) societal determinants b) societal determinants c) societal determinants d) societal determinants,societal critique,0,0,1,0,0,0,0,0,0
+reddit,148,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,149,a hole in the market,,0,0,0,0,0,0,0,0,0
+reddit,150,"[ORGANIZATION], 'government','solutions'",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,151,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,152,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,153,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,154,a) seniors b) seniors c) seniors d) seniors e) seniors f) seniors g) seniors h) seniors,,0,0,0,0,0,0,0,0,0
+reddit,155,"STREET,homelessness,drug addiction",,0,0,0,0,0,0,0,0,0
+reddit,156,"a, b",,0,0,0,0,0,0,0,0,0
+reddit,157,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,158,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,159,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,160,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,161,a] b] c] d] e] f] g] h] i] j] k,,0,0,0,0,0,0,0,0,0
+reddit,162,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,163,1),,0,0,0,0,0,0,0,0,0
+reddit,164,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,165,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,166,[[URL]],,0,0,0,0,0,0,0,0,0
+reddit,167,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,168,[URL],,0,0,0,0,0,0,0,0,0
+reddit,169,[[URL]],,0,0,0,0,0,0,0,0,0
+reddit,170,&#x200B,,0,0,0,0,0,0,0,0,0
+reddit,171,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,172,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,173,"[PERSON], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,174,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,175,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,176,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,177,[URL],,0,0,0,0,0,0,0,0,0
+reddit,178,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,179,",,,,,,,,,,,,,,,,",,0,0,0,0,0,0,0,0,0
+reddit,180,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,181,"[ORGANIZATION], [PERSON], [ORG2]",,0,0,0,0,0,0,0,0,0
+reddit,182,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,183,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,184,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,185,>Trespassing is a crime... unauthorized camping is a crime,,0,0,0,0,0,0,0,0,0
+reddit,186,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,187,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,188,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,189,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,190,0,,0,0,0,0,0,0,0,0,0
+reddit,191,0,,0,0,0,0,0,0,0,0,0
+reddit,192,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,193,a) societal problems b) housing crisis c) societal problems d) societal problems,societal critique,0,0,1,0,0,0,0,0,0
+reddit,194,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,195,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,196,$0,,0,0,0,0,0,0,0,0,0
+reddit,197,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,198,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,199,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,200,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,201,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,202,a) raising taxes b) reducing the number of homeless people c) reducing the number of homeless people d) reducing the number,,0,0,0,0,0,0,0,0,0
+reddit,203,"[STREET], [INSTITUTION]",,0,0,0,0,0,0,0,0,0
+reddit,204,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,205,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,206,"[PERSON] GPE2,rent_was_cheaper,homeless_theft_of_money,personality_",money aid allocation;personal interaction,1,0,0,0,1,0,0,0,0
+reddit,207,[ORGANIZATION][URL],,0,0,0,0,0,0,0,0,0
+reddit,208,"sheltered,unsheltered,employment,social stigma",,0,0,0,0,0,0,0,0,0
+reddit,209,"[PERSON],[ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,210,a,,0,0,0,0,0,0,0,0,0
+reddit,211,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,212,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,213,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,214,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,215,a) reducing the number of homeless people in the city b) reducing the number of homeless people in the city c) reducing the,,0,0,0,0,0,0,0,0,0
+reddit,216,"samaritain, but you cant help a person who has no money, no job, no transportation, no address, no job,",money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,217,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,218,"affluent, societal, housing",societal critique,0,0,1,0,0,0,0,0,0
+reddit,219,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,220,[PERSON]'s thoughts on the people's resolution,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,221,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,222,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,223,1.,,0,0,0,0,0,0,0,0,0
+reddit,224,solutions to housing insecurity and homelessness,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,225,a comma-separated list of resources,,0,0,0,0,0,0,0,0,0
+reddit,226,"[DATE], [TIME]",,0,0,0,0,0,0,0,0,0
+reddit,227,[[ORGANIZATION]],,0,0,0,0,0,0,0,0,0
+reddit,228,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,229,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,230,a,,0,0,0,0,0,0,0,0,0
+reddit,231,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,232,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,233,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,234,[URL],,0,0,0,0,0,0,0,0,0
+reddit,235,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,236,"0, 0, 0",,0,0,0,0,0,0,0,0,0
+reddit,237,a) displaced b) displaced c) displaced d) displaced,,0,0,0,0,0,0,0,0,0
+reddit,238,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,239,a) societal determinants b) housing c) benefits d) income,societal critique,0,0,1,0,0,0,0,0,0
+reddit,240,"- Your frustration is understandable, but I think it's misplaced on this.",,0,0,0,0,0,0,0,0,0
+reddit,241,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,242,a] a] b] c] d] e] f] g] h] i] j,,0,0,0,0,0,0,0,0,0
+reddit,243,"[ORGANIZATION], [PERSON] got tired of its homeless problem, realizing it cost the city more to police and hospitalize them than",,0,0,0,0,0,0,0,0,0
+reddit,244,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,245,", i, fayettevillear, i, i, i, i, ",,0,0,0,0,0,0,0,0,0
+reddit,246,"afghanistan, u.s.",,0,0,0,0,0,0,0,0,0
+reddit,247,[URL],,0,0,0,0,0,0,0,0,0
+reddit,248,"[ORGANIZATION], [STREET], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,249,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,250,[[PERSON]],,0,0,0,0,0,0,0,0,0
+reddit,251,[URL],,0,0,0,0,0,0,0,0,0
+reddit,252,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,253,"a,b,c",,0,0,0,0,0,0,0,0,0
+reddit,254,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,255,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,256,a) societal issues b) societal issues c) societal issues d) societal issues,societal critique,0,0,1,0,0,0,0,0,0
+reddit,257,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,258,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,259,doorstep,,0,0,0,0,0,0,0,0,0
+reddit,260,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,261,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,262,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,263,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,264,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,265,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+reddit,266,,,0,0,0,0,0,0,0,0,0
+reddit,267,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,268,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,269,whoever had it,,0,0,0,0,0,0,0,0,0
+reddit,270,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,271,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,272,"[STREET], '', ''",,0,0,0,0,0,0,0,0,0
+reddit,273,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,274,a) decriminalizing b) education c) social services d) livable wages,,0,0,0,0,0,0,0,0,0
+reddit,275,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+reddit,276,[[URL]],,0,0,0,0,0,0,0,0,0
+reddit,277,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,278,0,,0,0,0,0,0,0,0,0,0
+reddit,279,[ORG1],,0,0,0,0,0,0,0,0,0
+reddit,280,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+reddit,281,"-Fund programs that couple housing and health services, including programs that require sobriety. As of now [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,282,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,283,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,284,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+reddit,285,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,286,,,0,0,0,0,0,0,0,0,0
+reddit,287,"a. s.d., b. c. d., e. s.d., f. ",,0,0,0,0,0,0,0,0,0
+reddit,288,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,289,"a), b), c)",,0,0,0,0,0,0,0,0,0
+reddit,290,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,291,_______________________________,,0,0,0,0,0,0,0,0,0
+reddit,292,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,293,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,294,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,295,[ORGANIZATION][ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,296,0,,0,0,0,0,0,0,0,0,0
+reddit,297,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,298,_______________________________,,0,0,0,0,0,0,0,0,0
+reddit,299,"0, 0, 0, 0, 0, 0, 0, 0,",,0,0,0,0,0,0,0,0,0
+reddit,300,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,301,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,302,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,303,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,304,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,305,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,306,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,307,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,308,[],,0,0,0,0,0,0,0,0,0
+reddit,309,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,310,squat,,0,0,0,0,0,0,0,0,0
+reddit,311,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,312,"a,b,c,d,e",,0,0,0,0,0,0,0,0,0
+reddit,313,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,314,],,0,0,0,0,0,0,0,0,0
+reddit,315,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,316,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,317,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+reddit,318,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,319,a) societal problems b) solutions c) money d) government e) societal attitudes,money aid allocation;government critique;societal critique;solutions/interventions,1,1,1,1,0,0,0,0,0
+reddit,320,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,321,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,322,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,323,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,324,a) societal problems b) criminals c) mental health problems d) poverty,societal critique,0,0,1,0,0,0,0,0,0
+reddit,325,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,326,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,327,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,328,r/portlandhomelesscomplaints,,0,0,0,0,0,0,0,0,0
+reddit,329,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,330,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,331,"a, b, c, d, e, f",,0,0,0,0,0,0,0,0,0
+reddit,332,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,333,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,334,"s, ''",,0,0,0,0,0,0,0,0,0
+reddit,335,[LOCATION] vs [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,336,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,337,0,,0,0,0,0,0,0,0,0,0
+reddit,338,"[STREET] racers, homeless",,0,0,0,0,0,0,0,0,0
+reddit,339,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,340,"squatters, dicks, junkies",,0,0,0,0,0,0,0,0,0
+reddit,341,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,342,", they deserve better.",deserving/undeserving,0,0,0,0,0,0,0,0,1
+reddit,343,a) a business b) a homeless person c) a business,,0,0,0,0,0,0,0,0,0
+reddit,344,"a,b,c,d,e",,0,0,0,0,0,0,0,0,0
+reddit,345,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,346,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,347,"NIMBYs, ACTIONS, COMMUNITIES, ACTIONS, ACTIONS, ACTION",not in my backyard,0,0,0,0,0,0,1,0,0
+reddit,348,a) fac0 b) ids c) fac0 d) ids e,,0,0,0,0,0,0,0,0,0
+reddit,349,a) money raised by ballot measures b) money raised by government,money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,350,[URL][URL] Housing Resources https://[STREET][URL] Community Resources https://[STREET][URL] If you are experiencing,,0,0,0,0,0,0,0,0,0
+reddit,351,0,,0,0,0,0,0,0,0,0,0
+reddit,352,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,353,[ORGANIZATION][URL],,0,0,0,0,0,0,0,0,0
+reddit,354,"[ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+reddit,355,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,356,"AIDS, TB, TB, TB, TB, TB",,0,0,0,0,0,0,0,0,0
+reddit,357,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,358,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,359,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,360,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,361,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,362,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,363,"a,b,c",,0,0,0,0,0,0,0,0,0
+reddit,364,[[ORGANIZATION]],,0,0,0,0,0,0,0,0,0
+reddit,365,"squeegee boys,homelessness",,0,0,0,0,0,0,0,0,0
+reddit,366,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,367,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,368,[URL],,0,0,0,0,0,0,0,0,0
+reddit,369,"[ORGANIZATION], 'government'",government critique,0,1,0,0,0,0,0,0,0
+reddit,370,"[ORGANIZATION],,,,,,,,,,,,, ",,0,0,0,0,0,0,0,0,0
+reddit,371,"orgy, sex, sex, sex, sex, sex, s",,0,0,0,0,0,0,0,0,0
+reddit,372,a) shelters / soup kitchens b),,0,0,0,0,0,0,0,0,0
+reddit,373,a) societal __________________________,societal critique,0,0,1,0,0,0,0,0,0
+reddit,374,"), and if you're not, don't bother.",,0,0,0,0,0,0,0,0,0
+reddit,375,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,376,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,377,"squatters rights,government's interest in ensuring people use the proper legal avenues to remove people from their own premises",government critique,0,1,0,0,0,0,0,0,0
+reddit,378,,,0,0,0,0,0,0,0,0,0
+reddit,379,'not in my backyard',not in my backyard,0,0,0,0,0,0,1,0,0
+reddit,380,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,381,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,382,"[LOCATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,383,[ORG0],,0,0,0,0,0,0,0,0,0
+reddit,384,"[ORGANIZATION]'s housing trust, [ORGANIZATION]'s affordable housing",,0,0,0,0,0,0,0,0,0
+reddit,385,0,,0,0,0,0,0,0,0,0,0
+reddit,386,a) a) b) c) d) e) f) g) h) i) j,,0,0,0,0,0,0,0,0,0
+reddit,387,STREET],,0,0,0,0,0,0,0,0,0
+reddit,388,,,0,0,0,0,0,0,0,0,0
+reddit,389,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,390,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,391,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,392,[URL],,0,0,0,0,0,0,0,0,0
+reddit,393,",,,,,,,,,,,,,,,,",,0,0,0,0,0,0,0,0,0
+reddit,394,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,395,"societal, economic, traffic",societal critique,0,0,1,0,0,0,0,0,0
+reddit,396,"[LOCATION], [DATE]",,0,0,0,0,0,0,0,0,0
+reddit,397,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,398,0,,0,0,0,0,0,0,0,0,0
+reddit,399,a series of steps starting with SROs and helping people move into bigger spaces if/when they're ready,,0,0,0,0,0,0,0,0,0
+reddit,400,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,401,).,,0,0,0,0,0,0,0,0,0
+reddit,402,"affordable housing, private developers, non-profits",,0,0,0,0,0,0,0,0,0
+reddit,403,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,404,),,0,0,0,0,0,0,0,0,0
+reddit,405,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,406,0,,0,0,0,0,0,0,0,0,0
+reddit,407,0,,0,0,0,0,0,0,0,0,0
+reddit,408,"a,b,c,d,e",,0,0,0,0,0,0,0,0,0
+reddit,409,"affordable housing,government subsidized housing",government critique,0,1,0,0,0,0,0,0,0
+reddit,410,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,411,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,412,[ORGANIZATION] to continue to demolish houses without a plan.,,0,0,0,0,0,0,0,0,0
+reddit,413,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,414,"DATE1: housing crisis, societal, economic, environmental, social",societal critique,0,0,1,0,0,0,0,0,0
+reddit,415,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,416,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,417,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,418,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,419,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,420,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,421,a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,422,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,423,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,424,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,425,"[PERSON], [PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,426,[LOCATION],,0,0,0,0,0,0,0,0,0
+reddit,427,"[ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,428,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,429,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,430,SPOA is that he will be able to get a place to live.,,0,0,0,0,0,0,0,0,0
+reddit,431,,,0,0,0,0,0,0,0,0,0
+reddit,432,a) societal problems b) money c) government d) societal solutions,money aid allocation;government critique;societal critique;solutions/interventions,1,1,1,1,0,0,0,0,0
+reddit,433,a) reducing the number of homeless by half b) reducing the number of homeless by half c) reducing the number of homeless by,,0,0,0,0,0,0,0,0,0
+reddit,434,"[ORGANIZATION], [PERSON], GPE2",,0,0,0,0,0,0,0,0,0
+reddit,435,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,436,_______________________________,,0,0,0,0,0,0,0,0,0
+reddit,437,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,438,[ORG0-Homeless-Housing-Brochure.pdf],,0,0,0,0,0,0,0,0,0
+reddit,439,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,440,[INSITUTIONS],,0,0,0,0,0,0,0,0,0
+reddit,441,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,442,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,443,0,,0,0,0,0,0,0,0,0,0
+reddit,444,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,445,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,446,[TIME] before [DATE],,0,0,0,0,0,0,0,0,0
+reddit,447,a) a) a) a b) a c) a d) a e) a ,,0,0,0,0,0,0,0,0,0
+reddit,448,a) b) c) d),,0,0,0,0,0,0,0,0,0
+reddit,449,0,,0,0,0,0,0,0,0,0,0
+reddit,450,[LOCATION],,0,0,0,0,0,0,0,0,0
+reddit,451,_______________________________,,0,0,0,0,0,0,0,0,0
+reddit,452,"[ORG0], [ORG1]",,0,0,0,0,0,0,0,0,0
+reddit,453,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,454,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,455,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,456,money for her son,money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,457,"a, b, c",,0,0,0,0,0,0,0,0,0
+reddit,458,a) a) b) c) d) e),,0,0,0,0,0,0,0,0,0
+reddit,459,"[ORGANIZATION], [ORGANIZATION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,460,STREET,,0,0,0,0,0,0,0,0,0
+reddit,461,a) Mental illness b) Drugs c) Alcohol,,0,0,0,0,0,0,0,0,0
+reddit,462,"0, 0, 1, 2, 3, 4",,0,0,0,0,0,0,0,0,0
+reddit,463,'uncomfortable',,0,0,0,0,0,0,0,0,0
+reddit,464,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+reddit,465,"[STREET], [ORGANIZATION],",,0,0,0,0,0,0,0,0,0
+reddit,466,"migrant,homeless",,0,0,0,0,0,0,0,0,0
+reddit,467,[ORGANIZATION] [INSTITUTION],,0,0,0,0,0,0,0,0,0
+reddit,468,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+reddit,469,[URL],,0,0,0,0,0,0,0,0,0
+reddit,470,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,471,a) hospitals b) nursing homes c) other sources of care,,0,0,0,0,0,0,0,0,0
+reddit,472,"[STREET], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,473,profit-driven society,,0,0,0,0,0,0,0,0,0
+reddit,474,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,475,"[ORGANIZATION], Homeless shelters, community health centers",,0,0,0,0,0,0,0,0,0
+reddit,476,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+reddit,477,"a,b,c",,0,0,0,0,0,0,0,0,0
+reddit,478,0,,0,0,0,0,0,0,0,0,0
+reddit,479,0,,0,0,0,0,0,0,0,0,0
+reddit,480,[URL] [URL] [URL],,0,0,0,0,0,0,0,0,0
+reddit,481,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+reddit,482,[STREET],,0,0,0,0,0,0,0,0,0
+reddit,483,,,0,0,0,0,0,0,0,0,0
+reddit,484,"[ORGANIZATION], [ORGANIZATION], [ORG1]",,0,0,0,0,0,0,0,0,0
+reddit,485,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,486,"a), b), c), d), e), f), g",,0,0,0,0,0,0,0,0,0
+reddit,487,____,,0,0,0,0,0,0,0,0,0
+reddit,488,"[INSTITUTION], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+reddit,489,[PERSON],,0,0,0,0,0,0,0,0,0
+reddit,490,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,491,_______________________________,,0,0,0,0,0,0,0,0,0
+reddit,492,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,493,[DATE],,0,0,0,0,0,0,0,0,0
+reddit,494,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+reddit,495,a) bribes b) sex c) money d) sex,money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,496,"aggression,not knowing when you'll get your next meal,not having reliable [STREET] of comfort and refuge,not having a",,0,0,0,0,0,0,0,0,0
+reddit,497,"[PERSON], '', ''",,0,0,0,0,0,0,0,0,0
+reddit,498,0,,0,0,0,0,0,0,0,0,0
+reddit,499,"[ORGANIZATION], ___, ___",,0,0,0,0,0,0,0,0,0
+x,0,[PERSON],,0,0,0,0,0,0,0,0,0
+x,1,[USER],,0,0,0,0,0,0,0,0,0
+x,2,[LOCATION],,0,0,0,0,0,0,0,0,0
+x,3,0,,0,0,0,0,0,0,0,0,0
+x,4,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,5,[URL],,0,0,0,0,0,0,0,0,0
+x,6,[URL],,0,0,0,0,0,0,0,0,0
+x,7,[URL],,0,0,0,0,0,0,0,0,0
+x,8,[URL],,0,0,0,0,0,0,0,0,0
+x,9,[USER],,0,0,0,0,0,0,0,0,0
+x,10,[USER],,0,0,0,0,0,0,0,0,0
+x,11,[USER],,0,0,0,0,0,0,0,0,0
+x,12,[URL],,0,0,0,0,0,0,0,0,0
+x,13,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,14,0,,0,0,0,0,0,0,0,0,0
+x,15,[USER] [USER] address how he treated homeless people in [ORGANIZATION] without pretending being a wealthy gay man,,0,0,0,0,0,0,0,0,0
+x,16,[URL],,0,0,0,0,0,0,0,0,0
+x,17,"a, b, c, d, e, f, g, h,",,0,0,0,0,0,0,0,0,0
+x,18,"PERSON,[ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,19,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,20,[PERSON],,0,0,0,0,0,0,0,0,0
+x,21,[URL],,0,0,0,0,0,0,0,0,0
+x,22,[URL],,0,0,0,0,0,0,0,0,0
+x,23,[PERSON],,0,0,0,0,0,0,0,0,0
+x,24,[PERSON],,0,0,0,0,0,0,0,0,0
+x,25,[USER],,0,0,0,0,0,0,0,0,0
+x,26,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,27,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,28,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,29,[URL],,0,0,0,0,0,0,0,0,0
+x,30,[URL],,0,0,0,0,0,0,0,0,0
+x,31,[USER] [USER],,0,0,0,0,0,0,0,0,0
+x,32,[URL],,0,0,0,0,0,0,0,0,0
+x,33,[ORG1],,0,0,0,0,0,0,0,0,0
+x,34,[URL],,0,0,0,0,0,0,0,0,0
+x,35,0,,0,0,0,0,0,0,0,0,0
+x,36,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,37,813 S. FAC0 ([ORGANIZATION]) [ORGANIZATION] #SouthBend,,0,0,0,0,0,0,0,0,0
+x,38,[PERSON],,0,0,0,0,0,0,0,0,0
+x,39,813 S. FAC0 ([ORGANIZATION]) [ORGANIZATION] #[PERSON],,0,0,0,0,0,0,0,0,0
+x,40,[PERSON],,0,0,0,0,0,0,0,0,0
+x,41,[PERSON],,0,0,0,0,0,0,0,0,0
+x,42,[ORG1] [URL],,0,0,0,0,0,0,0,0,0
+x,43,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,44,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,45,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,46,[URL],,0,0,0,0,0,0,0,0,0
+x,47,&gt; &gt; &gt; &gt; &gt; &gt; &,,0,0,0,0,0,0,0,0,0
+x,48,[URL],,0,0,0,0,0,0,0,0,0
+x,49,[PERSON],,0,0,0,0,0,0,0,0,0
+x,50,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,51,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,52,"[USER], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,53,[URL],,0,0,0,0,0,0,0,0,0
+x,54,[STREET],,0,0,0,0,0,0,0,0,0
+x,55,[URL],,0,0,0,0,0,0,0,0,0
+x,56,[URL],,0,0,0,0,0,0,0,0,0
+x,57,[URL],,0,0,0,0,0,0,0,0,0
+x,58,"date1, a, b, c, d, e, f, g",,0,0,0,0,0,0,0,0,0
+x,59,[URL],,0,0,0,0,0,0,0,0,0
+x,60,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,61,[URL],,0,0,0,0,0,0,0,0,0
+x,62,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,63,[PERSON].,,0,0,0,0,0,0,0,0,0
+x,64,#[PERSON]scanner #[PERSON] #[PERSON]il #[PERSON] #[PERSON] #[PER,,0,0,0,0,0,0,0,0,0
+x,65,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+x,66,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,67,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,68,[USER],,0,0,0,0,0,0,0,0,0
+x,69,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,70,#affordablehousing #landlords #residents #rockfordil,,0,0,0,0,0,0,0,0,0
+x,71,[URL],,0,0,0,0,0,0,0,0,0
+x,72,[PERSON],,0,0,0,0,0,0,0,0,0
+x,73,[URL],,0,0,0,0,0,0,0,0,0
+x,74,[USER] [USER] [USER] [USER] [USER] [USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,75,GPE21,,0,0,0,0,0,0,0,0,0
+x,76,[PERSON],,0,0,0,0,0,0,0,0,0
+x,77,[USER] [URL],,0,0,0,0,0,0,0,0,0
+x,78,"a,b,c,d",,0,0,0,0,0,0,0,0,0
+x,79,a) a) b) c) d),,0,0,0,0,0,0,0,0,0
+x,80,"[USER], [INSTITUTION]",,0,0,0,0,0,0,0,0,0
+x,81,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,82,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,83,[URL],,0,0,0,0,0,0,0,0,0
+x,84,[URL],,0,0,0,0,0,0,0,0,0
+x,85,[URL],,0,0,0,0,0,0,0,0,0
+x,86,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,87,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,88,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,89,ad,,0,0,0,0,0,0,0,0,0
+x,90,[URL],,0,0,0,0,0,0,0,0,0
+x,91,"[PERSON], she was able to move to [ORGANIZATION] to live with her daughter.",,0,0,0,0,0,0,0,0,0
+x,92,[URL],,0,0,0,0,0,0,0,0,0
+x,93,[URL],,0,0,0,0,0,0,0,0,0
+x,94,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,95,[URL],,0,0,0,0,0,0,0,0,0
+x,96,[URL],,0,0,0,0,0,0,0,0,0
+x,97,[INSTITUTION],,0,0,0,0,0,0,0,0,0
+x,98,[URL],,0,0,0,0,0,0,0,0,0
+x,99,"[ORGANIZATION],,,,,,,,,,,, ",,0,0,0,0,0,0,0,0,0
+x,100,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,101,[USER] [USER] [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,102,0,,0,0,0,0,0,0,0,0,0
+x,103,[URL],,0,0,0,0,0,0,0,0,0
+x,104,[URL],,0,0,0,0,0,0,0,0,0
+x,105,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,106,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,107,[ORGANIZATION] [URL],,0,0,0,0,0,0,0,0,0
+x,108,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,109,[URL],,0,0,0,0,0,0,0,0,0
+x,110,[LOCATION],,0,0,0,0,0,0,0,0,0
+x,111,"[PERSON0], [PERSON2]",,0,0,0,0,0,0,0,0,0
+x,112,"[USER], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,113,[URL],,0,0,0,0,0,0,0,0,0
+x,114,[PERSON],,0,0,0,0,0,0,0,0,0
+x,115,[URL],,0,0,0,0,0,0,0,0,0
+x,116,[URL],,0,0,0,0,0,0,0,0,0
+x,117,[URL],,0,0,0,0,0,0,0,0,0
+x,118,[URL],,0,0,0,0,0,0,0,0,0
+x,119,[URL],,0,0,0,0,0,0,0,0,0
+x,120,[URL],,0,0,0,0,0,0,0,0,0
+x,121,[URL],,0,0,0,0,0,0,0,0,0
+x,122,[URL],,0,0,0,0,0,0,0,0,0
+x,123,[USER],,0,0,0,0,0,0,0,0,0
+x,124,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,125,"[PERSON], '[PERSON]'",,0,0,0,0,0,0,0,0,0
+x,126,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,127,[URL],,0,0,0,0,0,0,0,0,0
+x,128,[URL],,0,0,0,0,0,0,0,0,0
+x,129,[URL],,0,0,0,0,0,0,0,0,0
+x,130,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,131,0,,0,0,0,0,0,0,0,0,0
+x,132,"[ORGANIZATION]: Green, [ORGANIZATION]: To Bring Old Lots New Life",,0,0,0,0,0,0,0,0,0
+x,133,"[PERSON],[ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,134,"[USER], [PERSON], [DATE0]",,0,0,0,0,0,0,0,0,0
+x,135,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,136,[USER],,0,0,0,0,0,0,0,0,0
+x,137,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,138,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,139,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,140,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,141,[PERSON],,0,0,0,0,0,0,0,0,0
+x,142,#[PERSON] 0,,0,0,0,0,0,0,0,0,0
+x,143,[ORGANIZATION] is accepting applications for our [ORGANIZATION] (CDBG)  Organizations offering support for senior citizens,,0,0,0,0,0,0,0,0,0
+x,144,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,145,[URL],,0,0,0,0,0,0,0,0,0
+x,146,"PERSON1, PERSON2, PERSON3, PERSON4",,0,0,0,0,0,0,0,0,0
+x,147,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,148,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,149,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,150,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,151,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,152,[USER],,0,0,0,0,0,0,0,0,0
+x,153,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,154,PERSON0,,0,0,0,0,0,0,0,0,0
+x,155,PERSON0 PERSON1 [USER] PERSON2,,0,0,0,0,0,0,0,0,0
+x,156,[URL]),,0,0,0,0,0,0,0,0,0
+x,157,[USER] [USER] [USER] [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,158,a) veterans b) immigrants c) govt d) govt e) govt f) govt,,0,0,0,0,0,0,0,0,0
+x,159,PERSON0,,0,0,0,0,0,0,0,0,0
+x,160,,,0,0,0,0,0,0,0,0,0
+x,161,[URL],,0,0,0,0,0,0,0,0,0
+x,162,[USER],,0,0,0,0,0,0,0,0,0
+x,163,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,164,[ORGANIZATION] to [PERSON] gets 3rd tower,,0,0,0,0,0,0,0,0,0
+x,165,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,166,"0, 0",,0,0,0,0,0,0,0,0,0
+x,167,"[ORGANIZATION], [STREET]",,0,0,0,0,0,0,0,0,0
+x,168,[URL],,0,0,0,0,0,0,0,0,0
+x,169,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,170,[PERSON],,0,0,0,0,0,0,0,0,0
+x,171,PERSON0,,0,0,0,0,0,0,0,0,0
+x,172,"[ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,173,[URL],,0,0,0,0,0,0,0,0,0
+x,174,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,175,[URL],,0,0,0,0,0,0,0,0,0
+x,176,[USER],,0,0,0,0,0,0,0,0,0
+x,177,[URL],,0,0,0,0,0,0,0,0,0
+x,178,[PERSON],,0,0,0,0,0,0,0,0,0
+x,179,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,180,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,181,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,182,[URL],,0,0,0,0,0,0,0,0,0
+x,183,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,184,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,185,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,186,[URL],,0,0,0,0,0,0,0,0,0
+x,187,[URL],,0,0,0,0,0,0,0,0,0
+x,188,[PERSON],,0,0,0,0,0,0,0,0,0
+x,189,[PERSON],,0,0,0,0,0,0,0,0,0
+x,190,[URL],,0,0,0,0,0,0,0,0,0
+x,191,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,192,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,193,[USER] [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,194,[URL],,0,0,0,0,0,0,0,0,0
+x,195,[STREET],,0,0,0,0,0,0,0,0,0
+x,196,"[ORGANIZATION], FAC0",,0,0,0,0,0,0,0,0,0
+x,197,[ORG1ORG2],,0,0,0,0,0,0,0,0,0
+x,198,[USER],,0,0,0,0,0,0,0,0,0
+x,199,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,200,[URL],,0,0,0,0,0,0,0,0,0
+x,201,[USER],,0,0,0,0,0,0,0,0,0
+x,202,[USER],,0,0,0,0,0,0,0,0,0
+x,203,[PERSON],,0,0,0,0,0,0,0,0,0
+x,204,[USER] [USER],,0,0,0,0,0,0,0,0,0
+x,205,[URL],,0,0,0,0,0,0,0,0,0
+x,206,[USER] [USER] [ORGANIZATION] put a cap on them PERSON1,,0,0,0,0,0,0,0,0,0
+x,207,[USER],,0,0,0,0,0,0,0,0,0
+x,208,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,209,#[PERSON] #[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,210,"[USER], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,211,[URL],,0,0,0,0,0,0,0,0,0
+x,212,[URL],,0,0,0,0,0,0,0,0,0
+x,213,[PERSON2],,0,0,0,0,0,0,0,0,0
+x,214,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,215,[URL],,0,0,0,0,0,0,0,0,0
+x,216,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,217,[USER],,0,0,0,0,0,0,0,0,0
+x,218,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,219,[URL],,0,0,0,0,0,0,0,0,0
+x,220,[URL],,0,0,0,0,0,0,0,0,0
+x,221,[URL],,0,0,0,0,0,0,0,0,0
+x,222,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,223,[PERSON],,0,0,0,0,0,0,0,0,0
+x,224,[ORGANIZATION] SER]...[ORGANIZATION] don’t straighten it out,,0,0,0,0,0,0,0,0,0
+x,225,"[PERSON], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,226,[PERSON],,0,0,0,0,0,0,0,0,0
+x,227,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,228,Sharing pizza with homeless people Is [ORGANIZATION] the most beautiful city in the country? “D,,0,0,0,0,0,0,0,0,0
+x,229,0,,0,0,0,0,0,0,0,0,0
+x,230,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,231,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,232,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,233,[URL],,0,0,0,0,0,0,0,0,0
+x,234,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,235,[PERSON],,0,0,0,0,0,0,0,0,0
+x,236,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,237,[PERSON],,0,0,0,0,0,0,0,0,0
+x,238,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,239,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,240,[USER],,0,0,0,0,0,0,0,0,0
+x,241,[URL],,0,0,0,0,0,0,0,0,0
+x,242,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,243,[URL],,0,0,0,0,0,0,0,0,0
+x,244,[PERSON],,0,0,0,0,0,0,0,0,0
+x,245,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,246,[URL],,0,0,0,0,0,0,0,0,0
+x,247,#[PERSON],,0,0,0,0,0,0,0,0,0
+x,248,"[USER] [USER]  Dems are for destruction, fear mongering and spreading lies! They can’t even change homelessness",,0,0,0,0,0,0,0,0,0
+x,249,[URL],,0,0,0,0,0,0,0,0,0
+x,250,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,251,[PERSON],,0,0,0,0,0,0,0,0,0
+x,252,[PERSON],,0,0,0,0,0,0,0,0,0
+x,253,[URL],,0,0,0,0,0,0,0,0,0
+x,254,[USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,255,               ,,0,0,0,0,0,0,0,0,0
+x,256,[URL],,0,0,0,0,0,0,0,0,0
+x,257,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,258,"[PERSON], [USER]",,0,0,0,0,0,0,0,0,0
+x,259,[PERSON],,0,0,0,0,0,0,0,0,0
+x,260,[PERSON],,0,0,0,0,0,0,0,0,0
+x,261,[USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,262,0,,0,0,0,0,0,0,0,0,0
+x,263,[ORGANIZATION][LOCATION],,0,0,0,0,0,0,0,0,0
+x,264,[USER] PERSON0,,0,0,0,0,0,0,0,0,0
+x,265,"[PERSON], [PERSON], [PERSON], [PERSON], [PERSON], [PERSON], [PERSON], [ADDRESS",,0,0,0,0,0,0,0,0,0
+x,266,[USER],,0,0,0,0,0,0,0,0,0
+x,267,[PERSON],,0,0,0,0,0,0,0,0,0
+x,268,"[USER], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,269,[PERSON],,0,0,0,0,0,0,0,0,0
+x,270,PERSON0,,0,0,0,0,0,0,0,0,0
+x,271,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,272,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,273,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,274,[URL],,0,0,0,0,0,0,0,0,0
+x,275,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,276,0,,0,0,0,0,0,0,0,0,0
+x,277,[PERSON],,0,0,0,0,0,0,0,0,0
+x,278,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,279,[PERSON],,0,0,0,0,0,0,0,0,0
+x,280,[PERSON],,0,0,0,0,0,0,0,0,0
+x,281,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,282,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,283,[URL]: [URL] [URL] [URL] [URL] [URL] [URL] [URL] [URL] [URL] [,,0,0,0,0,0,0,0,0,0
+x,284,[LOCATION],,0,0,0,0,0,0,0,0,0
+x,285,[USER],,0,0,0,0,0,0,0,0,0
+x,286,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,287,[URL],,0,0,0,0,0,0,0,0,0
+x,288,[URL],,0,0,0,0,0,0,0,0,0
+x,289,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,290,[URL],,0,0,0,0,0,0,0,0,0
+x,291,"[USER], [USER]",,0,0,0,0,0,0,0,0,0
+x,292,[PERSON],,0,0,0,0,0,0,0,0,0
+x,293,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,294,0,,0,0,0,0,0,0,0,0,0
+x,295,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,296,[URL],,0,0,0,0,0,0,0,0,0
+x,297,"[USER], [USER]",,0,0,0,0,0,0,0,0,0
+x,298,[URL],,0,0,0,0,0,0,0,0,0
+x,299,[PERSON],,0,0,0,0,0,0,0,0,0
+x,300,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,301,[URL],,0,0,0,0,0,0,0,0,0
+x,302,[URL],,0,0,0,0,0,0,0,0,0
+x,303,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,304,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,305,[USER] [USER] [ORGANIZATION]'s public transit - which I used to use [DATE] and [,,0,0,0,0,0,0,0,0,0
+x,306,"[PERSON], [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,307,[URL],,0,0,0,0,0,0,0,0,0
+x,308,societal problems are worsening.,societal critique,0,0,1,0,0,0,0,0,0
+x,309,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,310,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,311,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,312,[STREET],,0,0,0,0,0,0,0,0,0
+x,313,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,314,[URL],,0,0,0,0,0,0,0,0,0
+x,315,"[USER], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,316,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,317,[URL],,0,0,0,0,0,0,0,0,0
+x,318,[URL],,0,0,0,0,0,0,0,0,0
+x,319,"PERSON1, PERSON2, PERSON0",,0,0,0,0,0,0,0,0,0
+x,320,[PERSON] [USER] [USER] [USER] [USER] [USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,321,[USER],,0,0,0,0,0,0,0,0,0
+x,322,[URL],,0,0,0,0,0,0,0,0,0
+x,323,[URL],,0,0,0,0,0,0,0,0,0
+x,324,[PERSON],,0,0,0,0,0,0,0,0,0
+x,325,[URL],,0,0,0,0,0,0,0,0,0
+x,326,"[TIME], [ORGANIZATION], [ADDRESS]",,0,0,0,0,0,0,0,0,0
+x,327,[PERSON],,0,0,0,0,0,0,0,0,0
+x,328,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,329,[URL],,0,0,0,0,0,0,0,0,0
+x,330,"[ORG0], [ORG1], [ORG0]",,0,0,0,0,0,0,0,0,0
+x,331,[PERSON],,0,0,0,0,0,0,0,0,0
+x,332,PERSON0 PERSON1 [USER],,0,0,0,0,0,0,0,0,0
+x,333,[ORG1],,0,0,0,0,0,0,0,0,0
+x,334,[PERSON],,0,0,0,0,0,0,0,0,0
+x,335,[USER],,0,0,0,0,0,0,0,0,0
+x,336,,,0,0,0,0,0,0,0,0,0
+x,337,[PERSON],,0,0,0,0,0,0,0,0,0
+x,338,"[ORGANIZATION], [ORGANIZATION] leadership met with Mayor [PERSON] to discuss affordable [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,339,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,340,[URL],,0,0,0,0,0,0,0,0,0
+x,341,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,342,[URL],,0,0,0,0,0,0,0,0,0
+x,343,[URL],,0,0,0,0,0,0,0,0,0
+x,344,[URL],,0,0,0,0,0,0,0,0,0
+x,345,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,346,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,347,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,348,[USER],,0,0,0,0,0,0,0,0,0
+x,349,[URL],,0,0,0,0,0,0,0,0,0
+x,350,[USER],,0,0,0,0,0,0,0,0,0
+x,351,[STREET] [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,352,[URL],,0,0,0,0,0,0,0,0,0
+x,353,[PERSON],,0,0,0,0,0,0,0,0,0
+x,354,[URL],,0,0,0,0,0,0,0,0,0
+x,355,[PERSON],,0,0,0,0,0,0,0,0,0
+x,356,[[ORG]],,0,0,0,0,0,0,0,0,0
+x,357,[USER] [USER] [USER] [USER] [USER] [USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,358,"a, b, c, d, e, f, g, h, i, j, k",,0,0,0,0,0,0,0,0,0
+x,359,[PERSON],,0,0,0,0,0,0,0,0,0
+x,360,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,361,"[ORGANIZATION], older adults with housing instability, income-eligible renters over [LOCATION]",,0,0,0,0,0,0,0,0,0
+x,362,[USER],,0,0,0,0,0,0,0,0,0
+x,363,"a,b,c,d,e,f,g,h,i,j,k,l,m,n,o",,0,0,0,0,0,0,0,0,0
+x,364,               ,,0,0,0,0,0,0,0,0,0
+x,365,[URL],,0,0,0,0,0,0,0,0,0
+x,366,[USER] DELTA BY PERSON0 NORTH TREATED A HOMELESS MOTHER AND CHILD INHUMAN,,0,0,0,0,0,0,0,0,0
+x,367,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,368,0,,0,0,0,0,0,0,0,0,0
+x,369,[PERSON],,0,0,0,0,0,0,0,0,0
+x,370,[USER],,0,0,0,0,0,0,0,0,0
+x,371,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,372,"[ORGANIZATION], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,373,[URL],,0,0,0,0,0,0,0,0,0
+x,374,[URL],,0,0,0,0,0,0,0,0,0
+x,375,[URL],,0,0,0,0,0,0,0,0,0
+x,376,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,377,[URL],,0,0,0,0,0,0,0,0,0
+x,378,[USER] [USER],,0,0,0,0,0,0,0,0,0
+x,379,[URL],,0,0,0,0,0,0,0,0,0
+x,380,0,,0,0,0,0,0,0,0,0,0
+x,381,[USER],,0,0,0,0,0,0,0,0,0
+x,382,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,383,[URL],,0,0,0,0,0,0,0,0,0
+x,384,_______________________________,,0,0,0,0,0,0,0,0,0
+x,385,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,386,"[PERSON], [PERSON], [PERSON], [PERSON]T",,0,0,0,0,0,0,0,0,0
+x,387,"[ORGANIZATION], ",,0,0,0,0,0,0,0,0,0
+x,388,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,389,[URL],,0,0,0,0,0,0,0,0,0
+x,390,[DATE][PERSON][DATE][PERSON][DATE][PERSON][DATE][PERSON],,0,0,0,0,0,0,0,0,0
+x,391,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,392,.[USER] [ORGANIZATION] #AffordableHousing #Housing #Rent #Mortgage,,0,0,0,0,0,0,0,0,0
+x,393,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,394,[LOCATION],,0,0,0,0,0,0,0,0,0
+x,395,[USER],,0,0,0,0,0,0,0,0,0
+x,396,[ORG1],,0,0,0,0,0,0,0,0,0
+x,397,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,398,[USER] [USER],,0,0,0,0,0,0,0,0,0
+x,399,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,400,[USER],,0,0,0,0,0,0,0,0,0
+x,401,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,402,[URL],,0,0,0,0,0,0,0,0,0
+x,403,[ORG] is activated &amp; several [PERSON] ([ORGANIZATION]) providers are operating as warming centers.,,0,0,0,0,0,0,0,0,0
+x,404,"[PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,405,[STREET],,0,0,0,0,0,0,0,0,0
+x,406,[URL],,0,0,0,0,0,0,0,0,0
+x,407,[USER] [USER],,0,0,0,0,0,0,0,0,0
+x,408,[URL],,0,0,0,0,0,0,0,0,0
+x,409,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,410,[ORG1],,0,0,0,0,0,0,0,0,0
+x,411,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,412,[PERSON],,0,0,0,0,0,0,0,0,0
+x,413,[URL],,0,0,0,0,0,0,0,0,0
+x,414,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,415,"[PERSON], [USER] Creative Kids in [ORGANIZATION], [PERSON]",,0,0,0,0,0,0,0,0,0
+x,416,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,417,[PERSON],,0,0,0,0,0,0,0,0,0
+x,418,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,419,0,,0,0,0,0,0,0,0,0,0
+x,420,[URL],,0,0,0,0,0,0,0,0,0
+x,421,[URL],,0,0,0,0,0,0,0,0,0
+x,422,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,423,[URL],,0,0,0,0,0,0,0,0,0
+x,424,"[PERSON], [PERSON], [PERSON], [PERSON], [ORGANIZATION]",,0,0,0,0,0,0,0,0,0
+x,425,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,426,[URL],,0,0,0,0,0,0,0,0,0
+x,427,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,428,[URL],,0,0,0,0,0,0,0,0,0
+x,429,[URL],,0,0,0,0,0,0,0,0,0
+x,430,[ORG0],,0,0,0,0,0,0,0,0,0
+x,431,"[ORGANIZATION], [LOCATION]",,0,0,0,0,0,0,0,0,0
+x,432,[URL],,0,0,0,0,0,0,0,0,0
+x,433,[ORG],,0,0,0,0,0,0,0,0,0
+x,434,[ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,435,[URL],,0,0,0,0,0,0,0,0,0
+x,436,[USER] [URL],,0,0,0,0,0,0,0,0,0
+x,437,[PERSON],,0,0,0,0,0,0,0,0,0
+x,438,[USER] [USER] [USER] [USER] [USER] [USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,439,[URL],,0,0,0,0,0,0,0,0,0
+x,440,[STREET] [ORGANIZATION],,0,0,0,0,0,0,0,0,0
+x,441,[URL],,0,0,0,0,0,0,0,0,0
+x,442,[USER],,0,0,0,0,0,0,0,0,0
+x,443,[USER] [USER] [USER],,0,0,0,0,0,0,0,0,0
+x,444,[URL],,0,0,0,0,0,0,0,0,0
+x,445,"[PERSON], [PERSON], [PERSON], GPE7, [PERSON], GPE10",,0,0,0,0,0,0,0,0,0
+x,446,[URL],,0,0,0,0,0,0,0,0,0
+x,447,[PERSON],,0,0,0,0,0,0,0,0,0
+x,448,[URL],,0,0,0,0,0,0,0,0,0
+x,449,0,,0,0,0,0,0,0,0,0,0
+x,450,[USER],,0,0,0,0,0,0,0,0,0
+x,451,[URL],,0,0,0,0,0,0,0,0,0

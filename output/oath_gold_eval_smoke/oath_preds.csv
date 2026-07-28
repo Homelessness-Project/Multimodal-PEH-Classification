@@ -1,0 +1,9 @@
+source,row_index,oath_frames_raw,pred_labels,pred_money aid allocation,pred_government critique,pred_societal critique,pred_solutions/interventions,pred_personal interaction,pred_media portrayal,pred_not in my backyard,pred_harmful generalization,pred_deserving/undeserving
+reddit,0,societal media,societal critique;media portrayal,0,0,1,0,0,1,0,0,0
+reddit,1,societal societal societal societal societal societal societal societal societal societal societal societal societal societal societal societal,societal critique,0,0,1,0,0,0,0,0,0
+reddit,2,"societal media,personal,personal,personal,personal,personal,personal,personal,personal",societal critique;personal interaction;media portrayal,0,0,1,0,1,1,0,0,0
+reddit,3,"solutions, not societal, money, money, money, societal societal societal societal societal societal societal societal societal societal",money aid allocation;societal critique;solutions/interventions,1,0,1,1,0,0,0,0,0
+reddit,4,"money, money, solutions, not money, money, money, money, money, money, money, money, money, money, money, money, money",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,5,0,,0,0,0,0,0,0,0,0,0
+reddit,6,solutions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,7,"government, not societal, societal, personal, personal, societal, societal, societal, societal, societal, societal, ",government critique;societal critique;personal interaction,0,1,1,0,1,0,0,0,0

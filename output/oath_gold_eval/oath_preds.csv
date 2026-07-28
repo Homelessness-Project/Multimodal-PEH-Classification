@@ -1,0 +1,1699 @@
+source,row_index,oath_frames_raw,pred_labels,pred_money aid allocation,pred_government critique,pred_societal critique,pred_solutions/interventions,pred_personal interaction,pred_media portrayal,pred_not in my backyard,pred_harmful generalization,pred_deserving/undeserving
+meeting_minutes,0,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+meeting_minutes,1,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,2,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,3,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,4,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+meeting_minutes,5,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,6,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,7,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,8,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,9,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,10,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,11,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,12,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,13,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,14,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,15,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,16,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,17,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,18,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,19,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,20,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,21,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,22,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,23,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,24,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,25,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,26,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,27,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,28,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,29,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,30,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,31,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,32,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,33,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,34,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,35,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,36,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,37,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,38,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,39,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,40,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,41,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,42,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,43,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,44,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,45,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,46,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,47,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,48,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,49,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,50,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,51,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,52,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,53,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,54,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,55,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,56,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,57,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,58,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+meeting_minutes,59,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,60,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,61,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,62,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,63,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,64,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,65,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,66,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,67,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,68,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,69,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,70,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,71,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,72,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,73,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,74,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,75,"harmful_generalization,societal_critique,personal_interaction_observation_of_homelessness",societal critique;personal interaction;harmful generalization,0,0,1,0,1,0,0,1,0
+meeting_minutes,76,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,77,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,78,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,79,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,80,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,81,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,82,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,83,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,84,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+meeting_minutes,85,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,86,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,87,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+meeting_minutes,88,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,89,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,90,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,91,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,92,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,93,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,94,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,95,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,96,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,97,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,98,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,99,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,100,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,101,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,102,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,103,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,104,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+meeting_minutes,105,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,106,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,107,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,108,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,109,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,110,"harmful_generalization,not_in_my_backyard,solutions_interventions",solutions/interventions;not in my backyard;harmful generalization,0,0,0,1,0,0,1,1,0
+meeting_minutes,111,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,112,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,113,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,114,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,115,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,116,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,117,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,118,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,119,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,120,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,121,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,122,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,123,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,124,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,125,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,126,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,127,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,128,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,129,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,130,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,131,"personal_interaction_observation_of_homelessness,not_in_my_backyard",personal interaction;not in my backyard,0,0,0,0,1,0,1,0,0
+meeting_minutes,132,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,133,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,134,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,135,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,136,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,137,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,138,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,139,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,140,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,141,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,142,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+meeting_minutes,143,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,144,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,145,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,146,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,147,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+meeting_minutes,148,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,149,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,150,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,151,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,152,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,153,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,154,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,155,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,156,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,157,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,158,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,159,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,160,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,161,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,162,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,163,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,164,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,165,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,166,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+meeting_minutes,167,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,168,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,169,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,170,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+meeting_minutes,171,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+meeting_minutes,172,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,173,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,174,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,175,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+meeting_minutes,176,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,177,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,178,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,179,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,180,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,181,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,182,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,183,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,184,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,185,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,186,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,187,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,188,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,189,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,190,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,191,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,192,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,193,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,194,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,195,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,196,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,197,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,198,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,199,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,200,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,201,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,202,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,203,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,204,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+meeting_minutes,205,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+meeting_minutes,206,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,207,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,208,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,209,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,210,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,211,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,212,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,213,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,214,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,215,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,216,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,217,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,218,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,219,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,220,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,221,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+meeting_minutes,222,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,223,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,224,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,225,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,226,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,227,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,228,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,229,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,230,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,231,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,232,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,233,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,234,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,235,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,236,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+meeting_minutes,237,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,238,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,239,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,240,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,241,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,242,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,243,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,244,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,245,"not_in_my_backyard,societal_critique",societal critique,0,0,1,0,0,0,0,0,0
+meeting_minutes,246,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,247,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,248,government_critique,government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,249,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,250,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,251,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,252,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,253,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+meeting_minutes,254,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,255,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,256,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,257,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,258,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,259,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,260,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,261,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,262,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,263,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,264,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,265,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,266,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,267,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,268,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,269,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,270,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,271,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,272,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,273,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,274,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,275,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,276,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,277,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,278,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,279,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,280,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,281,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,282,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,283,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,284,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,285,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,286,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,287,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,288,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,289,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,290,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,291,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,292,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,293,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,294,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,295,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,296,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,297,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,298,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,299,"government_critique,not_in_my_backyard",government critique;not in my backyard,0,1,0,0,0,0,1,0,0
+meeting_minutes,300,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,301,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,302,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,303,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,304,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,305,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+meeting_minutes,306,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,307,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,308,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,309,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,310,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,311,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,312,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,313,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,314,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,315,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,316,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,317,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,318,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,319,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,320,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,321,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,322,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,323,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,324,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,325,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,326,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,327,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,328,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,329,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,330,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,331,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,332,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,333,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,334,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,335,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,336,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,337,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,338,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,339,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,340,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,341,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,342,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,343,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,344,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,345,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+meeting_minutes,346,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+meeting_minutes,347,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,348,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,349,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,350,0,,0,0,0,0,0,0,0,0,0
+meeting_minutes,351,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,352,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,353,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+meeting_minutes,354,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,355,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,356,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,357,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,358,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,359,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+meeting_minutes,360,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,361,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+meeting_minutes,362,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+meeting_minutes,363,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,0,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,1,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,2,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,3,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,4,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,5,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,6,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,7,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,8,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,9,0,,0,0,0,0,0,0,0,0,0
+news,10,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,11,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,12,"deserving_undeserving_of_resources,societal_critique",societal critique;deserving/undeserving,0,0,1,0,0,0,0,0,1
+news,13,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,14,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,15,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,16,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,17,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,18,0,,0,0,0,0,0,0,0,0,0
+news,19,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,20,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,21,0,,0,0,0,0,0,0,0,0,0
+news,22,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,23,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,24,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,25,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,26,"media_portrayal,solutions_interventions",solutions/interventions;media portrayal,0,0,0,1,0,1,0,0,0
+news,27,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,28,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,29,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,30,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,31,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+news,32,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,33,0,,0,0,0,0,0,0,0,0,0
+news,34,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,35,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+news,36,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,37,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,38,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,39,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,40,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+news,41,0,,0,0,0,0,0,0,0,0,0
+news,42,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,43,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,44,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,45,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,46,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,47,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,48,0,,0,0,0,0,0,0,0,0,0
+news,49,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+news,50,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,51,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,52,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,53,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,54,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,55,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,56,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,57,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+news,58,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+news,59,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,60,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+news,61,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,62,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,63,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+news,64,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,65,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,66,"media_portrayal,government_critique",government critique;media portrayal,0,1,0,0,0,1,0,0,0
+news,67,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,68,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,69,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,70,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+news,71,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,72,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,73,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,74,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,75,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,76,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,77,0,,0,0,0,0,0,0,0,0,0
+news,78,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,79,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,80,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,81,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,82,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+news,83,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,84,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,85,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,86,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,87,0,,0,0,0,0,0,0,0,0,0
+news,88,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,89,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,90,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,91,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,92,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,93,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,94,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+news,95,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+news,96,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,97,0,,0,0,0,0,0,0,0,0,0
+news,98,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,99,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,100,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,101,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,102,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,103,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,104,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,105,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,106,0,,0,0,0,0,0,0,0,0,0
+news,107,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,108,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+news,109,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,110,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,111,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,112,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,113,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,114,0,,0,0,0,0,0,0,0,0,0
+news,115,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,116,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,117,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,118,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,119,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,120,0,,0,0,0,0,0,0,0,0,0
+news,121,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,122,0,,0,0,0,0,0,0,0,0,0
+news,123,0,,0,0,0,0,0,0,0,0,0
+news,124,0,,0,0,0,0,0,0,0,0,0
+news,125,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,126,0,,0,0,0,0,0,0,0,0,0
+news,127,0,,0,0,0,0,0,0,0,0,0
+news,128,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,129,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,130,0,,0,0,0,0,0,0,0,0,0
+news,131,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+news,132,0,,0,0,0,0,0,0,0,0,0
+news,133,0,,0,0,0,0,0,0,0,0,0
+news,134,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,135,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,136,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,137,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,138,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,139,0,,0,0,0,0,0,0,0,0,0
+news,140,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,141,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,142,0,,0,0,0,0,0,0,0,0,0
+news,143,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,144,0,,0,0,0,0,0,0,0,0,0
+news,145,0,,0,0,0,0,0,0,0,0,0
+news,146,0,,0,0,0,0,0,0,0,0,0
+news,147,0,,0,0,0,0,0,0,0,0,0
+news,148,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+news,149,0,,0,0,0,0,0,0,0,0,0
+news,150,0,,0,0,0,0,0,0,0,0,0
+news,151,0,,0,0,0,0,0,0,0,0,0
+news,152,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,153,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,154,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,155,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,156,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,157,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,158,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,159,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,160,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,161,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+news,162,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,163,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,164,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,165,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,166,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,167,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,168,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,169,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+news,170,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,171,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+news,172,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,173,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,174,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,175,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+news,176,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,177,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,178,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,179,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,180,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+news,181,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,182,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,183,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,184,0,,0,0,0,0,0,0,0,0,0
+news,185,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,186,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+news,187,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,188,"media_portrayal,government_critique",government critique;media portrayal,0,1,0,0,0,1,0,0,0
+news,189,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,190,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,191,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,192,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,193,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,194,"harmful_generalization,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;harmful generalization,1,0,0,1,0,0,0,1,0
+news,195,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,196,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,197,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,198,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,199,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,200,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,201,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,202,0,,0,0,0,0,0,0,0,0,0
+news,203,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,204,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,205,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,206,"government_critique,money_aid_resource_allocation",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,207,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+news,208,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,209,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,210,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,211,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,212,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,213,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,214,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+news,215,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,216,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,217,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,218,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,219,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,220,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,221,"government_critique,solutions_interventions,personal_interaction_observation_of_homelessness",government critique;solutions/interventions;personal interaction,0,1,0,1,1,0,0,0,0
+news,222,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,223,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,224,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,225,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,226,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,227,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,228,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,229,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,230,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,231,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,232,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,233,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,234,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,235,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,236,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+news,237,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,238,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,239,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,240,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,241,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,242,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+news,243,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,244,0,,0,0,0,0,0,0,0,0,0
+news,245,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+news,246,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,247,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,248,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,249,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,250,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,251,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,252,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,253,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,254,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,255,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,256,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,257,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,258,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,259,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,260,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,261,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,262,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,263,0,,0,0,0,0,0,0,0,0,0
+news,264,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,265,0,,0,0,0,0,0,0,0,0,0
+news,266,0,,0,0,0,0,0,0,0,0,0
+news,267,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,268,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,269,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,270,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,271,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,272,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,273,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,274,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,275,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,276,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,277,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,278,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,279,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,280,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,281,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,282,0,,0,0,0,0,0,0,0,0,0
+news,283,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,284,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,285,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,286,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,287,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,288,0,,0,0,0,0,0,0,0,0,0
+news,289,0,,0,0,0,0,0,0,0,0,0
+news,290,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,291,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+news,292,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,293,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,294,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,295,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,296,0,,0,0,0,0,0,0,0,0,0
+news,297,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,298,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,299,"deserving_undeserving_of_resources,not_in_my_backyard,government_critique",government critique;not in my backyard;deserving/undeserving,0,1,0,0,0,0,1,0,1
+news,300,0,,0,0,0,0,0,0,0,0,0
+news,301,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+news,302,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,303,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,304,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,305,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,306,0,,0,0,0,0,0,0,0,0,0
+news,307,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,308,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,309,0,,0,0,0,0,0,0,0,0,0
+news,310,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,311,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,312,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,313,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,314,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,315,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,316,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,317,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,318,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,319,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,320,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,321,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,322,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,323,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,324,"deserving_undeserving_of_resources,societal_critique,money_aid_resource_allocation,government_critique",money aid allocation;government critique;societal critique;deserving/undeserving,1,1,1,0,0,0,0,0,1
+news,325,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,326,0,,0,0,0,0,0,0,0,0,0
+news,327,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,328,0,,0,0,0,0,0,0,0,0,0
+news,329,0,,0,0,0,0,0,0,0,0,0
+news,330,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,331,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,332,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,333,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,334,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,335,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,336,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,337,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,338,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,339,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,340,0,,0,0,0,0,0,0,0,0,0
+news,341,government_critique,government critique,0,1,0,0,0,0,0,0,0
+news,342,"media_portrayal,government_critique",government critique;media portrayal,0,1,0,0,0,1,0,0,0
+news,343,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,344,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,345,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,346,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+news,347,0,,0,0,0,0,0,0,0,0,0
+news,348,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,349,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+news,350,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,351,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,352,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,353,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,354,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+news,355,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,356,"government_critique,personal_interaction_observation_of_homelessness",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+news,357,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+news,358,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+news,359,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+news,360,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,361,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+news,362,0,,0,0,0,0,0,0,0,0,0
+news,363,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,364,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,365,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+news,366,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,367,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,368,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,369,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+news,370,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,371,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,372,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+news,373,0,,0,0,0,0,0,0,0,0,0
+news,374,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+news,375,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,376,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+news,377,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+news,378,0,,0,0,0,0,0,0,0,0,0
+news,379,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+news,380,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+news,381,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,0,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,1,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,2,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,3,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,4,"harmful_generalization,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;harmful generalization,1,0,0,1,0,0,0,1,0
+reddit,5,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,6,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,7,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,8,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,9,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,10,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,11,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,12,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,13,"personal_interaction_observation_of_homelessness,not_in_my_backyard,solutions_interventions",solutions/interventions;personal interaction;not in my backyard,0,0,0,1,1,0,1,0,0
+reddit,14,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,15,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,16,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,17,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+reddit,18,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,19,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,20,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,21,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,22,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,23,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,24,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,25,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,26,"government_critique,personal_interaction_observation_of_homelessness",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+reddit,27,"solutions_interventions,personal_interaction_observation_of_homelessness,government_critique",government critique;solutions/interventions;personal interaction,0,1,0,1,1,0,0,0,0
+reddit,28,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+reddit,29,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,30,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,31,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,32,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,33,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,34,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,35,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,36,"harmful_generalization,not_in_my_backyard,solutions_interventions",solutions/interventions;not in my backyard;harmful generalization,0,0,0,1,0,0,1,1,0
+reddit,37,0,,0,0,0,0,0,0,0,0,0
+reddit,38,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,39,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,40,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,41,"not_in_my_backyard,societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,42,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,43,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,44,"government_critique,money_aid_resource_allocation",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,45,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,46,"solutions_interventions,not_in_my_backyard,societal_critique",societal critique;solutions/interventions;not in my backyard,0,0,1,1,0,0,1,0,0
+reddit,47,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,48,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,49,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,50,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,51,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,52,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,53,0,,0,0,0,0,0,0,0,0,0
+reddit,54,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,55,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,56,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,57,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,58,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,59,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,60,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,61,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,62,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,63,"media_portrayal,solutions_interventions",solutions/interventions;media portrayal,0,0,0,1,0,1,0,0,0
+reddit,64,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,65,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,66,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,67,0,,0,0,0,0,0,0,0,0,0
+reddit,68,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,69,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,70,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,71,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,72,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,73,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,74,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+reddit,75,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,76,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,77,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,78,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,79,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,80,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,81,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,82,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,83,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,84,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,85,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,86,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,87,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,88,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,89,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+reddit,90,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,91,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,92,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,93,"harmful_generalization,government_critique,personal_interaction_observation_of_homelessness",government critique;personal interaction;harmful generalization,0,1,0,0,1,0,0,1,0
+reddit,94,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,95,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+reddit,96,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,97,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,98,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,99,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,100,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,101,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,102,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,103,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,104,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,105,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,106,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,107,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,108,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,109,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,110,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,111,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,112,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,113,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,114,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,115,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,116,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,117,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,118,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,119,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,120,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,121,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,122,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,123,"not_in_my_backyard,societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,124,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,125,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,126,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,127,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,128,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,129,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,130,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,131,"government_critique,money_aid_resource_allocation,personal_interaction_observation_of_homelessness",money aid allocation;government critique;personal interaction,1,1,0,0,1,0,0,0,0
+reddit,132,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,133,"harmful_generalization,societal_critique,government_critique",government critique;societal critique;harmful generalization,0,1,1,0,0,0,0,1,0
+reddit,134,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,135,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,136,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,137,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,138,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,139,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,140,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,141,"harmful_generalization,not_in_my_backyard,societal_critique",societal critique;not in my backyard;harmful generalization,0,0,1,0,0,0,1,1,0
+reddit,142,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,143,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,144,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,145,0,,0,0,0,0,0,0,0,0,0
+reddit,146,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,147,"deserving_undeserving_of_resources,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;deserving/undeserving,1,0,0,1,0,0,0,0,1
+reddit,148,0,,0,0,0,0,0,0,0,0,0
+reddit,149,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,150,"harmful_generalization,government_critique,solutions_interventions",government critique;solutions/interventions;harmful generalization,0,1,0,1,0,0,0,1,0
+reddit,151,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,152,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,153,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,154,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,155,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+reddit,156,0,,0,0,0,0,0,0,0,0,0
+reddit,157,"personal_interaction_observation_of_homelessness,not_in_my_backyard,government_critique",government critique;personal interaction;not in my backyard,0,1,0,0,1,0,1,0,0
+reddit,158,"harmful_generalization,government_critique,solutions_interventions",government critique;solutions/interventions;harmful generalization,0,1,0,1,0,0,0,1,0
+reddit,159,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,160,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,161,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,162,0,,0,0,0,0,0,0,0,0,0
+reddit,163,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,164,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,165,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,166,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,167,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,168,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,169,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,170,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,171,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,172,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,173,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,174,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,175,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+reddit,176,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,177,0,,0,0,0,0,0,0,0,0,0
+reddit,178,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,179,0,,0,0,0,0,0,0,0,0,0
+reddit,180,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,181,"societal_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;societal critique;solutions/interventions,1,0,1,1,0,0,0,0,0
+reddit,182,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+reddit,183,"deserving_undeserving_of_resources,societal_critique,solutions_interventions",societal critique;solutions/interventions;deserving/undeserving,0,0,1,1,0,0,0,0,1
+reddit,184,"not_in_my_backyard,societal_critique",societal critique,0,0,1,0,0,0,0,0,0
+reddit,185,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,186,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,187,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,188,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,189,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,190,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,191,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,192,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,193,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,194,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,195,"not_in_my_backyard,societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,196,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,197,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,198,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,199,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,200,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,201,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,202,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,203,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,204,"not_in_my_backyard,societal_critique",societal critique,0,0,1,0,0,0,0,0,0
+reddit,205,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,206,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,207,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,208,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,209,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,210,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,211,0,,0,0,0,0,0,0,0,0,0
+reddit,212,"not_in_my_backyard,personal_interaction_observation_of_homelessness",personal interaction,0,0,0,0,1,0,0,0,0
+reddit,213,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,214,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+reddit,215,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,216,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,217,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,218,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,219,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,220,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,221,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,222,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,223,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,224,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,225,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+reddit,226,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,227,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+reddit,228,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,229,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,230,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+reddit,231,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,232,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,233,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,234,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,235,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,236,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,237,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,238,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,239,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,240,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,241,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,242,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,243,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,244,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,245,"personal_interaction_observation_of_homelessness,not_in_my_backyard,solutions_interventions",solutions/interventions;personal interaction;not in my backyard,0,0,0,1,1,0,1,0,0
+reddit,246,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,247,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,248,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,249,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,250,0,,0,0,0,0,0,0,0,0,0
+reddit,251,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,252,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+reddit,253,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,254,"harmful_generalization,government_critique,solutions_interventions",government critique;solutions/interventions;harmful generalization,0,1,0,1,0,0,0,1,0
+reddit,255,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,256,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,257,deserving_undeserving_of_resources,deserving/undeserving,0,0,0,0,0,0,0,0,1
+reddit,258,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,259,"not_in_my_backyard,societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,260,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,261,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,262,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,263,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,264,"deserving_undeserving_of_resources,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;deserving/undeserving,1,0,0,1,0,0,0,0,1
+reddit,265,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,266,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,267,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,268,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,269,0,,0,0,0,0,0,0,0,0,0
+reddit,270,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,271,0,,0,0,0,0,0,0,0,0,0
+reddit,272,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,273,"harmful_generalization,money_aid_resource_allocation,societal_critique",money aid allocation;societal critique;harmful generalization,1,0,1,0,0,0,0,1,0
+reddit,274,"harmful_generalization,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;harmful generalization,1,0,0,1,0,0,0,1,0
+reddit,275,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,276,0,,0,0,0,0,0,0,0,0,0
+reddit,277,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,278,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,279,"deserving_undeserving_of_resources,societal_critique,money_aid_resource_allocation",money aid allocation;societal critique;deserving/undeserving,1,0,1,0,0,0,0,0,1
+reddit,280,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,281,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,282,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,283,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,284,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,285,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+reddit,286,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,287,"government_critique,societal_critique,solutions_interventions",government critique;societal critique;solutions/interventions,0,1,1,1,0,0,0,0,0
+reddit,288,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,289,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,290,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,291,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,292,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,293,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+reddit,294,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+reddit,295,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,296,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,297,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,298,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+reddit,299,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,300,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,301,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,302,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,303,"harmful_generalization,government_critique,solutions_interventions,personal_interaction_observation_of_homelessness",government critique;solutions/interventions;personal interaction;harmful generalization,0,1,0,1,1,0,0,1,0
+reddit,304,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,305,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,306,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,307,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,308,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+reddit,309,"harmful_generalization,not_in_my_backyard,solutions_interventions",solutions/interventions;not in my backyard;harmful generalization,0,0,0,1,0,0,1,1,0
+reddit,310,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,311,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,312,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,313,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,314,"harmful_generalization,money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions;harmful generalization,1,0,0,1,0,0,0,1,0
+reddit,315,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,316,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+reddit,317,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+reddit,318,0,,0,0,0,0,0,0,0,0,0
+reddit,319,"harmful_generalization,societal_critique,government_critique",government critique;societal critique;harmful generalization,0,1,1,0,0,0,0,1,0
+reddit,320,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,321,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,322,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,323,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,324,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,325,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,326,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,327,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,328,0,,0,0,0,0,0,0,0,0,0
+reddit,329,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,330,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,331,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,332,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,333,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,334,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,335,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+reddit,336,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,337,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,338,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,339,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,340,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,341,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,342,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,343,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,344,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,345,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,346,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,347,"government_critique,solutions_interventions,not_in_my_backyard",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,348,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,349,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,350,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,351,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,352,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,353,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,354,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,355,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,356,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,357,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,358,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,359,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,360,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,361,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,362,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,363,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,364,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,365,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,366,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,367,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,368,0,,0,0,0,0,0,0,0,0,0
+reddit,369,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,370,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,371,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+reddit,372,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,373,"harmful_generalization,societal_critique,solutions_interventions",societal critique;solutions/interventions;harmful generalization,0,0,1,1,0,0,0,1,0
+reddit,374,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,375,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,376,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,377,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,378,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,379,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,380,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,381,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,382,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,383,0,,0,0,0,0,0,0,0,0,0
+reddit,384,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,385,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,386,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,387,"not_in_my_backyard,societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,388,"societal_critique,not_in_my_backyard",societal critique;not in my backyard,0,0,1,0,0,0,1,0,0
+reddit,389,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,390,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,391,"government_critique,personal_interaction_observation_of_homelessness",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+reddit,392,0,,0,0,0,0,0,0,0,0,0
+reddit,393,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,394,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,395,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,396,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,397,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,398,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,399,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,400,0,,0,0,0,0,0,0,0,0,0
+reddit,401,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+reddit,402,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,403,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,404,0,,0,0,0,0,0,0,0,0,0
+reddit,405,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,406,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,407,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,408,0,,0,0,0,0,0,0,0,0,0
+reddit,409,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,410,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,411,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,412,"government_critique,solutions_interventions,not_in_my_backyard",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,413,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,414,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,415,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+reddit,416,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,417,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,418,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,419,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,420,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,421,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,422,0,,0,0,0,0,0,0,0,0,0
+reddit,423,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,424,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,425,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,426,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,427,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,428,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,429,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,430,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,431,0,,0,0,0,0,0,0,0,0,0
+reddit,432,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,433,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,434,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,435,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,436,0,,0,0,0,0,0,0,0,0,0
+reddit,437,"not_in_my_backyard,societal_critique",societal critique,0,0,1,0,0,0,0,0,0
+reddit,438,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,439,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,440,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,441,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,442,"not_in_my_backyard,societal_critique,money_aid_resource_allocation,government_critique",money aid allocation;government critique;societal critique,1,1,1,0,0,0,0,0,0
+reddit,443,0,,0,0,0,0,0,0,0,0,0
+reddit,444,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,445,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,446,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,447,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,448,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,449,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,450,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+reddit,451,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+reddit,452,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,453,"deserving_undeserving_of_resources,not_in_my_backyard",not in my backyard;deserving/undeserving,0,0,0,0,0,0,1,0,1
+reddit,454,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,455,"government_critique,not_in_my_backyard",government critique;not in my backyard,0,1,0,0,0,0,1,0,0
+reddit,456,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,457,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,458,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+reddit,459,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,460,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,461,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,462,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,463,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,464,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,465,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+reddit,466,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,467,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,468,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+reddit,469,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,470,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,471,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,472,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,473,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+reddit,474,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,475,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,476,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,477,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,478,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,479,government_critique,government critique,0,1,0,0,0,0,0,0,0
+reddit,480,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,481,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,482,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+reddit,483,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,484,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,485,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+reddit,486,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+reddit,487,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,488,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,489,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,490,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+reddit,491,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,492,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+reddit,493,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,494,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+reddit,495,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+reddit,496,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+reddit,497,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+reddit,498,0,,0,0,0,0,0,0,0,0,0
+reddit,499,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,0,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,1,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,2,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,3,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,4,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,5,0,,0,0,0,0,0,0,0,0,0
+x,6,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,7,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,8,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,9,0,,0,0,0,0,0,0,0,0,0
+x,10,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,11,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,12,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,13,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,14,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,15,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,16,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,17,0,,0,0,0,0,0,0,0,0,0
+x,18,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+x,19,"government_critique,deserving_undeserving_of_resources",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,20,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,21,0,,0,0,0,0,0,0,0,0,0
+x,22,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,23,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,24,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,25,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,26,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+x,27,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,28,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,29,0,,0,0,0,0,0,0,0,0,0
+x,30,0,,0,0,0,0,0,0,0,0,0
+x,31,0,,0,0,0,0,0,0,0,0,0
+x,32,0,,0,0,0,0,0,0,0,0,0
+x,33,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,34,0,,0,0,0,0,0,0,0,0,0
+x,35,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,36,0,,0,0,0,0,0,0,0,0,0
+x,37,0,,0,0,0,0,0,0,0,0,0
+x,38,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,39,0,,0,0,0,0,0,0,0,0,0
+x,40,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,41,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+x,42,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,43,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,44,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,45,0,,0,0,0,0,0,0,0,0,0
+x,46,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,47,0,,0,0,0,0,0,0,0,0,0
+x,48,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,49,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,50,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,51,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,52,0,,0,0,0,0,0,0,0,0,0
+x,53,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,54,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,55,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,56,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+x,57,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,58,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,59,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,60,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,61,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,62,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,63,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,64,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,65,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,66,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,67,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,68,0,,0,0,0,0,0,0,0,0,0
+x,69,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,70,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,71,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,72,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,73,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,74,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,75,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,76,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,77,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,78,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,79,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,80,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,81,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,82,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,83,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,84,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,85,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,86,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,87,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,88,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,89,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,90,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,91,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+x,92,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,93,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,94,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,95,0,,0,0,0,0,0,0,0,0,0
+x,96,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,97,0,,0,0,0,0,0,0,0,0,0
+x,98,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,99,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,100,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,101,0,,0,0,0,0,0,0,0,0,0
+x,102,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,103,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+x,104,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,105,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,106,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,107,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,108,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,109,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,110,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,111,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,112,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+x,113,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,114,"government_critique,not_in_my_backyard,solutions_interventions",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+x,115,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,116,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,117,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,118,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,119,0,,0,0,0,0,0,0,0,0,0
+x,120,0,,0,0,0,0,0,0,0,0,0
+x,121,0,,0,0,0,0,0,0,0,0,0
+x,122,"money_aid_resource_allocation,deserving_undeserving_of_resources",money aid allocation;deserving/undeserving,1,0,0,0,0,0,0,0,1
+x,123,"government_critique,money_aid_resource_allocation",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,124,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,125,"government_critique,deserving_undeserving_of_resources",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,126,"government_critique,deserving_undeserving_of_resources",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,127,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,128,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,129,0,,0,0,0,0,0,0,0,0,0
+x,130,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,131,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,132,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,133,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,134,0,,0,0,0,0,0,0,0,0,0
+x,135,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,136,0,,0,0,0,0,0,0,0,0,0
+x,137,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,138,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+x,139,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,140,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,141,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+x,142,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+x,143,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,144,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,145,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,146,0,,0,0,0,0,0,0,0,0,0
+x,147,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,148,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,149,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,150,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,151,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+x,152,0,,0,0,0,0,0,0,0,0,0
+x,153,"government_critique,deserving_undeserving_of_resources",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,154,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,155,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,156,0,,0,0,0,0,0,0,0,0,0
+x,157,0,,0,0,0,0,0,0,0,0,0
+x,158,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,159,0,,0,0,0,0,0,0,0,0,0
+x,160,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,161,0,,0,0,0,0,0,0,0,0,0
+x,162,0,,0,0,0,0,0,0,0,0,0
+x,163,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,164,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,165,"deserving_undeserving_of_resources,societal_critique,solutions_interventions",societal critique;solutions/interventions;deserving/undeserving,0,0,1,1,0,0,0,0,1
+x,166,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+x,167,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,168,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,169,0,,0,0,0,0,0,0,0,0,0
+x,170,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+x,171,0,,0,0,0,0,0,0,0,0,0
+x,172,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,173,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,174,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,175,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,176,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+x,177,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,178,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,179,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,180,0,,0,0,0,0,0,0,0,0,0
+x,181,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,182,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,183,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,184,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,185,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,186,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,187,0,,0,0,0,0,0,0,0,0,0
+x,188,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,189,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,190,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,191,0,,0,0,0,0,0,0,0,0,0
+x,192,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,193,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+x,194,0,,0,0,0,0,0,0,0,0,0
+x,195,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,196,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,197,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+x,198,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,199,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,200,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,201,0,,0,0,0,0,0,0,0,0,0
+x,202,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,203,0,,0,0,0,0,0,0,0,0,0
+x,204,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,205,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+x,206,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,207,"deserving_undeserving_of_resources,societal_critique",societal critique;deserving/undeserving,0,0,1,0,0,0,0,0,1
+x,208,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,209,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,210,0,,0,0,0,0,0,0,0,0,0
+x,211,0,,0,0,0,0,0,0,0,0,0
+x,212,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,213,0,,0,0,0,0,0,0,0,0,0
+x,214,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+x,215,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,216,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,217,0,,0,0,0,0,0,0,0,0,0
+x,218,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,219,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+x,220,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,221,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,222,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,223,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,224,0,,0,0,0,0,0,0,0,0,0
+x,225,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,226,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,227,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,228,"societal_critique,solutions_interventions",societal critique;solutions/interventions,0,0,1,1,0,0,0,0,0
+x,229,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+x,230,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,231,"government_critique,money_aid_resource_allocation",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,232,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,233,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,234,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,235,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,236,"money_aid_resource_allocation,societal_critique",money aid allocation;societal critique,1,0,1,0,0,0,0,0,0
+x,237,0,,0,0,0,0,0,0,0,0,0
+x,238,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,239,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,240,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,241,0,,0,0,0,0,0,0,0,0,0
+x,242,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,243,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,244,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+x,245,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,246,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,247,0,,0,0,0,0,0,0,0,0,0
+x,248,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,249,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,250,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,251,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,252,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,253,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+x,254,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,255,"not_in_my_backyard,government_critique",government critique,0,1,0,0,0,0,0,0,0
+x,256,"societal_critique,money_aid_resource_allocation",money aid allocation;societal critique,1,0,1,0,0,0,0,0,0
+x,257,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,258,"societal_critique,government_critique",government critique;societal critique,0,1,1,0,0,0,0,0,0
+x,259,"solutions_interventions,government_critique",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,260,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,261,0,,0,0,0,0,0,0,0,0,0
+x,262,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,263,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,264,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,265,0,,0,0,0,0,0,0,0,0,0
+x,266,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+x,267,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,268,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,269,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,270,"harmful_generalization,societal_critique",societal critique;harmful generalization,0,0,1,0,0,0,0,1,0
+x,271,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+x,272,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,273,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,274,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,275,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,276,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,277,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,278,0,,0,0,0,0,0,0,0,0,0
+x,279,"harmful_generalization,solutions_interventions",solutions/interventions;harmful generalization,0,0,0,1,0,0,0,1,0
+x,280,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,281,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,282,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,283,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,284,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,285,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,286,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,287,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,288,0,,0,0,0,0,0,0,0,0,0
+x,289,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,290,0,,0,0,0,0,0,0,0,0,0
+x,291,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,292,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,293,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,294,"harmful_generalization,media_portrayal",media portrayal;harmful generalization,0,0,0,0,0,1,0,1,0
+x,295,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,296,0,,0,0,0,0,0,0,0,0,0
+x,297,"harmful_generalization,not_in_my_backyard,solutions_interventions",solutions/interventions;not in my backyard;harmful generalization,0,0,0,1,0,0,1,1,0
+x,298,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,299,"harmful_generalization,government_critique",government critique;harmful generalization,0,1,0,0,0,0,0,1,0
+x,300,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,301,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,302,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,303,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,304,"harmful_generalization,media_portrayal",media portrayal;harmful generalization,0,0,0,0,0,1,0,1,0
+x,305,"harmful_generalization,not_in_my_backyard,government_critique",government critique;not in my backyard;harmful generalization,0,1,0,0,0,0,1,1,0
+x,306,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,307,0,,0,0,0,0,0,0,0,0,0
+x,308,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,309,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+x,310,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,311,"solutions_interventions,not_in_my_backyard,government_critique",government critique;solutions/interventions;not in my backyard,0,1,0,1,0,0,1,0,0
+x,312,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,313,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+x,314,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,315,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,316,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,317,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,318,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,319,0,,0,0,0,0,0,0,0,0,0
+x,320,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,321,0,,0,0,0,0,0,0,0,0,0
+x,322,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,323,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,324,0,,0,0,0,0,0,0,0,0,0
+x,325,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,326,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+x,327,0,,0,0,0,0,0,0,0,0,0
+x,328,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,329,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,330,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,331,0,,0,0,0,0,0,0,0,0,0
+x,332,"not_in_my_backyard,solutions_interventions",solutions/interventions,0,0,0,1,0,0,0,0,0
+x,333,0,,0,0,0,0,0,0,0,0,0
+x,334,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,335,"deserving_undeserving_of_resources,societal_critique,money_aid_resource_allocation",money aid allocation;societal critique;deserving/undeserving,1,0,1,0,0,0,0,0,1
+x,336,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,337,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,338,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,339,"government_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+x,340,"government_critique,solutions_interventions",government critique;solutions/interventions,0,1,0,1,0,0,0,0,0
+x,341,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,342,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,343,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,344,0,,0,0,0,0,0,0,0,0,0
+x,345,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,346,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,347,0,,0,0,0,0,0,0,0,0,0
+x,348,0,,0,0,0,0,0,0,0,0,0
+x,349,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,350,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,351,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,352,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,353,0,,0,0,0,0,0,0,0,0,0
+x,354,"deserving_undeserving_of_resources,money_aid_resource_allocation,government_critique",money aid allocation;government critique;deserving/undeserving,1,1,0,0,0,0,0,0,1
+x,355,0,,0,0,0,0,0,0,0,0,0
+x,356,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,357,0,,0,0,0,0,0,0,0,0,0
+x,358,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,359,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,360,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,361,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,362,0,,0,0,0,0,0,0,0,0,0
+x,363,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+x,364,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,365,0,,0,0,0,0,0,0,0,0,0
+x,366,"societal_critique,money_aid_resource_allocation,solutions_interventions",money aid allocation;societal critique;solutions/interventions,1,0,1,1,0,0,0,0,0
+x,367,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,368,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,369,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,370,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,371,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,372,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+x,373,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,374,0,,0,0,0,0,0,0,0,0,0
+x,375,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,376,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,377,"personal_interaction_observation_of_homelessness,government_critique",government critique;personal interaction,0,1,0,0,1,0,0,0,0
+x,378,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,379,0,,0,0,0,0,0,0,0,0,0
+x,380,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,381,"harmful_generalization,personal_interaction_observation_of_homelessness",personal interaction;harmful generalization,0,0,0,0,1,0,0,1,0
+x,382,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,383,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,384,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,385,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,386,government_critique,government critique,0,1,0,0,0,0,0,0,0
+x,387,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,388,"money_aid_resource_allocation,government_critique",money aid allocation;government critique,1,1,0,0,0,0,0,0,0
+x,389,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,390,0,,0,0,0,0,0,0,0,0,0
+x,391,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,392,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,393,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,394,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,395,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,396,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,397,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,398,"harmful_generalization,not_in_my_backyard",not in my backyard;harmful generalization,0,0,0,0,0,0,1,1,0
+x,399,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,400,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,401,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,402,0,,0,0,0,0,0,0,0,0,0
+x,403,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,404,media_portrayal,media portrayal,0,0,0,0,0,1,0,0,0
+x,405,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,406,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,407,0,,0,0,0,0,0,0,0,0,0
+x,408,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,409,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,410,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,411,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,412,0,,0,0,0,0,0,0,0,0,0
+x,413,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,414,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,415,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,416,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,417,"solutions_interventions,personal_interaction_observation_of_homelessness",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+x,418,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,419,0,,0,0,0,0,0,0,0,0,0
+x,420,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,421,0,,0,0,0,0,0,0,0,0,0
+x,422,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,423,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,424,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,425,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0
+x,426,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,427,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,428,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,429,0,,0,0,0,0,0,0,0,0,0
+x,430,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,431,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,432,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,433,money_aid_resource_allocation,money aid allocation,1,0,0,0,0,0,0,0,0
+x,434,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,435,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,436,0,,0,0,0,0,0,0,0,0,0
+x,437,0,,0,0,0,0,0,0,0,0,0
+x,438,"personal_interaction_observation_of_homelessness,solutions_interventions",solutions/interventions;personal interaction,0,0,0,1,1,0,0,0,0
+x,439,personal_interaction_observation_of_homelessness,personal interaction,0,0,0,0,1,0,0,0,0
+x,440,not_in_my_backyard,,0,0,0,0,0,0,0,0,0
+x,441,solutions_interventions,solutions/interventions,0,0,0,1,0,0,0,0,0
+x,442,0,,0,0,0,0,0,0,0,0,0
+x,443,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,444,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,445,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,446,0,,0,0,0,0,0,0,0,0,0
+x,447,"money_aid_resource_allocation,solutions_interventions",money aid allocation;solutions/interventions,1,0,0,1,0,0,0,0,0
+x,448,"deserving_undeserving_of_resources,government_critique",government critique;deserving/undeserving,0,1,0,0,0,0,0,0,1
+x,449,societal_critique,societal critique,0,0,1,0,0,0,0,0,0
+x,450,harmful_generalization,harmful generalization,0,0,0,0,0,0,0,1,0
+x,451,"solutions_interventions,money_aid_resource_allocation,government_critique",money aid allocation;government critique;solutions/interventions,1,1,0,1,0,0,0,0,0

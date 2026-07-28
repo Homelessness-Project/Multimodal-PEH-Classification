@@ -1,0 +1,7 @@
+model,setting,macro_f1,note
+OATH Flan-T5-Large,released scaler (transfer),0.033,in-domain X ~0.50; here under-prediction gap −10.1 pp
+Gemini 2.5 Pro,few-shot,0.424,best among prompted on 9-frame subset
+GPT-4.1,few-shot,0.421,reference teacher
+Qwen 2.5 7B,few-shot,0.317,local; larger NIMBY over-tagging
+Phi-4 Mini,few-shot,0.233,local
+LLaMA 3.2 3B,few-shot,0.22,local

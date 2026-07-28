@@ -2,6 +2,12 @@
 
 This repository contains code and data for analyzing content (Reddit, X/Twitter, news articles, and meeting minutes) across multiple cities using both open-source and API-based large language models (LLMs) for classification and mitigation. Supported models include Llama 3.2, Qwen 2.5, Phi-4, GPT-4.1, Gemini 2.5 Pro, Grok-4, and fine-tuned BERT models.
 
+## Key findings (gold-standard audit, n=1,698)
+
+- **Prompted LLMs** reach ~43 macro-F1 (closed APIs, few-shot) vs ~32 for local models on the full 16-label taxonomy (2-of-3 soft-label reference).
+- **Prevalence gaps matter more than F1 alone**: every prompted model over-tags NIMBY (pooled +11.5 pp); local Qwen is ~7× worse than GPT-4.1 on that gap.
+- **OATH Flan-T5-Large** (released scaler; training prompt prefix): in-domain **Aggregated Macro ≈0.50** over nine frames on X (NIMBY alone **0.26**). On our gold, nine-frame macro-F1 = **0.42** (tied with few-shot Gemini/GPT-4.1; NIMBY F1 **0.18**; SolnInt gap **+23 pp**). See `output/oath_gold_eval/`.
+
 ## Setup
 
 ### 1. Create a Python Environment
@@ -315,6 +321,8 @@ The project generates extensive outputs organized by:
 ### Analysis Outputs
 - `output/f1/soft/` - Soft-label F1 tables and LaTeX files
 - `output/f1/val_opt/` - Val-opt F1 tables and LaTeX files
+- `output/audits/` - Calibration, IAA, prevalence, prompt-sensitivity, and related diagnostics
+- `output/oath_gold_eval/` - OATH Flan-T5-Large vs gold on nine overlapping frames
 - `output/charts/gpt_research_analysis/` - Publication-quality research charts
 - `output/charts/` - Annotation agreement charts
 - `output/annotation/` - Agreement statistics and soft labels
@@ -359,6 +367,25 @@ To generate this yourself:
 ```bash
 python scripts/deidentify_comments.py
 ```
+
+---
+
+## OATH Flan-T5 baseline (external)
+
+Evaluate the released Flan-T5-Large frame tagger that accompanies OATH-Frames (Ranjit et al., EMNLP 2024). Uses their **training prompt prefix** (required; a mismatched prompt yields near-zero F1). Their **Aggregated Macro F1 ≈0.50** averages F1 over nine issue-specific frames on X (NIMBY alone 0.26); we report the same nine-frame macro on our gold (**0.42** with the correct prefix). Default checkpoint: `dill-lab/oath-frames-flant5-large`.
+
+```bash
+.venv/bin/python -u scripts/oath_gold_frame_eval.py --device mps
+# CPU / CUDA: --device cpu | --device cuda
+# Resume-safe; writes under output/oath_gold_eval/
+```
+
+Artifacts:
+- `oath_preds.csv` — per-item frame predictions
+- `oath_vs_gold_metrics.csv` / `.tex` — per-frame P/R/F1 and prevalence gap
+- `oath_vs_prompted_macro_f1.csv` — macro-F1 vs our prompted LLMs on the same nine frames
+
+**Takeaway:** Transfer check (not a re-score of OATH’s X expert test). With the correct prefix, nine-frame macro-F1 is **0.42** (≈ Gemini/GPT-4.1 few-shot on those labels; ~8 pp below in-domain X). NIMBY stays weak (F1 0.18); solutions/interventions is over-tagged (+23 pp). Prevalence-gap audits still matter.
 
 ---
 

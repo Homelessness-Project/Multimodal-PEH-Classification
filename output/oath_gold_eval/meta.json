@@ -1,0 +1,21 @@
+{
+  "model": "dill-lab/oath-frames-flant5-large",
+  "n": 1698,
+  "gold_n_canonical": 1698,
+  "tau": "2/3",
+  "labels": [
+    "money aid allocation",
+    "government critique",
+    "societal critique",
+    "solutions/interventions",
+    "personal interaction",
+    "media portrayal",
+    "not in my backyard",
+    "harmful generalization",
+    "deserving/undeserving"
+  ],
+  "device": "mps",
+  "fast": false,
+  "small": false,
+  "macro_f1": 0.42106770317779313
+}

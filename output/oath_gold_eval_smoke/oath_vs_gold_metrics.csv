@@ -1,0 +1,11 @@
+label,short,n_pos_gold,n_pos_pred,precision,recall,f1,pi_ref_pct,pi_model_pct,gap_pp,tp,fp,fn
+money aid allocation,MoneyAid,2,2,1.0,1.0,1.0,25.0,25.0,0.0,2,0,0
+government critique,GovCrit,3,1,0.0,0.0,0.0,37.5,12.5,-25.0,0,1,3
+societal critique,SocCrit,2,5,0.4,1.0,0.5714285714285715,25.0,62.5,37.5,2,3,0
+solutions/interventions,SolnInt,4,3,1.0,0.75,0.8571428571428571,50.0,37.5,-12.5,3,0,1
+personal interaction,Interact,2,2,0.5,0.5,0.5,25.0,25.0,0.0,1,1,1
+media portrayal,MediaPort,0,2,0.0,0.0,0.0,0.0,25.0,25.0,0,2,0
+not in my backyard,NIMBY,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0
+harmful generalization,HarmGen,1,0,0.0,0.0,0.0,12.5,0.0,-12.5,0,0,1
+deserving/undeserving,(Un)Deserv,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0
+MACRO (9 OATH),MACRO,14,15,0.3222222222222222,0.3611111111111111,0.3253968253968254,19.444444444444443,20.833333333333332,1.3888888888888888,8,7,6
