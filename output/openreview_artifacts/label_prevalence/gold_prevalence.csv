@@ -1,0 +1,17 @@
+label,n_pos,n_total,prevalence,source
+ask a genuine question,113,1698,0.06654888103651355,gold
+ask a rhetorical question,148,1698,0.08716136631330977,gold
+provide a fact or claim,1416,1698,0.833922261484099,gold
+provide an observation,148,1698,0.08716136631330977,gold
+express their opinion,907,1698,0.5341578327444052,gold
+express others opinions,111,1698,0.06537102473498234,gold
+money aid allocation,309,1698,0.18197879858657243,gold
+government critique,203,1698,0.11955241460541814,gold
+societal critique,152,1698,0.0895170789163722,gold
+solutions/interventions,678,1698,0.3992932862190813,gold
+personal interaction,80,1698,0.04711425206124853,gold
+media portrayal,10,1698,0.005889281507656066,gold
+not in my backyard,42,1698,0.024734982332155476,gold
+harmful generalization,118,1698,0.06949352179034157,gold
+deserving/undeserving,23,1698,0.013545347467608953,gold
+racist,5,1698,0.002944640753828033,gold

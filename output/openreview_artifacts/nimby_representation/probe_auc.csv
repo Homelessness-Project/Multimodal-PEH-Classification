@@ -1,0 +1,4 @@
+target,cv_auc
+gold_NIMBY,0.7051790495314592
+consensus_FP,0.7091414072143739
+FP_vs_TN_among_gold_neg,0.7275983276959427

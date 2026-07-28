@@ -1,0 +1,9 @@
+{
+  "model": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "temp": 0.1,
+  "baseline_A": "existing qwen_*_none_flags.csv",
+  "variants_inferred": [
+    "B",
+    "C"
+  ]
+}

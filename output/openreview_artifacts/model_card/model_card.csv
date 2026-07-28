@@ -1,0 +1,7 @@
+display_name,backend,model_id,short_id,temperature,top_p,max_new_tokens,snapshot_note
+GPT,API,gpt-4.1,gpt-4.1,0.1,API default,500,2025-01--2025-05 collection window
+Gemini,API,gemini-2.5-pro,gemini-2.5-pro,0.1,API default,500,2025-01--2025-05 collection window
+Grok,API,grok-4-latest,grok-4-latest,0.1,API default,500,2025-01--2025-05 collection window
+LLaMA,local,meta-llama/Llama-3.2-3B-Instruct,Llama-3.2-3B-Instruct,0.1,0.95,500,2025-01--2025-05 collection window
+Qwen,local,Qwen/Qwen2.5-7B-Instruct,Qwen2.5-7B-Instruct,0.1,0.95,500,2025-01--2025-05 collection window
+Phi-4,local,microsoft/Phi-4-mini-instruct,Phi-4-mini-instruct,0.1,0.95,500,2025-01--2025-05 collection window

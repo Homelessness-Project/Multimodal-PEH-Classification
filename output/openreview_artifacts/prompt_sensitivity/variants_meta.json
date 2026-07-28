@@ -1,0 +1,8 @@
+{
+  "variants": [
+    "A_baseline",
+    "B_shuffled_order_seed7",
+    "C_no_role_prefix"
+  ],
+  "note": "Templates for sensitivity audit; not re-run at scale in this revision."
+}

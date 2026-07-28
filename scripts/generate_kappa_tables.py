@@ -68,21 +68,21 @@ CATEGORIES: List[str] = [
 
 
 CATEGORY_DISPLAY: Dict[str, str] = {
-    "ask a genuine question": "Ask Genuine Question",
-    "ask a rhetorical question": "Ask Rhetorical Question",
-    "provide a fact or claim": "Provide Fact/Claim",
-    "provide an observation": "Provide Observation",
-    "express their opinion": "Express Opinion",
-    "express others opinions": "Express Others Opinions",
-    "money aid allocation": "Money Aid Allocation",
-    "government critique": "Government Critique",
-    "societal critique": "Societal Critique",
-    "solutions/interventions": "Solutions/Interventions",
-    "personal interaction": "Personal Interaction",
-    "media portrayal": "Media Portrayal",
-    "not in my backyard": "Not in My Backyard",
-    "harmful generalization": "Harmful Generalization",
-    "deserving/undeserving": "Deserving/Undeserving",
+    "ask a genuine question": "Genuine Q",
+    "ask a rhetorical question": "Rhetorical Q",
+    "provide a fact or claim": "Fact/claim",
+    "provide an observation": "Observation",
+    "express their opinion": "Own opinion",
+    "express others opinions": "Others' op.",
+    "money aid allocation": "Money/aid",
+    "government critique": "Gov. critique",
+    "societal critique": "Soc. critique",
+    "solutions/interventions": "Solutions",
+    "personal interaction": "Personal",
+    "media portrayal": "Media",
+    "not in my backyard": "NIMBY",
+    "harmful generalization": "Harm. gen.",
+    "deserving/undeserving": "Deservingness",
     "racist": "Racist",
 }
 
@@ -568,11 +568,14 @@ def main() -> None:
 
     # Write a single wide table: columns are sources (one value each) and rows are categories.
     lines = [
-        r"\begin{table*}[htbp]",
+        r"\begin{table}[!htb]",
         r"\centering",
-        r"\begin{tabular}{lcccc}",
+        r"\scriptsize",
+        r"\setlength{\tabcolsep}{2pt}",
+        r"\resizebox{\columnwidth}{!}{%",
+        r"\begin{tabular}{lrrrr}",
         r"\toprule",
-        r"Category & Reddit & News & Meeting Minutes & X (Twitter) \\",
+        r"\textbf{Cat.} & \textbf{Rdt} & \textbf{News} & \textbf{Mtgs} & \textbf{X} \\",
         r"\midrule",
     ]
     for cat in CATEGORIES:
@@ -586,9 +589,10 @@ def main() -> None:
     lines += [
         r"\bottomrule",
         r"\end{tabular}",
-        r"\caption{Cohen's $\kappa$ by category between annotators and the gold standard (expected $\kappa$ for a randomly selected annotator vs majority-vote gold). (* indicates $<$5 positive examples in gold labels; interpret with caution.)}",
+        r"}",
+        r"\caption{Cohen's $\kappa$ (annotator vs.\ 2-of-3 gold). $^{*}$: $<$5 gold positives.}",
         r"\label{tab:humans_vs_gold_kappa}",
-        r"\end{table*}",
+        r"\end{table}",
     ]
     (humans_outdir / "humans_vs_gold_kappa.tex").write_text("\n".join(lines))
 

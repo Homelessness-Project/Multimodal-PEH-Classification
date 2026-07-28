@@ -1,0 +1,17 @@
+label,n_pos,n_total,prevalence,source
+ask a genuine question,5670,50161,0.11303602400271127,gpt4.1_corpus
+ask a rhetorical question,4656,50161,0.0928211160064592,gpt4.1_corpus
+provide a fact or claim,37281,50161,0.7432268096728534,gpt4.1_corpus
+provide an observation,17601,50161,0.350890133769263,gpt4.1_corpus
+express their opinion,41695,50161,0.8312234604573274,gpt4.1_corpus
+express others opinions,8972,50161,0.17886405773409622,gpt4.1_corpus
+money aid allocation,11586,50161,0.23097625645421743,gpt4.1_corpus
+government critique,14694,50161,0.29293674368533323,gpt4.1_corpus
+societal critique,31440,50161,0.6267817627240286,gpt4.1_corpus
+solutions/interventions,17347,50161,0.3458264388668488,gpt4.1_corpus
+personal interaction,6776,50161,0.13508502621558582,gpt4.1_corpus
+media portrayal,3474,50161,0.06925699248420088,gpt4.1_corpus
+not in my backyard,4290,50161,0.08552461075337414,gpt4.1_corpus
+harmful generalization,12303,50161,0.24527022985985128,gpt4.1_corpus
+deserving/undeserving,13849,50161,0.27609098702178986,gpt4.1_corpus
+racist,69,50161,0.0013755706624668568,gpt4.1_corpus

@@ -1,0 +1,20 @@
+block,setting,gap_pp,f1
+baseline,Pooled per-model (Tab.~\ref{tab:calibration_by_model}),11.5,
+Zero-shot,$v\geq\frac{1}{6}$,20.960187353629976,0.1555555555555555
+Zero-shot,$v\geq\frac{1}{3}$,20.960187353629976,0.1555555555555555
+Zero-shot,$v\geq\frac{1}{2}$,5.737704918032787,0.2842105263157895
+Zero-shot,$v\geq\frac{2}{3}$,-1.873536299765808,0.2333333333333333
+Zero-shot,$v\geq\frac{5}{6}$,-1.873536299765808,0.2333333333333333
+Zero-shot,$v=1$,-2.5761124121779857,0.0833333333333333
+Few-shot,$v\geq\frac{1}{6}$,15.217391304347824,0.1982507288629738
+Few-shot,$v\geq\frac{1}{3}$,15.217391304347824,0.1982507288629738
+Few-shot,$v\geq\frac{1}{2}$,2.7614571092831963,0.3511450381679389
+Few-shot,$v\geq\frac{2}{3}$,-2.056404230317274,0.1632653061224489
+Few-shot,$v\geq\frac{5}{6}$,-2.056404230317274,0.1632653061224489
+Few-shot,$v=1$,-2.4676850763807283,0.0
+Fine-tuned,BERT (val-opt),-1.1,
+Fine-tuned,RoBERTa (val-opt),0.0,
+Fine-tuned,ModernBERT (val-opt),0.0,
+Fine-tuned,LLaMA LoRA (val-opt),3.0,
+Fine-tuned,Phi-4 LoRA (val-opt),2.4,
+Fine-tuned,Qwen LoRA (val-opt),-1.9,

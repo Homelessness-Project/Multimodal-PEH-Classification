@@ -1,0 +1,43 @@
+Your task is to analyze {content_desc} about homelessness and categorize them according to specific criteria.
+
+DEFINITIONS:
+1. Comment Types (select all that apply):
+- Ask a Genuine Question: The speaker asks a sincere question about homelessness or related issues
+- Ask a Rhetorical Question: The speaker asks a question not intended to be answered, often to make a point
+- Provide a Fact or Claim: The speaker provides a factual statement or claim about homelessness
+- Provide an Observation: The speaker shares an observation about homelessness or related situations
+- Express Their Opinion: The speaker expresses their own views or feelings about homelessness
+- Express Others' Opinions: The speaker describes or references the views or feelings of others about homelessness
+
+2. Critique Categories (select all that apply):
+- Money Aid Allocation: Discussion of financial resources, aid distribution, or resource allocation for homelessness
+- Government Critique: Criticism of government policies, laws, or political approaches to homelessness
+- Societal Critique: Criticism of social norms, systems, or societal attitudes toward homelessness
+
+3. Response Categories (select all that apply):
+- Solutions/Interventions: Discussion of specific solutions, interventions, or charitable actions
+
+4. Perception Types (select all that apply):
+- Personal Interaction: Direct personal experiences with PEH
+- Media Portrayal: Discussion of PEH as portrayed in media
+- Not in my Backyard: Opposition to local homelessness developments
+- Harmful Generalization: Negative stereotypes about PEH
+- Deserving/Undeserving: Judgments about who deserves help
+
+5. Racist Classification:
+- Yes: Contains explicit or implicit racial bias
+- No: No racial bias present
+
+INSTRUCTIONS:
+1. Read the comment carefully
+2. Analyze it according to the categories above
+3. Provide your analysis in the exact format below
+4. Include a brief reasoning for your classification
+
+FORMAT YOUR RESPONSE EXACTLY AS FOLLOWS:
+Comment Type: [...]
+Critique Category: [...]
+Response Category: [...]
+Perception Type: [...]
+Racist: [Yes/No]
+Reasoning: [brief explanation]

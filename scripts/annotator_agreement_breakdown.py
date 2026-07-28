@@ -55,6 +55,25 @@ CATEGORIES: List[str] = [
     "racist",
 ]
 
+COMPACT_CAT: Dict[str, str] = {
+    "ask a genuine question": "Genuine Q",
+    "ask a rhetorical question": "Rhetorical Q",
+    "provide a fact or claim": "Fact/claim",
+    "provide an observation": "Observation",
+    "express their opinion": "Own opinion",
+    "express others opinions": "Others' op.",
+    "money aid allocation": "Money/aid",
+    "government critique": "Gov. critique",
+    "societal critique": "Soc. critique",
+    "solutions/interventions": "Solutions",
+    "personal interaction": "Personal",
+    "media portrayal": "Media",
+    "not in my backyard": "NIMBY",
+    "harmful generalization": "Harm. gen.",
+    "deserving/undeserving": "Deservingness",
+    "racist": "Racist",
+}
+
 # Column name variants present in some files
 COL_ALIASES: Dict[str, List[str]] = {
     "ask a rhetorical question": ["ask a rhetorical question", "ask a rheorical question"],
@@ -204,42 +223,44 @@ def append_breakdown_table(
 ) -> None:
     totals = _category_totals(per_cat)
 
-    lines.append(r"\begin{table*}[htbp]")
+    lines.append(r"\begin{table}[!htb]")
     lines.append(r"\centering")
-    lines.append(r"\begin{tabular}{lrrrrr}")
+    lines.append(r"\scriptsize")
+    lines.append(r"\setlength{\tabcolsep}{2pt}")
+    lines.append(
+        r"\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X rrrr@{}}"
+    )
     lines.append(r"\toprule")
-    lines.append(r"Category & 3/3 Pos & 2/3 Pos & 2/3 Neg & 3/3 Neg & Total \\")
+    lines.append(r"\textbf{Cat.} & 3/3+ & 2/3+ & 2/3- & 3/3- \\")
     lines.append(r"\midrule")
 
     for cat in CATEGORIES:
         c = per_cat[cat]
-        total = int(c["total"])
+        label = COMPACT_CAT.get(cat, cat)
         lines.append(
-            f"{cat} "
-            f"& {c['full_positive']} ({pct(int(c['full_positive']), total)}) "
-            f"& {c['two_of_three_positive']} ({pct(int(c['two_of_three_positive']), total)}) "
-            f"& {c['two_of_three_negative']} ({pct(int(c['two_of_three_negative']), total)}) "
-            f"& {c['full_negative']} ({pct(int(c['full_negative']), total)}) "
-            f"& {total} \\\\"
+            f"{label} "
+            f"& {c['full_positive']} "
+            f"& {c['two_of_three_positive']} "
+            f"& {c['two_of_three_negative']} "
+            f"& {c['full_negative']} \\\\"
         )
 
     lines.append(r"\midrule")
     lines.append(
         f"TOTAL "
-        f"& {totals['full_positive']} ({pct(int(totals['full_positive']), int(totals['total']))}) "
-        f"& {totals['two_of_three_positive']} ({pct(int(totals['two_of_three_positive']), int(totals['total']))}) "
-        f"& {totals['two_of_three_negative']} ({pct(int(totals['two_of_three_negative']), int(totals['total']))}) "
-        f"& {totals['full_negative']} ({pct(int(totals['full_negative']), int(totals['total']))}) "
-        f"& {totals['total']} \\\\"
+        f"& {totals['full_positive']} "
+        f"& {totals['two_of_three_positive']} "
+        f"& {totals['two_of_three_negative']} "
+        f"& {totals['full_negative']} \\\\"
     )
     lines.append(r"\bottomrule")
-    lines.append(r"\end{tabular}")
+    lines.append(r"\end{tabularx}")
     lines.append(
-        rf"\caption{{Annotator agreement breakdown by category for {source_label} "
-        rf"(gold-standard set; $n={n_items}$ items). Raw scores: 0--3.}}"
+        rf"\caption{{Raw-score breakdown ({source_label}; $n={n_items}$). "
+        rf"Cell counts by category; columns sum to $n$ per row (raw scores 0--3).}}"
     )
     lines.append(rf"\label{{tab:annotator_agreement_breakdown_{label_suffix}}}")
-    lines.append(r"\end{table*}")
+    lines.append(r"\end{table}")
     lines.append("")
 
 
