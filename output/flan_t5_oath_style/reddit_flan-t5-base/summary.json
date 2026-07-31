@@ -1,0 +1,11 @@
+{
+  "model_id": "google/flan-t5-base",
+  "sources": [
+    "reddit"
+  ],
+  "use_lora": true,
+  "val_macro_f1": 0.1867866503295678,
+  "test_macro_f1": 0.16326546279534332,
+  "val_micro_f1": 0.30646589902568644,
+  "test_micro_f1": 0.2804878048780488
+}

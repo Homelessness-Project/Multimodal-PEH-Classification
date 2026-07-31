@@ -387,6 +387,43 @@ Artifacts:
 
 **Takeaway:** Transfer check (not a re-score of OATH’s X expert test). With the correct prefix, nine-frame macro-F1 is **0.42** (≈ Gemini/GPT-4.1 few-shot on those labels; ~8 pp below in-domain X). NIMBY stays weak (F1 0.18); solutions/interventions is over-tagged (+23 pp). Prevalence-gap audits still matter.
 
+### Train your own OATH-style Flan-T5 (16 labels, GPT pseudo-labels)
+
+`scripts/finetune_flan_t5_oath_style.py` trains **Flan-T5** the OATH way (seq2seq → comma-separated snake_case labels) on GPT-4.1 flags, with gold 50/50 val/test. Default is **flan-t5-large + LoRA** (best OATH-matched recipe for our taxonomy). For strongest absolute 16-label F1, prefer ModernBERT / local LoRA LLMs in `finetune_on_gpt_pseudolabels.py`.
+
+**Mac (MPS):** yes — LoRA + float32 + micro-batch 1. Install `peft` if missing. Overnight for Large + all sources; start with `--fast` smoke. See the script docstring (`Why these defaults`) for full rationale; summary:
+
+| Default | Why |
+|---|---|
+| `flan-t5-large` | Same family/size as released OATH tagger; `--fast` (base) is smoke-only |
+| LoRA `r=16`, `α=32`, dropout `0.05`, targets `q/v` | Full FT of ~780M is slow/heavy on MPS; r=16 is the usual T5 PEFT rank; α=2r keeps update scale ≈1; light dropout helps with noisy GPT labels |
+| `--batch-size 1`, `--grad-accum 16` | Effective batch **16** without OOM on unified memory at 512 tokens; on CUDA prefer e.g. `4×4` for the same effective batch |
+| `--eval-batch-size 4` | No backward graph → can pack more than train |
+| `--lr 2e-4`, `--warmup-ratio 0.03` | LoRA needs a higher LR than full FT; short warmup stabilizes early adapter steps |
+| `--epochs 3` | ~50k noisy pseudo-labels: 2–3 epochs before val plateaus; more tends to overfit the teacher |
+| `--max-input-length 512`, `--max-target-length 64` | Matches OATH / our eval script; 64 tokens covers a 16-label comma list |
+| `--source all`, gold held out + 50/50 val/test | Multi-domain paper setting; no gold leakage into train |
+
+```bash
+.venv/bin/pip install peft
+# Smoke on Mac
+.venv/bin/python -u scripts/finetune_flan_t5_oath_style.py \
+  --source reddit --fast --max-train 200 --epochs 1 --device mps
+# Full Large (overnight on Apple Silicon; defaults already = batch 1, accum 16)
+.venv/bin/python -u scripts/finetune_flan_t5_oath_style.py \
+  --source all --epochs 3 --device mps
+# CUDA: same effective batch, larger micro-batch
+.venv/bin/python -u scripts/finetune_flan_t5_oath_style.py \
+  --source all --batch-size 4 --grad-accum 4 --device cuda
+# After Ctrl+C: resume from latest checkpoint under the same output dir
+.venv/bin/python -u scripts/finetune_flan_t5_oath_style.py \
+  --source all --batch-size 4 --grad-accum 4 --device cuda --resume
+```
+
+**Graceful stop:** Ctrl+C (or `kill <pid>`) saves a resumable `checkpoints/checkpoint-*` plus `interrupted/`; second Ctrl+C force-quits. Use `--resume` or `--resume-from PATH`.
+
+Writes under `output/flan_t5_oath_style/` (`final/`, `test_metrics.json`, per-label CSVs).
+
 ---
 
 ## NIMBY Bias Evaluation (Near vs Far)

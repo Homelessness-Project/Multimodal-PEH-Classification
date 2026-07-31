@@ -1,0 +1,30 @@
+{
+  "model_id": "google/flan-t5-base",
+  "sources": [
+    "reddit"
+  ],
+  "n_train": 200,
+  "n_val": 250,
+  "n_test": 250,
+  "use_lora": true,
+  "device": "mps",
+  "prompt_prefix": "Classify the given text into one or more of the following 16 labels: ask_a_genuine_question,ask_a_rhetorical_question,provide_a_fact_or_claim,provide_an_observation,express_their_opinion,express_others_opinions,money_aid_allocation,government_critique,societal_critique,solutions_interventions,personal_interaction,media_portrayal,not_in_my_backyard,harmful_generalization,deserving_undeserving,racist,none. Text: ",
+  "categories": [
+    "ask a genuine question",
+    "ask a rhetorical question",
+    "provide a fact or claim",
+    "provide an observation",
+    "express their opinion",
+    "express others opinions",
+    "money aid allocation",
+    "government critique",
+    "societal critique",
+    "solutions/interventions",
+    "personal interaction",
+    "media portrayal",
+    "not in my backyard",
+    "harmful generalization",
+    "deserving/undeserving",
+    "racist"
+  ]
+}

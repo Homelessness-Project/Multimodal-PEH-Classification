@@ -1,0 +1,166 @@
+{
+  "macro_f1": 0.16326546279534332,
+  "micro_f1": 0.2804878048780488,
+  "per_label": [
+    {
+      "category": "ask a genuine question",
+      "support": 26,
+      "precision": 0.6875,
+      "recall": 0.4230769230769231,
+      "f1": 0.5238095238095238,
+      "pred_rate": 0.06400000303983688,
+      "gold_rate": 0.10400000214576721,
+      "gap_pp": -4.0
+    },
+    {
+      "category": "ask a rhetorical question",
+      "support": 37,
+      "precision": 0.13333333333333333,
+      "recall": 0.10810810810810811,
+      "f1": 0.11940298507462686,
+      "pred_rate": 0.11999999731779099,
+      "gold_rate": 0.14800000190734863,
+      "gap_pp": -2.8000004291534424
+    },
+    {
+      "category": "provide a fact or claim",
+      "support": 143,
+      "precision": 0.656,
+      "recall": 0.5734265734265734,
+      "f1": 0.6119402985074627,
+      "pred_rate": 0.5,
+      "gold_rate": 0.5720000267028809,
+      "gap_pp": -7.200002670288086
+    },
+    {
+      "category": "provide an observation",
+      "support": 67,
+      "precision": 0.27848101265822783,
+      "recall": 0.3283582089552239,
+      "f1": 0.3013698630136986,
+      "pred_rate": 0.3160000145435333,
+      "gold_rate": 0.2680000066757202,
+      "gap_pp": 4.8000006675720215
+    },
+    {
+      "category": "express their opinion",
+      "support": 204,
+      "precision": 0.9545454545454546,
+      "recall": 0.10294117647058823,
+      "f1": 0.18584070796460178,
+      "pred_rate": 0.08799999952316284,
+      "gold_rate": 0.8159999847412109,
+      "gap_pp": -72.79999542236328
+    },
+    {
+      "category": "express others opinions",
+      "support": 28,
+      "precision": 0.5,
+      "recall": 0.07142857142857142,
+      "f1": 0.125,
+      "pred_rate": 0.01600000075995922,
+      "gold_rate": 0.1120000034570694,
+      "gap_pp": -9.600000381469727
+    },
+    {
+      "category": "money aid allocation",
+      "support": 34,
+      "precision": 0.3333333333333333,
+      "recall": 0.11764705882352941,
+      "f1": 0.17391304347826086,
+      "pred_rate": 0.04800000041723251,
+      "gold_rate": 0.13600000739097595,
+      "gap_pp": -8.80000114440918
+    },
+    {
+      "category": "government critique",
+      "support": 33,
+      "precision": 0.375,
+      "recall": 0.18181818181818182,
+      "f1": 0.24489795918367346,
+      "pred_rate": 0.06400000303983688,
+      "gold_rate": 0.13199999928474426,
+      "gap_pp": -6.799999713897705
+    },
+    {
+      "category": "societal critique",
+      "support": 38,
+      "precision": 0.07692307692307693,
+      "recall": 0.02631578947368421,
+      "f1": 0.0392156862745098,
+      "pred_rate": 0.052000001072883606,
+      "gold_rate": 0.15199999511241913,
+      "gap_pp": -9.999999046325684
+    },
+    {
+      "category": "solutions/interventions",
+      "support": 85,
+      "precision": 1.0,
+      "recall": 0.047058823529411764,
+      "f1": 0.0898876404494382,
+      "pred_rate": 0.01600000075995922,
+      "gold_rate": 0.3400000035762787,
+      "gap_pp": -32.400001525878906
+    },
+    {
+      "category": "personal interaction",
+      "support": 28,
+      "precision": 0.2,
+      "recall": 0.03571428571428571,
+      "f1": 0.06060606060606061,
+      "pred_rate": 0.019999999552965164,
+      "gold_rate": 0.1120000034570694,
+      "gap_pp": -9.200000762939453
+    },
+    {
+      "category": "media portrayal",
+      "support": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pred_rate": 0.0,
+      "gold_rate": 0.00800000037997961,
+      "gap_pp": -0.800000011920929
+    },
+    {
+      "category": "not in my backyard",
+      "support": 16,
+      "precision": 0.10714285714285714,
+      "recall": 0.1875,
+      "f1": 0.13636363636363635,
+      "pred_rate": 0.1120000034570694,
+      "gold_rate": 0.06400000303983688,
+      "gap_pp": 4.800000190734863
+    },
+    {
+      "category": "harmful generalization",
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pred_rate": 0.004000000189989805,
+      "gold_rate": 0.14399999380111694,
+      "gap_pp": -14.0
+    },
+    {
+      "category": "deserving/undeserving",
+      "support": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pred_rate": 0.024000000208616257,
+      "gold_rate": 0.019999999552965164,
+      "gap_pp": 0.40000006556510925
+    },
+    {
+      "category": "racist",
+      "support": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pred_rate": 0.01600000075995922,
+      "gold_rate": 0.004000000189989805,
+      "gap_pp": 1.2000000476837158
+    }
+  ]
+}
